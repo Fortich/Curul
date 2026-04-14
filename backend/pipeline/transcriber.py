@@ -73,7 +73,7 @@ def transcribe(
     """
     device = device or get_device()
     logger.info("Using device: %s", device)
-    model = whisper.load_model("large-v3", device=device)
+    model = whisper.load_model("large-v3-turbo", device=device)
     raw = model.transcribe(str(audio_path), verbose=True)
     return TranscriptionResult.from_dict(raw)
 
