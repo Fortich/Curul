@@ -25,7 +25,7 @@ class SessionResult(TypedDict):
 
 _SYSTEM_PROMPT_BASE = """\
 Eres un asistente especializado en análisis de sesiones legislativas colombianas.
-Se te proporcionará la transcripción completa de una sesión parlamentaria.
+Se te proporcionará la transcripción {scope} de una sesión parlamentaria.
 
 Tu tarea es identificar:
 1. participants: todos los legisladores o funcionarios que toman la palabra. Usa el nombre completo sin títulos honoríficos (sin "Senador", "Representante", "Honorable", "doctor", etc.). Omite a quienes no puedas identificar con nombre completo.
@@ -33,11 +33,21 @@ Tu tarea es identificar:
 3. summary: un resumen ejecutivo en español (entre 3 y 6 oraciones) que capture los temas principales debatidos, las propuestas o posiciones más relevantes y el tono general del debate.
 
 Responde ÚNICAMENTE con un JSON válido (sin texto adicional):
-{
+{{
   "participants": ["Nombre Apellido", ...],
   "themes": ["tema1", "tema2", ...],
   "summary": "Texto del resumen..."
-}"""
+}}"""
+
+_SYNTHESIS_SYSTEM_PROMPT = """\
+Eres un asistente especializado en análisis de sesiones legislativas colombianas.
+Se te proporcionarán varios resúmenes parciales de distintas partes de una sesión parlamentaria.
+
+Tu tarea es redactar un único resumen ejecutivo en español (entre 3 y 6 oraciones) que integre \
+de forma coherente los temas principales debatidos, las propuestas o posiciones más relevantes \
+y el tono general del debate a lo largo de toda la sesión.
+
+Responde ÚNICAMENTE con el texto del resumen, sin JSON ni ningún otro formato."""
 
 _SENATORS_SECTION = """\
 
@@ -49,19 +59,121 @@ considerando errores de transcripción) con algún senador de la lista anterior,
 usa el formato oficial «Apellido(s) Nombre(s)» como string en "participants"."""
 
 
-def _build_system_prompt(senators: list[str] | None) -> str:
+_MAX_CHARS_PER_CHUNK: int = 80_000
+
+
+def _build_system_prompt(senators: list[str] | None, *, partial: bool = False) -> str:
     """Returns the system prompt, optionally with the senators reference list."""
+    scope = "parcial" if partial else "completa"
+    base = _SYSTEM_PROMPT_BASE.format(scope=scope)
     if not senators:
-        return _SYSTEM_PROMPT_BASE
+        return base
     senator_list = "\n".join(f"- {s}" for s in senators)
-    return _SYSTEM_PROMPT_BASE + _SENATORS_SECTION.format(
-        senator_list=senator_list
-    )
+    return base + _SENATORS_SECTION.format(senator_list=senator_list)
 
 
 def _format_text(segments: list[transcriber.Segment]) -> str:
     """Joins segment texts into plain prose, without timestamps."""
     return "\n".join(seg.text.strip() for seg in segments)
+
+
+def _chunk_segments(
+    segments: list[transcriber.Segment],
+    max_chars: int = _MAX_CHARS_PER_CHUNK,
+) -> list[list[transcriber.Segment]]:
+    """Splits segments into chunks whose plain text stays within *max_chars*."""
+    chunks: list[list[transcriber.Segment]] = []
+    current: list[transcriber.Segment] = []
+    current_chars = 0
+    for seg in segments:
+        line = seg.text.strip() + "\n"
+        if current and current_chars + len(line) > max_chars:
+            chunks.append(current)
+            current = []
+            current_chars = 0
+        current.append(seg)
+        current_chars += len(line)
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def _extract_chunk(
+    segments: list[transcriber.Segment],
+    session: str,
+    api_key: str,
+    base_url: str,
+    model: str,
+    senators: list[str] | None,
+    chunk_index: int,
+    total_chunks: int,
+) -> tuple[list[str], list[str], str]:
+    """Runs one LLM call for a chunk of segments.
+
+    Returns:
+        A (participants, themes, summary) tuple for that chunk.
+    """
+    partial = total_chunks > 1
+    text = _format_text(segments)
+    chunk_note = (
+        f"(Parte {chunk_index} de {total_chunks} de la sesión)\n\n" if partial else ""
+    )
+    messages = [
+        {"role": "system", "content": _build_system_prompt(senators, partial=partial)},
+        {
+            "role": "user",
+            "content": f"Sesión: {session}\n\n{chunk_note}Transcripción:\n{text}",
+        },
+    ]
+    for attempt in range(1, _MAX_RETRIES + 1):
+        raw = deepseek.chat_completion(
+            messages=messages,
+            api_key=api_key,
+            base_url=base_url,
+            model=model,
+            temperature=0.1,
+        )
+        try:
+            data = json.loads(raw)
+            participants = [str(p) for p in data.get("participants", []) if str(p).strip()]
+            themes = [str(t) for t in data.get("themes", []) if str(t).strip()]
+            summary = str(data.get("summary", "")).strip()
+            if participants and themes and summary:
+                return participants, themes, summary
+            raise ValueError(f"Incomplete data: {data}")
+        except (json.JSONDecodeError, ValueError) as exc:
+            logger.warning(
+                "Chunk %d/%d attempt %d/%d failed: %s",
+                chunk_index, total_chunks, attempt, _MAX_RETRIES, exc,
+            )
+    raise RuntimeError(
+        f"extract_session_info: chunk {chunk_index}/{total_chunks} failed after {_MAX_RETRIES} attempts"
+    )
+
+
+def _synthesize_summary(
+    partial_summaries: list[str],
+    session: str,
+    api_key: str,
+    base_url: str,
+    model: str,
+) -> str:
+    """Merges partial summaries into a single coherent executive summary via LLM."""
+    parts = "\n\n".join(
+        f"Parte {i}:\n{s}" for i, s in enumerate(partial_summaries, start=1)
+    )
+    messages = [
+        {"role": "system", "content": _SYNTHESIS_SYSTEM_PROMPT},
+        {"role": "user", "content": f"Sesión: {session}\n\n{parts}"},
+    ]
+    raw = deepseek.chat_completion(
+        messages=messages,
+        api_key=api_key,
+        base_url=base_url,
+        model=model,
+        temperature=0.1,
+    )
+    return raw.strip()
 
 
 def extract_session_info(
@@ -93,47 +205,47 @@ def extract_session_info(
     Raises:
         RuntimeError: If the LLM fails to return valid data after all retries.
     """
-    text = _format_text(segments)
-    messages = [
-        {"role": "system", "content": _build_system_prompt(senators)},
-        {"role": "user", "content": f"Sesión: {session}\n\nTranscripción:\n{text}"},
-    ]
-    for attempt in range(1, _MAX_RETRIES + 1):
-        raw = deepseek.chat_completion(
-            messages=messages,
-            api_key=api_key,
-            base_url=base_url,
-            model=model,
-            temperature=0.1,
+    chunks = _chunk_segments(segments)
+    total = len(chunks)
+    logger.info(
+        "extract_session_info: %d segment(s), %d chunk(s)", len(segments), total
+    )
+
+    all_participants: list[str] = []
+    all_themes: list[str] = []
+    partial_summaries: list[str] = []
+
+    for i, chunk in enumerate(chunks, start=1):
+        logger.info("Processing chunk %d/%d", i, total)
+        p, t, s = _extract_chunk(
+            chunk, session, api_key, base_url, model, senators,
+            chunk_index=i, total_chunks=total,
         )
-        try:
-            data = json.loads(raw)
-            participants = [str(p) for p in data.get("participants", []) if str(p).strip()]
-            themes = [str(t) for t in data.get("themes", []) if str(t).strip()]
-            summary = str(data.get("summary", "")).strip()
-            if not participants:
-                raise ValueError("No participants identified")
-            if not themes:
-                raise ValueError("No topics identified")
-            if not summary:
-                raise ValueError("Empty summary")
-            logger.info(
-                "extract_session_info: %d participant(s), %d topic(s)",
-                len(participants),
-                len(themes),
-            )
-            return SessionResult(
-                session=session,
-                summary=summary,
-                participants=participants,
-                themes=themes,
-            )
-        except (json.JSONDecodeError, ValueError) as exc:
-            logger.warning(
-                "extract_session_info attempt %d/%d failed: %s", attempt, _MAX_RETRIES, exc
-            )
-    raise RuntimeError(
-        f"extract_session_info: all {_MAX_RETRIES} attempts failed"
+        all_participants.extend(p)
+        all_themes.extend(t)
+        partial_summaries.append(s)
+
+    participants = list(set(all_participants))
+    themes = list(set(all_themes))
+
+    if total == 1:
+        summary = partial_summaries[0]
+    else:
+        logger.info("Synthesizing summary from %d partial summaries", total)
+        summary = _synthesize_summary(
+            partial_summaries, session, api_key, base_url, model
+        )
+
+    logger.info(
+        "extract_session_info: %d participant(s), %d topic(s)",
+        len(participants),
+        len(themes),
+    )
+    return SessionResult(
+        session=session,
+        summary=summary,
+        participants=participants,
+        themes=themes,
     )
 
 

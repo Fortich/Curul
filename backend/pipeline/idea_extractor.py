@@ -96,8 +96,9 @@ def _build_system_prompt(
 
 _USER_PROMPT_TEMPLATE = """\
 Sesión: {session}
-
-Transcripción (formato [inicio_s - fin_s] texto):
+{chunk_header}\
+{context_block}\
+Transcripción a analizar (formato [inicio_s - fin_s] texto):
 {segments_text}"""
 
 
@@ -111,6 +112,37 @@ def _format_segments(segments: list[transcriber.Segment]) -> str:
 _BASE_TEMPERATURE: float = 0.1
 _RETRY_TEMP_DELTA: float = 0.15
 _MAX_RETRIES: int = 3
+# Approximate character limit for the formatted segments text sent per request.
+# DeepSeek context windows are 64K–128K tokens; ~4 chars/token means keeping
+# the segments text under 80K chars leaves ample room for the system prompt and
+# the model's JSON output.
+_MAX_SEGMENT_CHARS: int = 80_000
+# Number of segments from the previous chunk to include as read-only context.
+_CONTEXT_TAIL: int = 10
+
+
+def _chunk_segments(
+    segments: list[transcriber.Segment],
+    max_chars: int = _MAX_SEGMENT_CHARS,
+) -> list[list[transcriber.Segment]]:
+    """Splits segments into chunks so each chunk's formatted text stays within *max_chars*."""
+    chunks: list[list[transcriber.Segment]] = []
+    current: list[transcriber.Segment] = []
+    current_chars = 0
+
+    for seg in segments:
+        line = f"[{seg.start:.1f}s - {seg.end:.1f}s] {seg.text.strip()}\n"
+        if current and current_chars + len(line) > max_chars:
+            chunks.append(current)
+            current = []
+            current_chars = 0
+        current.append(seg)
+        current_chars += len(line)
+
+    if current:
+        chunks.append(current)
+
+    return chunks
 
 
 def _process_segments(
@@ -121,6 +153,9 @@ def _process_segments(
     model: str,
     known_participants: list[str],
     known_themes: list[str],
+    chunk_index: int = 1,
+    total_chunks: int = 1,
+    context_segments: list[transcriber.Segment] | None = None,
 ) -> list[Idea]:
     """Extracts ideas from segments, retrying with higher temperature on parse errors.
 
@@ -128,12 +163,29 @@ def _process_segments(
     attempt produces partial results (some items parsed, some malformed), the
     attempt with the most valid ideas is returned rather than an empty list.
     """
+    chunk_header = (
+        f"\nEsta es la parte {chunk_index} de {total_chunks} de la transcripción.\n"
+        if total_chunks > 1
+        else ""
+    )
+    if context_segments:
+        context_block = (
+            "\nContexto del segmento anterior (solo para continuidad; NO extraer ideas de esta parte):\n"
+            + _format_segments(context_segments)
+            + "\n\n"
+        )
+    else:
+        context_block = ""
+
     messages = [
         {"role": "system", "content": _build_system_prompt(known_participants, known_themes)},
         {
             "role": "user",
             "content": _USER_PROMPT_TEMPLATE.format(
-                session=session, segments_text=_format_segments(segments)
+                session=session,
+                chunk_header=chunk_header,
+                context_block=context_block,
+                segments_text=_format_segments(segments),
             ),
         },
     ]
@@ -247,17 +299,27 @@ def extract_ideas(
     Returns:
         A list of ideas extracted from the transcription.
     """
+    chunks = _chunk_segments(transcription.segments)
     logger.info(
-        "Extracting ideas from %d segments via %s",
+        "Extracting ideas from %d segments (%d chunk(s)) via %s",
         len(transcription.segments),
+        len(chunks),
         model,
     )
 
-    ideas = _process_segments(
-        transcription.segments, session, api_key, base_url, model,
-        known_participants=session_result["participants"],
-        known_themes=session_result["themes"],
-    )
+    ideas: list[Idea] = []
+    for i, chunk in enumerate(chunks, start=1):
+        logger.info("Processing chunk %d/%d (%d segments)", i, len(chunks), len(chunk))
+        context = chunks[i - 2][-_CONTEXT_TAIL:] if i > 1 else None
+        chunk_ideas = _process_segments(
+            chunk, session, api_key, base_url, model,
+            known_participants=session_result["participants"],
+            known_themes=session_result["themes"],
+            chunk_index=i,
+            total_chunks=len(chunks),
+            context_segments=context,
+        )
+        ideas.extend(chunk_ideas)
 
     logger.info("Extracted %d ideas total", len(ideas))
     return ideas
