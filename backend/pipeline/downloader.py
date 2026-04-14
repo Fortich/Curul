@@ -1,5 +1,6 @@
 """Downloads audio from URLs using yt-dlp."""
 
+import os
 import pathlib
 
 import yt_dlp
@@ -25,6 +26,11 @@ def download_audio(url: str, output_dir: pathlib.Path) -> pathlib.Path:
             "preferredcodec": "opus",
         }],
     }
+
+    cookies_file = os.environ.get("YTDLP_COOKIES_FILE")
+    if cookies_file:
+        ydl_opts["cookiefile"] = cookies_file
+
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
 
