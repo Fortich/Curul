@@ -1,0 +1,170 @@
+"""Extracts session-level metadata (participants, themes) and summary."""
+
+# ruff: noqa: E501 — long lines are LLM prompt content, not code
+
+import json
+import logging
+import pathlib
+from typing import TypedDict
+
+from pipeline import deepseek, transcriber
+
+logger = logging.getLogger(__name__)
+
+_MAX_RETRIES: int = 3
+
+
+class SessionResult(TypedDict):
+    """Session-level result: identifier, executive summary, participants, and themes."""
+
+    session: str
+    summary: str
+    participants: list[str]
+    themes: list[str]
+
+
+_SYSTEM_PROMPT_BASE = """\
+Eres un asistente especializado en análisis de sesiones legislativas colombianas.
+Se te proporcionará la transcripción completa de una sesión parlamentaria.
+
+Tu tarea es identificar:
+1. participants: todos los legisladores o funcionarios que toman la palabra. Usa el nombre completo sin títulos honoríficos (sin "Senador", "Representante", "Honorable", "doctor", etc.). Omite a quienes no puedas identificar con nombre completo.
+2. themes: entre 5 y 15 etiquetas temáticas que cubran los temas principales debatidos. Deben ser concisas (1-3 palabras, en español).
+3. summary: un resumen ejecutivo en español (entre 3 y 6 oraciones) que capture los temas principales debatidos, las propuestas o posiciones más relevantes y el tono general del debate.
+
+Responde ÚNICAMENTE con un JSON válido (sin texto adicional):
+{
+  "participants": ["Nombre Apellido", ...],
+  "themes": ["tema1", "tema2", ...],
+  "summary": "Texto del resumen..."
+}"""
+
+_SENATORS_SECTION = """\
+
+Lista de senadores actuales (formato oficial «Apellido(s) Nombre(s)»):
+{senator_list}
+
+Cuando identifiques un participante que coincida (aunque sea aproximadamente,
+considerando errores de transcripción) con algún senador de la lista anterior,
+usa el formato oficial «Apellido(s) Nombre(s)» como string en "participants"."""
+
+
+def _build_system_prompt(senators: list[str] | None) -> str:
+    """Returns the system prompt, optionally with the senators reference list."""
+    if not senators:
+        return _SYSTEM_PROMPT_BASE
+    senator_list = "\n".join(f"- {s}" for s in senators)
+    return _SYSTEM_PROMPT_BASE + _SENATORS_SECTION.format(
+        senator_list=senator_list
+    )
+
+
+def _format_text(segments: list[transcriber.Segment]) -> str:
+    """Joins segment texts into plain prose, without timestamps."""
+    return "\n".join(seg.text.strip() for seg in segments)
+
+
+def extract_session_info(
+    segments: list[transcriber.Segment],
+    session: str,
+    api_key: str,
+    base_url: str = deepseek.BASE_URL,
+    model: str = deepseek.MODEL,
+    senators: list[str] | None = None,
+) -> SessionResult:
+    """Extracts participants, themes, and executive summary in a single LLM call.
+
+    Retries up to _MAX_RETRIES times. Raises RuntimeError if all attempts fail
+    or return incomplete data.
+
+    Args:
+        segments: All segments from the transcription.
+        session: Session identifier stored in the result.
+        api_key: Authentication key for the LLM API.
+        base_url: Base URL of the OpenAI-compatible API.
+        model: Model identifier (defaults to the fast model).
+        senators: Optional canonical list of senator names in
+            «Apellido(s) Nombre(s)» format used to normalize participant
+            names extracted from the transcription.
+
+    Returns:
+        A SessionResult with non-empty participants, themes, and summary.
+
+    Raises:
+        RuntimeError: If the LLM fails to return valid data after all retries.
+    """
+    text = _format_text(segments)
+    messages = [
+        {"role": "system", "content": _build_system_prompt(senators)},
+        {"role": "user", "content": f"Sesión: {session}\n\nTranscripción:\n{text}"},
+    ]
+    for attempt in range(1, _MAX_RETRIES + 1):
+        raw = deepseek.chat_completion(
+            messages=messages,
+            api_key=api_key,
+            base_url=base_url,
+            model=model,
+            temperature=0.1,
+        )
+        try:
+            data = json.loads(raw)
+            participants = [str(p) for p in data.get("participants", []) if str(p).strip()]
+            themes = [str(t) for t in data.get("themes", []) if str(t).strip()]
+            summary = str(data.get("summary", "")).strip()
+            if not participants:
+                raise ValueError("No participants identified")
+            if not themes:
+                raise ValueError("No topics identified")
+            if not summary:
+                raise ValueError("Empty summary")
+            logger.info(
+                "extract_session_info: %d participant(s), %d topic(s)",
+                len(participants),
+                len(themes),
+            )
+            return SessionResult(
+                session=session,
+                summary=summary,
+                participants=participants,
+                themes=themes,
+            )
+        except (json.JSONDecodeError, ValueError) as exc:
+            logger.warning(
+                "extract_session_info attempt %d/%d failed: %s", attempt, _MAX_RETRIES, exc
+            )
+    raise RuntimeError(
+        f"extract_session_info: all {_MAX_RETRIES} attempts failed"
+    )
+
+
+def save_session_result(result: SessionResult, output_path: pathlib.Path) -> None:
+    """Saves a SessionResult to a JSON file.
+
+    Args:
+        result: The session result to serialize.
+        output_path: Path where the JSON file will be written.
+    """
+    output_path.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    logger.info("SessionResult saved to: %s", output_path)
+
+
+def load_session_result(input_path: pathlib.Path) -> SessionResult:
+    """Loads a SessionResult from a JSON file written by save_session_result.
+
+    Args:
+        input_path: Path to the JSON file to read.
+
+    Returns:
+        The deserialized SessionResult.
+    """
+    data = json.loads(input_path.read_text(encoding="utf-8"))
+    logger.info("SessionResult loaded from: %s", input_path)
+    return SessionResult(
+        session=data["session"],
+        summary=data["summary"],
+        participants=data["participants"],
+        themes=data["themes"],
+    )

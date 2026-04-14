@@ -1,0 +1,23 @@
+# Credentials and sensitive files - NEVER COMMIT
+z_cred_NO_SUBIR/
+
+# Temp files
+z_temp/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Test/lint caches
+.pytest_cache/
+.ruff_cache/

@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pipeline"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-whisper>=20250625",
+    "yt-dlp>=2026.3.17",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pipeline"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: integration tests that load real models (deselect with -m 'not slow')",
+    "unit: fast unit tests that do not require models or audio files (select with -m 'unit')",
+]
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes (unused imports, vars, etc.)
+    "I",   # isort (import order)
+    "D",   # pydocstyle (Google docstring convention)
+    "N",   # pep8-naming
+    "UP",  # pyupgrade (modern Python syntax)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+known-first-party = ["pipeline"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["D"]   # No se exigen docstrings en tests
+
+[tool.ruff.format]
+docstring-code-format = true
