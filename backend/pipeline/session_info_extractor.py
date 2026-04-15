@@ -140,6 +140,10 @@ def _extract_chunk(
             themes = [str(t) for t in data.get("themes", []) if str(t).strip()]
             summary = str(data.get("summary", "")).strip()
             if participants and themes and summary:
+                logger.info(
+                    "Chunk %d/%d attempt %d/%d worked, summary: %s",
+                    chunk_index, total_chunks, attempt, _MAX_RETRIES, summary,
+                )
                 return participants, themes, summary
             raise ValueError(f"Incomplete data: {data}")
         except (json.JSONDecodeError, ValueError) as exc:
@@ -173,7 +177,9 @@ def _synthesize_summary(
         base_url=base_url,
         model=model,
         temperature=0.1,
+        response_format="text",
     )
+    logger.info("Sumarized summaries %s", raw)
     return raw.strip()
 
 

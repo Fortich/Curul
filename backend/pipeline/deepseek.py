@@ -17,6 +17,7 @@ def chat_completion(
     base_url: str,
     model: str,
     temperature: float,
+    response_format: str = "json_object",
 ) -> str:
     """POSTs to the OpenAI-compatible chat completions endpoint.
 
@@ -28,8 +29,11 @@ def chat_completion(
         {
             "model": model,
             "messages": messages,
-            "response_format": {"type": "json_object"},
+            "response_format": {"type": response_format},
             "temperature": temperature,
+            "thinking": {
+                "type": "enabled"
+            }
         }
     ).encode()
 
