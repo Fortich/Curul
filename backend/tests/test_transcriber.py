@@ -1,41 +1,12 @@
-"""Unit tests for get_device and save_transcription."""
+"""Unit tests for save_transcription and load_transcription."""
 
 import dataclasses
 import json
 from pathlib import Path
-from unittest import mock
 
 import pytest
 
 from pipeline import transcriber
-
-# ---------------------------------------------------------------------------
-# get_device
-# ---------------------------------------------------------------------------
-
-
-@pytest.mark.unit
-@pytest.mark.parametrize(
-    "cuda, mps, expected",
-    [
-        (True, False, "cuda"),
-        (False, True, "mps"),
-        (True, True, "cuda"),  # cuda takes priority
-        (False, False, "cpu"),
-    ],
-)
-def test_get_device(cuda: bool, mps: bool, expected: str) -> None:
-    with (
-        mock.patch("torch.cuda.is_available", return_value=cuda),
-        mock.patch("torch.backends.mps.is_available", return_value=mps),
-    ):
-        assert transcriber.get_device() == expected
-
-
-@pytest.mark.unit
-def test_get_device_returns_valid_device_string_on_current_machine() -> None:
-    assert transcriber.get_device() in {"cuda", "mps", "cpu"}
-
 
 # ---------------------------------------------------------------------------
 # save_transcription
@@ -48,19 +19,12 @@ def sample_result() -> transcriber.TranscriptionResult:
         text=" Hola, buenos días.",
         segments=[
             transcriber.Segment(
-                id=0,
-                seek=0,
                 start=0.0,
                 end=1.5,
                 text=" Hola, buenos días.",
-                tokens=[50364, 2952],
-                temperature=0.0,
-                avg_logprob=-0.3,
-                compression_ratio=1.0,
-                no_speech_prob=0.01,
             )
         ],
-        language="es",
+        language="Spanish",
     )
 
 
@@ -129,7 +93,7 @@ def test_save_transcription_overwrites_existing_file(
     output.write_text("stale content", encoding="utf-8")
     transcriber.save_transcription(sample_result, output)
     parsed = json.loads(output.read_text(encoding="utf-8"))
-    assert parsed["language"] == "es"
+    assert parsed["language"] == "Spanish"
 
 
 # ---------------------------------------------------------------------------
@@ -148,36 +112,19 @@ def test_load_transcription_roundtrip(
 
 
 @pytest.mark.unit
-def test_load_transcription_text(
-    tmp_path: Path, sample_result: transcriber.TranscriptionResult
-) -> None:
-    path = tmp_path / "out.json"
-    transcriber.save_transcription(sample_result, path)
-    loaded = transcriber.load_transcription(path)
-    assert loaded.text == sample_result.text
-
-
-@pytest.mark.unit
-def test_load_transcription_language(
-    tmp_path: Path, sample_result: transcriber.TranscriptionResult
-) -> None:
-    path = tmp_path / "out.json"
-    transcriber.save_transcription(sample_result, path)
-    loaded = transcriber.load_transcription(path)
-    assert loaded.language == sample_result.language
-
-
-@pytest.mark.unit
-def test_load_transcription_segments(
-    tmp_path: Path, sample_result: transcriber.TranscriptionResult
-) -> None:
-    path = tmp_path / "out.json"
-    transcriber.save_transcription(sample_result, path)
-    loaded = transcriber.load_transcription(path)
-    assert loaded.segments == sample_result.segments
-
-
-@pytest.mark.unit
 def test_load_transcription_missing_file_raises(tmp_path: Path) -> None:
     with pytest.raises(FileNotFoundError):
         transcriber.load_transcription(tmp_path / "nonexistent.json")
+
+
+# ---------------------------------------------------------------------------
+# transcribe
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.unit
+def test_transcribe_invalid_backend_raises() -> None:
+    with pytest.raises(ValueError, match="Unknown backend"):
+        transcriber.transcribe(
+            Path("dummy.wav"), backend="invalid_backend"
+        )

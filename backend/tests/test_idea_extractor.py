@@ -15,18 +15,7 @@ from pipeline import idea_extractor, transcriber
 def _make_segment(
     id: int, start: float, end: float, text: str
 ) -> transcriber.Segment:
-    return transcriber.Segment(
-        id=id,
-        seek=0,
-        start=start,
-        end=end,
-        text=text,
-        tokens=[],
-        temperature=0.0,
-        avg_logprob=-0.3,
-        compression_ratio=1.0,
-        no_speech_prob=0.01,
-    )
+    return transcriber.Segment(start=start, end=end, text=text)
 
 
 # ---------------------------------------------------------------------------

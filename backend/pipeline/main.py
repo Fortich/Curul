@@ -33,10 +33,21 @@ def main() -> None:
         print("Usage: uv run python main.py <session> <url> <output_dir> <api_key>")
         sys.exit(1)
 
-    session_name = sys.argv[1]
-    url = sys.argv[2]
-    session_dir = pathlib.Path(sys.argv[3]) / session_name
-    api_key = sys.argv[4]
+    args = sys.argv[1:]
+
+    backend = "whisper"
+    if "--backend" in args:
+        idx = args.index("--backend")
+        if idx + 1 >= len(args):
+            print("--backend requires a value (qwen3 or whisper)")
+            sys.exit(1)
+        backend = args.pop(idx + 1)
+        args.pop(idx)
+
+    session_name = args[0]
+    url = args[1]
+    session_dir = pathlib.Path(args[2]) / session_name
+    api_key = args[3]
 
     session_dir.mkdir(parents=True, exist_ok=True)
 
@@ -55,7 +66,7 @@ def main() -> None:
         transcription = transcriber.load_transcription(transcription_path)
     else:
         logger.info("Step 2/4 — Transcribing: %s", audio_path)
-        transcription = transcriber.transcribe(audio_path)
+        transcription = transcriber.transcribe(audio_path, backend=backend)
         transcriber.save_transcription(transcription, transcription_path)
         logger.info("Transcription saved to: %s", transcription_path)
 
@@ -107,10 +118,9 @@ def download_cli() -> None:
     print(f"Audio saved to: {audio_path}")
 
 def transcribe_file() -> None:
-    """Transcribes a local audio file with optional output and device selection.
+    """Transcribes a local audio file with optional output path.
 
-    Usage: uv run python main.py transcribe <audio_file>
-        [--output <file.json>] [cpu|mps|cuda]
+    Usage: uv run python main.py transcribe <audio_file> [--output <file.json>]
     """
     logging.basicConfig(
         level=logging.INFO,
@@ -122,7 +132,7 @@ def transcribe_file() -> None:
     if not args:
         logger.error(
             "Usage: uv run python main.py transcribe <audio_file>"
-            " [--output <file.json>] [cpu|mps|cuda]"
+            " [--output <file.json>]"
         )
         sys.exit(1)
 
@@ -136,11 +146,19 @@ def transcribe_file() -> None:
         output_path = pathlib.Path(args.pop(idx + 1))
         args.pop(idx)
 
+    backend = "whisper"
+    if "--backend" in args:
+        idx = args.index("--backend")
+        if idx + 1 >= len(args):
+            logger.error("--backend requires a value (qwen3 or whisper)")
+            sys.exit(1)
+        backend = args.pop(idx + 1)
+        args.pop(idx)
+
     audio_path = pathlib.Path(args[0])
-    device = args[1] if len(args) > 1 else None
 
     logger.info("Transcribing: %s", audio_path)
-    result = transcriber.transcribe(audio_path, device=device)
+    result = transcriber.transcribe(audio_path, backend=backend)
 
     if output_path:
         transcriber.save_transcription(result, output_path)

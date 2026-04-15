@@ -12,6 +12,9 @@ dependencies = [
     "yt-dlp>=2026.3.17",
 ]
 
+[project.optional-dependencies]
+qwen3 = ["mlx-qwen3-asr>=0.1.0"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["pipeline"]
 

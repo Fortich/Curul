@@ -1,40 +1,32 @@
-"""Transcribes audio files using the Whisper speech recognition model."""
+"""Transcribes audio files using a configurable ASR backend."""
 
 import dataclasses
 import json
 import logging
 import pathlib
 
-import torch
-import whisper
-
 logger = logging.getLogger(__name__)
+
+BACKENDS = ("qwen3", "whisper")
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class Segment:
-    """A single timed segment produced by Whisper."""
+    """A single timed segment produced by the ASR model."""
 
-    id: int
-    seek: int
     start: float
     end: float
     text: str
-    tokens: list[int]
-    temperature: float
-    avg_logprob: float
-    compression_ratio: float
-    no_speech_prob: float
 
     @classmethod
     def from_dict(cls, d: dict) -> "Segment":
         """Constructs a Segment from a plain dictionary."""
-        return cls(**{f.name: d[f.name] for f in dataclasses.fields(cls)})
+        return cls(start=d["start"], end=d["end"], text=d["text"])
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class TranscriptionResult:
-    """The full output returned by a Whisper transcription."""
+    """The full output returned by a transcription."""
 
     text: str
     segments: list[Segment]
@@ -50,32 +42,68 @@ class TranscriptionResult:
         )
 
 
-def get_device() -> str:
-    """Returns the best available compute device for inference."""
-    if torch.cuda.is_available():
-        return "cuda"
-    if torch.backends.mps.is_available():
-        return "mps"
-    return "cpu"
+def _transcribe_qwen3(audio_path: pathlib.Path) -> TranscriptionResult:
+    """Transcribes using the Qwen3-ASR model via MLX."""
+    import mlx_qwen3_asr  # lazy: only imported when this backend is used
+
+    raw = mlx_qwen3_asr.transcribe(
+        str(audio_path), return_timestamps=True, verbose=True
+    )
+    raw_segments = raw.segments or []
+    segments = [
+        Segment(
+            start=s["start"] if isinstance(s, dict) else s.start,
+            end=s["end"] if isinstance(s, dict) else s.end,
+            text=s["text"] if isinstance(s, dict) else s.text,
+        )
+        for s in raw_segments
+    ]
+    return TranscriptionResult(
+        text=raw.text,
+        segments=segments,
+        language=raw.language,
+    )
+
+
+def _transcribe_whisper(audio_path: pathlib.Path) -> TranscriptionResult:
+    """Transcribes using openai-whisper (large-v3-turbo)."""
+    import whisper  # lazy: only imported when this backend is used
+
+    model = whisper.load_model("large-v3")
+    raw = model.transcribe(str(audio_path))
+    segments = [
+        Segment(start=s["start"], end=s["end"], text=s["text"])
+        for s in raw["segments"]
+    ]
+    return TranscriptionResult(
+        text=raw["text"],
+        segments=segments,
+        language=raw["language"],
+    )
 
 
 def transcribe(
-    audio_path: pathlib.Path, device: str | None = None
+    audio_path: pathlib.Path, backend: str = "qwen3"
 ) -> TranscriptionResult:
-    """Transcribes an audio file using the Whisper large-v3 model.
+    """Transcribes an audio file using the specified ASR backend.
 
     Args:
-        audio_path: pathlib.Path to the audio file to transcribe.
-        device: Compute device to use (cuda/mps/cpu). Auto-detected if None.
+        audio_path: Path to the audio file to transcribe.
+        backend: ASR backend to use. One of ``"qwen3"`` (default) or
+            ``"whisper"``.
 
     Returns:
         A TranscriptionResult containing text, segments, and language.
+
+    Raises:
+        ValueError: If ``backend`` is not a recognised value.
     """
-    device = device or get_device()
-    logger.info("Using device: %s", device)
-    model = whisper.load_model("large-v3-turbo", device=device)
-    raw = model.transcribe(str(audio_path), verbose=True)
-    return TranscriptionResult.from_dict(raw)
+    logger.info("Transcribing: %s (backend=%s)", audio_path, backend)
+    if backend == "qwen3":
+        return _transcribe_qwen3(audio_path)
+    if backend == "whisper":
+        return _transcribe_whisper(audio_path)
+    raise ValueError(f"Unknown backend {backend!r}. Valid options: {BACKENDS}")
 
 
 def load_transcription(input_path: pathlib.Path) -> TranscriptionResult:
