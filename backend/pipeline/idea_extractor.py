@@ -42,10 +42,10 @@ Para cada idea debes:
 - Identificar el nombre completo del legislador usando los patrones de presentación habituales
   del cuerpo legislativo (títulos honoríficos, presentaciones de la mesa, etc.)
 - Extraer la cita textual exacta de lo que dijo
-- Redactar un resumen conciso (1-2 oraciones) que sintetice la idea principal expresada por el legislador, en tercera persona y en español
+- Redactar un resumen analítico-periodístico (1-2 oraciones) en tercera persona que capture la posición del legislador, su argumento central y, cuando aplique, la carga política o el conflicto subyacente. Evita parafrasear mecánicamente; sintetiza con criterio.
 - Registrar el timestamp de inicio y fin en segundos (float), tomados directamente de la transcripción
-- Asignar entre 1 y 5 tags temáticos (ej: "economía", "salud", "educación", "presupuestos")
-- Identificar todas las entidades mencionadas en la intervención (pueden ser cero) y clasificarlas con un tipo abierto. Ejemplos de tipos: "legislador", "ejecutivo", "ley", "proyecto de ley", "organismo", "partido", "institución". El tipo debe ser breve y en español.
+- Asignar entre 1 y 5 tags temáticos (ej: "Economía", "Salud", "Educación", "Presupuesto militar")
+- Identificar todas las entidades mencionadas en la intervención (pueden ser cero) y clasificarlas con un tipo abierto. Ejemplos de tipos: "legislador", "ejecutivo", "ley", "proyecto de ley", "organismo", "partido", "institución". El tipo debe ser breve y en español. Los nombres propios de instituciones, cuerpos del Estado y cargos oficiales llevan mayúscula inicial (ej: "Fuerza Pública", "Gobierno Nacional", "Ministerio de Defensa", "Congreso de la República").
 - Asignar un puntaje de importancia entre 0.0 y 1.0 (float) según estos criterios orientativos:
   0.0-0.2 = intervención protocolar o de trámite (saludos, mociones de orden, lecturas de acta)
   0.2-0.4 = comentario breve sin propuesta concreta

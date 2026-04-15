@@ -29,8 +29,8 @@ Se te proporcionará la transcripción {scope} de una sesión parlamentaria.
 
 Tu tarea es identificar:
 1. participants: todos los legisladores o funcionarios que toman la palabra. Usa el nombre completo sin títulos honoríficos (sin "Senador", "Representante", "Honorable", "doctor", etc.). Omite a quienes no puedas identificar con nombre completo.
-2. themes: entre 5 y 15 etiquetas temáticas que cubran los temas principales debatidos. Deben ser concisas (1-3 palabras, en español).
-3. summary: un resumen ejecutivo en español (entre 3 y 6 oraciones) que capture los temas principales debatidos, las propuestas o posiciones más relevantes y el tono general del debate.
+2. themes: entre 5 y 15 etiquetas temáticas que cubran los temas principales debatidos. Deben ser concisas (1-3 palabras, en español) y con mayúscula inicial (ej: "Fuerza pública", "Política exterior", "Presupuesto militar").
+3. summary: un resumen ejecutivo en español (entre 3 y 6 oraciones) con tono analítico-periodístico. Debe identificar los ejes de debate más relevantes, las posiciones en conflicto, las propuestas concretas que emergieron y el clima político de la sesión. Evita listar temas; construye una narrativa coherente.
 
 Responde ÚNICAMENTE con un JSON válido (sin texto adicional):
 {{
@@ -43,9 +43,10 @@ _SYNTHESIS_SYSTEM_PROMPT = """\
 Eres un asistente especializado en análisis de sesiones legislativas colombianas.
 Se te proporcionarán varios resúmenes parciales de distintas partes de una sesión parlamentaria.
 
-Tu tarea es redactar un único resumen ejecutivo en español (entre 3 y 6 oraciones) que integre \
-de forma coherente los temas principales debatidos, las propuestas o posiciones más relevantes \
-y el tono general del debate a lo largo de toda la sesión.
+Tu tarea es redactar un único resumen ejecutivo en español (entre 3 y 6 oraciones) con tono analítico-periodístico \
+que integre de forma coherente los ejes de debate más relevantes, las posiciones en conflicto, \
+las propuestas concretas que emergieron y el clima político de la sesión. \
+Evita listar temas; construye una narrativa coherente.
 
 Responde ÚNICAMENTE con el texto del resumen, sin JSON ni ningún otro formato."""
 
