@@ -38,10 +38,11 @@ Eres un asistente especializado en análisis de transcripciones de sesiones legi
 Se te proporcionará la transcripción parcial o completa de una sesión parlamentaria con timestamps en segundos.
 
 Tu tarea es identificar las distintas intervenciones de los legisladores y extraer las ideas relevantes.
+Una idea es un argumento completo o posición coherente del legislador sobre un tema. No fragmentes un mismo argumento en múltiples entradas; agrupa todo lo que el legislador dice sobre un mismo punto en una sola idea, incluso si hay interrupciones breves.
 Para cada idea debes:
 - Identificar el nombre completo del legislador usando los patrones de presentación habituales
   del cuerpo legislativo (títulos honoríficos, presentaciones de la mesa, etc.)
-- Extraer la cita textual exacta de lo que dijo
+- Extraer la cita textual exacta de lo que dijo. La cita debe ser verbatim de la transcripción proporcionada, sin corregir ni editar.
 - Redactar un resumen analítico-periodístico (1-2 oraciones) en tercera persona que capture la posición del legislador, su argumento central y, cuando aplique, la carga política o el conflicto subyacente. Evita parafrasear mecánicamente; sintetiza con criterio.
 - Registrar el timestamp de inicio y fin en segundos (float), tomados directamente de la transcripción
 - Asignar entre 1 y 5 tags temáticos (ej: "Economía", "Salud", "Educación", "Presupuesto militar")
@@ -81,8 +82,7 @@ def _build_system_prompt(
     lines = [_BASE_SYSTEM_PROMPT, "\nContexto de la sesión:"]
     if known_participants:
         lines.append(
-            "Participantes identificados (usa exactamente estos nombres en congressman_name;"
-            " si el orador no aparece en la lista, usa \"Desconocido\"):"
+            "Participantes identificados (usa exactamente estos nombres; si reconoces a un orador que no está en la lista, usa su nombre tal como aparece en la transcripción; si no puedes identificarlo, usa 'Desconocido'):"
         )
         lines.extend(f"  - {p}" for p in known_participants)
     if known_themes:
@@ -96,8 +96,7 @@ def _build_system_prompt(
 
 _USER_PROMPT_TEMPLATE = """\
 Sesión: {session}
-{chunk_header}\
-{context_block}\
+{last_speaker_line}\
 Transcripción a analizar (formato [inicio_s - fin_s] texto):
 {segments_text}"""
 
@@ -110,15 +109,13 @@ def _format_segments(segments: list[transcriber.Segment]) -> str:
 
 
 _BASE_TEMPERATURE: float = 0.1
-_RETRY_TEMP_DELTA: float = 0.15
+_RETRY_TEMP_DELTA: float = 0.01
 _MAX_RETRIES: int = 3
 # Approximate character limit for the formatted segments text sent per request.
 # DeepSeek context windows are 64K–128K tokens; ~4 chars/token means keeping
 # the segments text under 80K chars leaves ample room for the system prompt and
 # the model's JSON output.
-_MAX_SEGMENT_CHARS: int = 80_000
-# Number of segments from the previous chunk to include as read-only context.
-_CONTEXT_TAIL: int = 10
+_MAX_SEGMENT_CHARS: int = 100_000
 
 
 def _chunk_segments(
@@ -153,9 +150,7 @@ def _process_segments(
     model: str,
     known_participants: list[str],
     known_themes: list[str],
-    chunk_index: int = 1,
-    total_chunks: int = 1,
-    context_segments: list[transcriber.Segment] | None = None,
+    last_speaker: str | None = None,
 ) -> list[Idea]:
     """Extracts ideas from segments, retrying with higher temperature on parse errors.
 
@@ -163,19 +158,13 @@ def _process_segments(
     attempt produces partial results (some items parsed, some malformed), the
     attempt with the most valid ideas is returned rather than an empty list.
     """
-    chunk_header = (
-        f"\nEsta es la parte {chunk_index} de {total_chunks} de la transcripción.\n"
-        if total_chunks > 1
-        else ""
-    )
-    if context_segments:
-        context_block = (
-            "\nContexto del segmento anterior (solo para continuidad; NO extraer ideas de esta parte):\n"
-            + _format_segments(context_segments)
-            + "\n\n"
+    if last_speaker:
+        last_speaker_line = (
+            f"El último orador identificado antes de este fragmento fue: {last_speaker}."
+            " Si la transcripción comienza sin una nueva presentación, asumir que continúa siendo el mismo orador.\n"
         )
     else:
-        context_block = ""
+        last_speaker_line = ""
 
     messages = [
         {"role": "system", "content": _build_system_prompt(known_participants, known_themes)},
@@ -183,8 +172,7 @@ def _process_segments(
             "role": "user",
             "content": _USER_PROMPT_TEMPLATE.format(
                 session=session,
-                chunk_header=chunk_header,
-                context_block=context_block,
+                last_speaker_line=last_speaker_line,
                 segments_text=_format_segments(segments),
             ),
         },
@@ -192,7 +180,7 @@ def _process_segments(
 
     best: list[Idea] = []
     for attempt in range(1, _MAX_RETRIES + 1):
-        temperature = _BASE_TEMPERATURE + (attempt - 1) * _RETRY_TEMP_DELTA
+        temperature = _BASE_TEMPERATURE - (attempt - 1) * _RETRY_TEMP_DELTA
         if attempt > 1:
             logger.info(
                 "Retry %d/%d (temperature=%.2f)",
@@ -299,27 +287,61 @@ def extract_ideas(
     Returns:
         A list of ideas extracted from the transcription.
     """
-    chunks = _chunk_segments(transcription.segments)
+    all_segments = transcription.segments
     logger.info(
-        "Extracting ideas from %d segments (%d chunk(s)) via %s",
-        len(transcription.segments),
-        len(chunks),
+        "Extracting ideas from %d segments via %s",
+        len(all_segments),
         model,
     )
 
     ideas: list[Idea] = []
-    for i, chunk in enumerate(chunks, start=1):
-        logger.info("Processing chunk %d/%d (%d segments)", i, len(chunks), len(chunk))
-        context = chunks[i - 2][-_CONTEXT_TAIL:] if i > 1 else None
+    chunk_start_idx = 0
+    chunk_num = 0
+    last_speaker: str | None = None
+
+    while chunk_start_idx < len(all_segments):
+        chunk_num += 1
+        # Take only the first chunk from the remaining segments.
+        first_chunk = _chunk_segments(all_segments[chunk_start_idx:])[0]
+        is_last = chunk_start_idx + len(first_chunk) >= len(all_segments)
+
+        logger.info(
+            "Processing chunk %d (%d segments, from idx %d%s)",
+            chunk_num,
+            len(first_chunk),
+            chunk_start_idx,
+            ", last" if is_last else "",
+        )
+
         chunk_ideas = _process_segments(
-            chunk, session, api_key, base_url, model,
+            first_chunk, session, api_key, base_url, model,
             known_participants=session_result["participants"],
             known_themes=session_result["themes"],
-            chunk_index=i,
-            total_chunks=len(chunks),
-            context_segments=context,
+            last_speaker=last_speaker,
         )
+
+        if not is_last and chunk_ideas:
+            # Drop the last idea — it may be cut at the chunk boundary.
+            # The next chunk will re-extract it fully, starting from its timestamp.
+            dropped = chunk_ideas.pop()
+            logger.info(
+                "Dropped last idea (start=%.1fs) to re-extract in next chunk",
+                dropped["start"],
+            )
+            # Pass the identified speaker as a hint, unless unknown.
+            last_speaker = dropped["congressman_name"] if dropped["congressman_name"] != "Desconocido" else None
+            # Rewind to the first segment at or after the dropped idea's start.
+            next_start_idx = chunk_start_idx + len(first_chunk)  # fallback
+            for idx in range(chunk_start_idx, chunk_start_idx + len(first_chunk)):
+                if all_segments[idx].end >= dropped["start"]:
+                    next_start_idx = idx
+                    break
+        else:
+            last_speaker = None
+            next_start_idx = chunk_start_idx + len(first_chunk)
+
         ideas.extend(chunk_ideas)
+        chunk_start_idx = next_start_idx
 
     logger.info("Extracted %d ideas total", len(ideas))
     return ideas
