@@ -12,7 +12,7 @@ const Tag = ({ tag, onClick, active, size="sm" }) => {
   return <span onClick={onClick} style={{display:"inline-flex",alignItems:"center",borderRadius:"100px",cursor:onClick?"pointer":"default",fontFamily:"'DM Sans',sans-serif",fontWeight:500,letterSpacing:"0.01em",whiteSpace:"nowrap",transition:"all 0.2s",background:c.bg,color:c.text,border:active?`2px solid ${c.text}`:"2px solid transparent",opacity:active===false?0.4:1,...s}}>{tag}</span>;
 };
 
-const IdeaCard = ({ idea, onSenatorClick, delay=0 }) => {
+const IdeaCard = ({ idea, onSenatorClick, delay=0, youtubeUrl }) => {
   const [open, setOpen] = useState(false);
   const ac = avatarCol(idea.congressman_name);
   return (
@@ -35,6 +35,7 @@ const IdeaCard = ({ idea, onSenatorClick, delay=0 }) => {
       {open && (
         <div style={{marginTop:"12px",padding:"16px",background:"var(--quote-bg)",borderRadius:"12px",borderLeft:"3px solid var(--accent)",animation:"fadeIn .3s ease both"}}>
           <p style={{fontFamily:"'Instrument Serif',serif",fontSize:"14px",color:"var(--text-secondary)",lineHeight:1.7,margin:0,fontStyle:"italic"}}>«{idea.quote}»</p>
+          {youtubeUrl&&<a href={`${youtubeUrl}&t=${Math.floor(idea.start)}`} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"5px",marginTop:"12px",fontFamily:"'DM Sans',sans-serif",fontSize:"12px",color:"var(--accent)",fontWeight:500,textDecoration:"none",opacity:.85,transition:"opacity .2s"}} onMouseEnter={e=>e.currentTarget.style.opacity=1} onMouseLeave={e=>e.currentTarget.style.opacity=.85}>▶ Ver en YouTube · {fmt(idea.start)}</a>}
           {idea.mentions.length>0&&<div style={{marginTop:"12px",display:"flex",flexWrap:"wrap",gap:"6px"}}>{idea.mentions.map((m,i)=><span key={i} style={{fontFamily:"'DM Sans',sans-serif",fontSize:"10px",color:"var(--text-tertiary)",background:"var(--border)",padding:"2px 8px",borderRadius:"4px"}}>{m.entity}</span>)}</div>}
         </div>
       )}
@@ -175,7 +176,7 @@ export default function CurulApp() {
             <p style={{fontSize:"13px",color:"var(--text-secondary)",lineHeight:1.6,marginBottom:"16px"}}>{s?.summary}</p>
             <div style={{display:"flex",flexWrap:"wrap",gap:"6px",marginBottom:"20px"}}>{Object.entries(tags).sort((a,b)=>b[1]-a[1]).map(([t])=><Tag key={t} tag={t} size="sm" onClick={()=>push({view:"theme",tag:t,session:current.session})}/>)}</div>
             <div style={{fontSize:"12px",color:"var(--text-tertiary)",marginBottom:"16px"}}>{ideas.length} intervenciones · orden cronológico</div>
-            {ideas.map((idea,i)=><IdeaCard key={i} idea={idea} onSenatorClick={n=>push({view:"senator",senator:n})} delay={.04*i}/>)}
+            {ideas.map((idea,i)=><IdeaCard key={i} idea={idea} onSenatorClick={n=>push({view:"senator",senator:n})} delay={.04*i} youtubeUrl={s?.youtube_url}/>)}
           </>;
         })()}
 
@@ -197,9 +198,9 @@ export default function CurulApp() {
               const date=sessions.find(x=>x.session===sid)?.date ?? "";
               return<div key={sid} style={{marginBottom:"24px"}}>
                 <div onClick={()=>push({view:"session",session:sid})} style={{fontSize:"12px",fontWeight:600,color:"var(--accent)",marginBottom:"12px",paddingBottom:"8px",borderBottom:"1px solid var(--border)",textTransform:"uppercase",letterSpacing:".06em",cursor:"pointer"}}>{date?fmtDate(date):sid}</div>
-                {si.map((idea,i)=><IdeaCard key={i} idea={idea} delay={.04*i}/>)}
+                {si.map((idea,i)=><IdeaCard key={i} idea={idea} delay={.04*i} youtubeUrl={sessions.find(x=>x.session===sid)?.youtube_url}/>)}
               </div>;
-            }):ideas.map((idea,i)=><IdeaCard key={i} idea={idea} delay={.05*i}/>)}
+            }):ideas.map((idea,i)=><IdeaCard key={i} idea={idea} delay={.05*i} youtubeUrl={sessions.find(x=>x.session===idea.session)?.youtube_url}/>)}
           </>;
         })()}
 
@@ -217,7 +218,7 @@ export default function CurulApp() {
                   onMouseEnter={e=>e.currentTarget.style.borderColor="var(--accent)"} onMouseLeave={e=>e.currentTarget.style.borderColor="var(--border)"}>{shortName(n)}</span>)}
               </div>}
             </div>
-            {ideas.map((idea,i)=><IdeaCard key={i} idea={idea} onSenatorClick={n=>push({view:"senator",senator:n})} delay={.04*i}/>)}
+            {ideas.map((idea,i)=><IdeaCard key={i} idea={idea} onSenatorClick={n=>push({view:"senator",senator:n})} delay={.04*i} youtubeUrl={sessions.find(x=>x.session===idea.session)?.youtube_url}/>)}
           </>;
         })()}
 

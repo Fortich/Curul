@@ -1577,7 +1577,7 @@ export const IDEAS_DATA =
     "importance": 0.6
   },
   {
-    "congressman_name": "Cruz Bonilla Saúl ",
+    "congressman_name": "Cruz Bonilla Saúl",
     "session": "Abril-14-2026",
     "quote": "Con fundamento en las razones expuestas me permito rendir ponencia positiva y en consecuencia Solicito a la plenaria del Senado de la República dar segundo debate y aprobar el proyecto de ley número cero ochenta y nueve dos mil veinticuatro senado por medio de la cual se fomenta la inclusión activa de la mujer en el mercado financiero de Colombia",
     "summary": "El senador Gnecco Zuleta presenta ponencia favorable para el segundo debate del proyecto de ley que busca fomentar la inclusión activa de las mujeres en el mercado financiero colombiano, argumentando su importancia para la equidad económica.",
