@@ -60,7 +60,7 @@ considerando errores de transcripción) con algún senador de la lista anterior,
 usa el formato oficial «Apellido(s) Nombre(s)» como string en "participants"."""
 
 
-_MAX_CHARS_PER_CHUNK: int = 80_000
+_MAX_CHARS_PER_CHUNK: int = 200_000
 
 
 def _build_system_prompt(senators: list[str] | None, *, partial: bool = False) -> str:
