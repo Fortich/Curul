@@ -306,10 +306,11 @@ def extract_ideas(
         is_last = chunk_start_idx + len(first_chunk) >= len(all_segments)
 
         logger.info(
-            "Processing chunk %d (%d segments, from idx %d%s)",
+            "Processing chunk %d (%d segments, from idx %d to idx %d %s)",
             chunk_num,
             len(first_chunk),
             chunk_start_idx,
+            chunk_start_idx + len(first_chunk),
             ", last" if is_last else "",
         )
 
