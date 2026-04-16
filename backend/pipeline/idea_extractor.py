@@ -330,10 +330,12 @@ def extract_ideas(
             )
             # Pass the identified speaker as a hint, unless unknown.
             last_speaker = dropped["congressman_name"] if dropped["congressman_name"] != "Desconocido" else None
-            # Rewind to the first segment at or after the dropped idea's start.
+            # Rewind to 20s before the dropped idea's start so the next chunk
+            # captures any introduction or mention that precedes the speech.
+            rewind_target = dropped["start"] - 20.0
             next_start_idx = chunk_start_idx + len(first_chunk)  # fallback
             for idx in range(chunk_start_idx, chunk_start_idx + len(first_chunk)):
-                if all_segments[idx].end >= dropped["start"]:
+                if all_segments[idx].end >= rewind_target:
                     next_start_idx = idx
                     break
         else:
