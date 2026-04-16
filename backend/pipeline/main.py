@@ -8,6 +8,7 @@ import sys
 from pipeline import (
     downloader,
     idea_extractor,
+    review_ideas,
     senate_scraper,
     session_info_extractor,
     transcriber,
@@ -97,6 +98,7 @@ def main() -> None:
         logger.info("Ideas saved to: %s", ideas_path)
 
     logger.info("Pipeline complete. Results in: %s", session_dir)
+    review_ideas.review(ideas_path, senators_cache_path=senators_cache_path)
 
 def download_cli() -> None:
     """Downloads audio from a URL to a local directory.
@@ -270,6 +272,38 @@ def extract_session_info_cli() -> None:
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
+def review_ideas_cli() -> None:
+    """Reviews extracted ideas for unknown speakers and unrecognized names.
+
+    Usage: uv run python main.py review-ideas <ideas.json>
+        [--senators <senators_cache.json>]
+    """
+    args = sys.argv[2:]
+
+    if not args or args[0] in ("-h", "--help"):
+        print(
+            "Usage: uv run python main.py review-ideas <ideas.json>"
+            " [--senators <senators_cache.json>]"
+        )
+        sys.exit(0)
+
+    senators_cache: pathlib.Path | None = None
+    if "--senators" in args:
+        idx = args.index("--senators")
+        if idx + 1 >= len(args):
+            logger.error("--senators requires a file path")
+            sys.exit(1)
+        senators_cache = pathlib.Path(args.pop(idx + 1))
+        args.pop(idx)
+
+    ideas_path = pathlib.Path(args[0])
+    if not ideas_path.exists():
+        logger.error("File not found: %s", ideas_path)
+        sys.exit(1)
+
+    review_ideas.review(ideas_path, senators_cache_path=senators_cache)
+
+
 def scrape_senators_cli() -> None:
     """Fetches the active senator list from senado.gov.co and prints it.
 
@@ -308,6 +342,7 @@ COMMANDS = {
     "extract-ideas": extract_ideas_cli,
     "extract-session-info": extract_session_info_cli,
     "scrape-senators": scrape_senators_cli,
+    "review-ideas": review_ideas_cli,
 }
 
 
