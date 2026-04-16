@@ -7,6 +7,7 @@ import sys
 
 from pipeline import (
     downloader,
+    export_frontend,
     idea_extractor,
     review_ideas,
     review_session_info,
@@ -371,6 +372,44 @@ def scrape_senators_cli() -> None:
     print(json.dumps(senators, ensure_ascii=False, indent=2))
 
 
+def export_frontend_cli() -> None:
+    """Exports session info and ideas from pipeline outputs to a frontend data.js file.
+
+    Scans all subdirectories of <output_dir> for session_info.json and ideas.json,
+    then writes a data.js file ready to be used by the frontend.
+
+    Usage: uv run python main.py export-frontend <output_dir> <data_js_path>
+    """
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    )
+
+    args = sys.argv[2:]
+
+    if len(args) < 2 or args[0] in ("-h", "--help"):
+        print(
+            "Usage: uv run python main.py export-frontend"
+            " <output_dir> <data_js_path>"
+        )
+        sys.exit(0)
+
+    output_dir = pathlib.Path(args[0])
+    data_js_path = pathlib.Path(args[1])
+
+    if not output_dir.is_dir():
+        logger.error("Directory not found: %s", output_dir)
+        sys.exit(1)
+
+    sessions, ideas = export_frontend.collect_sessions(output_dir)
+
+    if not sessions:
+        logger.error("No sessions found in %s", output_dir)
+        sys.exit(1)
+
+    export_frontend.write_data_js(sessions, ideas, data_js_path)
+
+
 COMMANDS = {
     "download": download_cli,
     "transcribe": transcribe_file,
@@ -379,6 +418,7 @@ COMMANDS = {
     "scrape-senators": scrape_senators_cli,
     "review-session-info": review_session_info_cli,
     "review-ideas": review_ideas_cli,
+    "export-frontend": export_frontend_cli,
 }
 
 
