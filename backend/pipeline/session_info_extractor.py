@@ -15,12 +15,14 @@ _MAX_RETRIES: int = 3
 
 
 class SessionResult(TypedDict):
-    """Session-level result: identifier, executive summary, participants, and themes."""
+    """Session-level result: identifier, executive summary, participants, themes, URL, and date."""
 
     session: str
     summary: str
     participants: list[str]
     themes: list[str]
+    youtube_url: str
+    date: str
 
 
 _SYSTEM_PROMPT_BASE = """\
@@ -190,6 +192,8 @@ def extract_session_info(
     base_url: str = deepseek.BASE_URL,
     model: str = deepseek.MODEL,
     senators: list[str] | None = None,
+    youtube_url: str = "",
+    date: str = "",
 ) -> SessionResult:
     """Extracts participants, themes, and executive summary in a single LLM call.
 
@@ -205,6 +209,8 @@ def extract_session_info(
         senators: Optional canonical list of senator names in
             «Apellido(s) Nombre(s)» format used to normalize participant
             names extracted from the transcription.
+        youtube_url: YouTube URL of the session recording.
+        date: Date of the session (ISO format recommended, e.g. "2025-03-15").
 
     Returns:
         A SessionResult with non-empty participants, themes, and summary.
@@ -253,6 +259,8 @@ def extract_session_info(
         summary=summary,
         participants=participants,
         themes=themes,
+        youtube_url=youtube_url,
+        date=date,
     )
 
 
@@ -286,4 +294,6 @@ def load_session_result(input_path: pathlib.Path) -> SessionResult:
         summary=data["summary"],
         participants=data["participants"],
         themes=data["themes"],
+        youtube_url=data.get("youtube_url", ""),
+        date=data.get("date", ""),
     )

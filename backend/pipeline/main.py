@@ -9,6 +9,7 @@ from pipeline import (
     downloader,
     idea_extractor,
     review_ideas,
+    review_session_info,
     senate_scraper,
     session_info_extractor,
     transcriber,
@@ -81,7 +82,8 @@ def main() -> None:
     else:
         logger.info("Step 3/4 — Extracting session info...")
         session_result = session_info_extractor.extract_session_info(
-            transcription.segments, session_name, api_key, senators=senators
+            transcription.segments, session_name, api_key, senators=senators,
+            youtube_url=url,
         )
         session_info_extractor.save_session_result(session_result, session_info_path)
         logger.info("Session info saved to: %s", session_info_path)
@@ -98,6 +100,7 @@ def main() -> None:
         logger.info("Ideas saved to: %s", ideas_path)
 
     logger.info("Pipeline complete. Results in: %s", session_dir)
+    review_session_info.review(session_info_path, senators_cache_path=senators_cache_path)
     review_ideas.review(ideas_path, senators_cache_path=senators_cache_path)
 
 def download_cli() -> None:
@@ -272,6 +275,38 @@ def extract_session_info_cli() -> None:
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
+def review_session_info_cli() -> None:
+    """Reviews session info for date format, YouTube URL, and participant names.
+
+    Usage: uv run python main.py review-session-info <session_info.json>
+        [--senators <senators_cache.json>]
+    """
+    args = sys.argv[2:]
+
+    if not args or args[0] in ("-h", "--help"):
+        print(
+            "Usage: uv run python main.py review-session-info <session_info.json>"
+            " [--senators <senators_cache.json>]"
+        )
+        sys.exit(0)
+
+    senators_cache: pathlib.Path | None = None
+    if "--senators" in args:
+        idx = args.index("--senators")
+        if idx + 1 >= len(args):
+            logger.error("--senators requires a file path")
+            sys.exit(1)
+        senators_cache = pathlib.Path(args.pop(idx + 1))
+        args.pop(idx)
+
+    session_info_path = pathlib.Path(args[0])
+    if not session_info_path.exists():
+        logger.error("File not found: %s", session_info_path)
+        sys.exit(1)
+
+    review_session_info.review(session_info_path, senators_cache_path=senators_cache)
+
+
 def review_ideas_cli() -> None:
     """Reviews extracted ideas for unknown speakers and unrecognized names.
 
@@ -342,6 +377,7 @@ COMMANDS = {
     "extract-ideas": extract_ideas_cli,
     "extract-session-info": extract_session_info_cli,
     "scrape-senators": scrape_senators_cli,
+    "review-session-info": review_session_info_cli,
     "review-ideas": review_ideas_cli,
 }
 
