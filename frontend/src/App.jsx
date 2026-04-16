@@ -42,10 +42,10 @@ const IdeaCard = ({ idea, onSenatorClick, delay=0 }) => {
   );
 };
 
-const SessionCard = ({ session, count, senators, onClick, delay=0 }) => {
+const SessionCard = ({ session, count, senators, onClick, delay=0, isLatest=false }) => {
   const title = "Sesión Plenaria";
   const date = session.date ?? "";
-  const recent = date && (new Date()-new Date(date+"T12:00:00"))<7*864e5;
+  const recent = isLatest || (date && (new Date()-new Date(date+"T12:00:00"))<7*864e5);
   return (
     <div onClick={onClick} style={{background:"var(--card-bg)",borderRadius:"16px",padding:"20px",marginBottom:"12px",border:"1px solid var(--border)",cursor:"pointer",transition:"all .2s",animation:`fadeIn .4s ease ${delay}s both`,position:"relative",overflow:"hidden"}}
       onMouseEnter={e=>{e.currentTarget.style.borderColor="var(--accent)";e.currentTarget.style.transform="translateY(-2px)";}}
@@ -141,7 +141,7 @@ export default function CurulApp() {
         {current.view==="home"&&(<>
           <div style={{marginBottom:"28px"}}>
             <h3 style={{fontFamily:"'Instrument Serif',serif",fontSize:"20px",color:"var(--text-primary)",marginBottom:"14px",display:"flex",alignItems:"center",gap:"8px"}}><span style={{color:"var(--accent)",fontSize:"16px"}}>■</span>Sesiones plenarias</h3>
-            {sessions.map((s,i)=>{const ideas=getIdeas({session:s.session});return<SessionCard key={s.session} session={s} count={ideas.length} senators={new Set(ideas.map(x=>x.congressman_name)).size} onClick={()=>push({view:"session",session:s.session})} delay={.06*i}/>;
+            {sessions.map((s,i)=>{const ideas=getIdeas({session:s.session});return<SessionCard key={s.session} session={s} count={ideas.length} senators={new Set(ideas.map(x=>x.congressman_name)).size} onClick={()=>push({view:"session",session:s.session})} delay={.06*i} isLatest={i===0}/>;
             })}
             <div style={{textAlign:"center",padding:"16px",fontSize:"12px",color:"var(--text-tertiary)",fontStyle:"italic",animation:"fadeIn .4s ease .3s both"}}>Más sesiones pronto — procesando el archivo histórico</div>
           </div>
