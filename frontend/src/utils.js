@@ -3,24 +3,6 @@ const AVATAR_COLORS = [
   "#7c60c2", "#c8a33b", "#3aacb8", "#d95f5f",
 ];
 
-const _MONTHS_ES = {
-  enero:1, febrero:2, marzo:3, abril:4, mayo:5, junio:6,
-  julio:7, agosto:8, septiembre:9, octubre:10, noviembre:11, diciembre:12,
-};
-
-/** Derives display metadata from a pipeline session name like "Abril-08-26".
- *  Returns { title, date } where date is "YYYY-MM-DD". */
-export const parseSessionName = name => {
-  const parts = name.toLowerCase().split("-");
-  const month = _MONTHS_ES[parts[0]];
-  if (!month || parts.length < 3) return { title: "Sesión Plenaria", date: "" };
-  const year = 2000 + parseInt(parts[parts.length - 1], 10);
-  const day  = parseInt(parts[1], 10);
-  return {
-    title: "Sesión Plenaria",
-    date:  `${year}-${String(month).padStart(2,"0")}-${String(day).padStart(2,"0")}`,
-  };
-};
 
 export const fmt = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
 
@@ -58,7 +40,7 @@ export const fmtDate = d =>
   new Date(d + "T12:00:00").toLocaleDateString("es-CO", { day:"numeric", month:"long", year:"numeric" });
 
 export const ago = d => {
-  const days = Math.floor((new Date("2026-04-14") - new Date(d)) / 864e5);
+  const days = Math.floor((new Date() - new Date(d + "T12:00:00")) / 864e5);
   return days < 1 ? "Hoy"
     : days === 1 ? "Ayer"
     : days < 7 ? `Hace ${days} días`

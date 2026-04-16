@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { useData } from "./useData";
-import { fmt, initials, displayName, shortName, avatarCol, fmtDate, ago, tagColors, parseSessionName } from "./utils";
+import { fmt, initials, displayName, shortName, avatarCol, fmtDate, ago, tagColors } from "./utils";
 
 // ============================================================
 // COMPONENTS
@@ -43,8 +43,9 @@ const IdeaCard = ({ idea, onSenatorClick, delay=0 }) => {
 };
 
 const SessionCard = ({ session, count, senators, onClick, delay=0 }) => {
-  const { title, date } = parseSessionName(session.session);
-  const recent = date && (new Date("2026-04-14")-new Date(date))<7*864e5;
+  const title = "Sesión Plenaria";
+  const date = session.date ?? "";
+  const recent = date && (new Date()-new Date(date+"T12:00:00"))<7*864e5;
   return (
     <div onClick={onClick} style={{background:"var(--card-bg)",borderRadius:"16px",padding:"20px",marginBottom:"12px",border:"1px solid var(--border)",cursor:"pointer",transition:"all .2s",animation:`fadeIn .4s ease ${delay}s both`,position:"relative",overflow:"hidden"}}
       onMouseEnter={e=>{e.currentTarget.style.borderColor="var(--accent)";e.currentTarget.style.transform="translateY(-2px)";}}
@@ -163,7 +164,8 @@ export default function CurulApp() {
         {/* SESSION */}
         {current.view==="session"&&(()=>{
           const s=sessions.find(x=>x.session===current.session);
-          const { title, date } = parseSessionName(current.session);
+          const title = "Sesión Plenaria";
+          const date = s?.date ?? "";
           const ideas=getIdeas({session:current.session}).sort((a,b)=>a.start-b.start);
           const tags={}; ideas.forEach(i=>i.tags.forEach(t=>{tags[t]=(tags[t]||0)+1;}));
           return<>
@@ -180,19 +182,19 @@ export default function CurulApp() {
         {/* SENATOR */}
         {current.view==="senator"&&(()=>{
           const ideas=getIdeas({senator:current.senator}).sort((a,b)=>a.start-b.start);
-          const sessions=[...new Set(ideas.map(i=>i.session))];
+          const sessionIds=[...new Set(ideas.map(i=>i.session))];
           return<>
             <Back label="Volver" onClick={pop}/>
             <div style={{display:"flex",alignItems:"center",gap:"14px",marginBottom:"20px"}}>
               <div style={{width:52,height:52,borderRadius:"50%",background:avatarCol(current.senator),display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",fontWeight:700,fontSize:"18px",fontFamily:"'DM Sans',sans-serif"}}>{initials(current.senator)}</div>
               <div>
                 <h2 style={{fontFamily:"'Instrument Serif',serif",fontSize:"22px",color:"var(--text-primary)",lineHeight:1.2}}>{displayName(current.senator)}</h2>
-                <p style={{fontSize:"12px",color:"var(--text-tertiary)",marginTop:"4px"}}>{ideas.length} intervención{ideas.length!==1?"es":""}{sessions.length>1?` en ${sessions.length} sesiones`:""}</p>
+                <p style={{fontSize:"12px",color:"var(--text-tertiary)",marginTop:"4px"}}>{ideas.length} intervención{ideas.length!==1?"es":""}{sessionIds.length>1?` en ${sessionIds.length} sesiones`:""}</p>
               </div>
             </div>
-            {sessions.length>1?sessions.map(sid=>{
+            {sessionIds.length>1?sessionIds.map(sid=>{
               const si=ideas.filter(i=>i.session===sid);
-              const { date } = parseSessionName(sid);
+              const date=sessions.find(x=>x.session===sid)?.date ?? "";
               return<div key={sid} style={{marginBottom:"24px"}}>
                 <div onClick={()=>push({view:"session",session:sid})} style={{fontSize:"12px",fontWeight:600,color:"var(--accent)",marginBottom:"12px",paddingBottom:"8px",borderBottom:"1px solid var(--border)",textTransform:"uppercase",letterSpacing:".06em",cursor:"pointer"}}>{date?fmtDate(date):sid}</div>
                 {si.map((idea,i)=><IdeaCard key={i} idea={idea} delay={.04*i}/>)}
