@@ -1,0 +1,41 @@
+/* ============================================================
+   CURUL — Design Tokens
+   Single source of truth for all visual variables.
+   Import this first in index.css.
+   ============================================================ */
+
+:root {
+  /* Backgrounds */
+  --bg:        #0D0D0F;
+  --card-bg:   #16161A;
+  --quote-bg:  #1C1C22;
+
+  /* Borders */
+  --border:    #2A2A30;
+
+  /* Accent */
+  --accent:    #F5C518;
+
+  /* Text */
+  --text-primary:   #EAEAEC;
+  --text-secondary: #B0B0B8;
+  --text-tertiary:  #6B6B76;
+
+  /* Typography */
+  --font-ui:      'DM Sans', sans-serif;
+  --font-display: 'Instrument Serif', serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Spacing */
+  --radius-card: 16px;
+  --radius-sm:   8px;
+  --radius-pill: 100px;
+
+  /* Animation */
+  --transition: 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
