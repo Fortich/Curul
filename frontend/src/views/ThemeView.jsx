@@ -11,15 +11,13 @@ import { shortName } from "../utils";
  *   sessionId  string?   — if set, scoped to one session
  *   sessions   Session[]
  *   getIdeas   fn(opts) → Idea[]
- *   push       fn(navEntry)
- *   pop        fn
+ *   goSenator  fn(name)
+ *   goBack     fn
  */
-export function ThemeView({ tag, sessionId, sessions, getIdeas, push, pop }) {
+export function ThemeView({ tag, sessionId, sessions, getIdeas, goSenator, goBack }) {
   const ideas = getIdeas({ tag, session: sessionId }).sort(
     (a, b) => b.importance - a.importance
   );
-
-  // Senators who spoke about this topic
   const contributors = {};
   ideas.forEach((i) => {
     contributors[i.congressman_name] = (contributors[i.congressman_name] || 0) + 1;
@@ -27,7 +25,7 @@ export function ThemeView({ tag, sessionId, sessions, getIdeas, push, pop }) {
 
   return (
     <>
-      <Back label="Volver" onClick={pop} />
+      <Back label="Volver" onClick={goBack} />
 
       <div className="theme-header">
         <Tag tag={tag} size="md" />
@@ -45,7 +43,7 @@ export function ThemeView({ tag, sessionId, sessions, getIdeas, push, pop }) {
                 <button
                   key={name}
                   className="theme-contributor-btn"
-                  onClick={() => push({ view: "senator", senator: name })}
+                  onClick={() => goSenator(name)}
                 >
                   {shortName(name)}
                 </button>
@@ -58,7 +56,7 @@ export function ThemeView({ tag, sessionId, sessions, getIdeas, push, pop }) {
         <IdeaCard
           key={`${idea.congressman_name}-${idea.start}`}
           idea={idea}
-          onSenatorClick={(name) => push({ view: "senator", senator: name })}
+          onSenatorClick={goSenator}
           delay={0.04 * i}
           youtubeUrl={sessions.find((x) => x.session === idea.session)?.youtube_url}
         />

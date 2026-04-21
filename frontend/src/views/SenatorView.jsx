@@ -9,17 +9,17 @@ import { Back } from "../components/Back";
  *   senatorName  string
  *   sessions     Session[]
  *   getIdeas     fn(opts) → Idea[]
- *   push         fn(navEntry)
- *   pop          fn
+ *   goSession    fn(id)
+ *   goBack       fn
  */
-export function SenatorView({ senatorName, sessions, getIdeas, push, pop }) {
+export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack }) {
   const ideas = getIdeas({ senator: senatorName }).sort((a, b) => a.start - b.start);
   const sessionIds = [...new Set(ideas.map((i) => i.session))];
   const avatarColor = avatarCol(senatorName);
 
   return (
     <>
-      <Back label="Volver" onClick={pop} />
+      <Back label="Volver" onClick={goBack} />
 
       <header className="senator-profile-header">
         <div
@@ -48,7 +48,7 @@ export function SenatorView({ senatorName, sessions, getIdeas, push, pop }) {
               <div key={sid} style={{ marginBottom: "24px" }}>
                 <button
                   className="session-group-label"
-                  onClick={() => push({ view: "session", session: sid })}
+                  onClick={() => goSession(sid)}
                 >
                   {date ? fmtDate(date) : sid}
                 </button>

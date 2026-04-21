@@ -7,24 +7,24 @@ import { fmtDate } from "../utils";
  * SessionView — list of ideas for a single plenary session.
  *
  * Props:
- *   sessionId  string
- *   sessions   Session[]
- *   getIdeas   fn(opts) → Idea[]
- *   push       fn(navEntry)
- *   pop        fn
+ *   sessionId   string
+ *   sessions    Session[]
+ *   getIdeas    fn(opts) → Idea[]
+ *   goSenator   fn(name)
+ *   goTheme     fn(tag, sessionId?)
+ *   goBack      fn
  */
-export function SessionView({ sessionId, sessions, getIdeas, push, pop }) {
+export function SessionView({ sessionId, sessions, getIdeas, goSenator, goTheme, goBack }) {
   const session = sessions.find((x) => x.session === sessionId);
   const date = session?.date ?? "";
   const ideas = getIdeas({ session: sessionId }).sort((a, b) => a.start - b.start);
 
-  // Build tag frequency from ideas
   const tagFreq = {};
   ideas.forEach((i) => i.tags.forEach((t) => { tagFreq[t] = (tagFreq[t] || 0) + 1; }));
 
   return (
     <>
-      <Back label="Sesiones" onClick={pop} />
+      <Back label="Sesiones" onClick={goBack} />
 
       <h2 className="view-title">Sesión Plenaria</h2>
       {date && <p className="view-accent-date">{fmtDate(date)}</p>}
@@ -38,7 +38,7 @@ export function SessionView({ sessionId, sessions, getIdeas, push, pop }) {
               key={t}
               tag={t}
               size="sm"
-              onClick={() => push({ view: "theme", tag: t, session: sessionId })}
+              onClick={() => goTheme(t, sessionId)}
             />
           ))}
       </div>
@@ -49,7 +49,7 @@ export function SessionView({ sessionId, sessions, getIdeas, push, pop }) {
         <IdeaCard
           key={`${idea.congressman_name}-${idea.start}`}
           idea={idea}
-          onSenatorClick={(name) => push({ view: "senator", senator: name })}
+          onSenatorClick={goSenator}
           delay={0.04 * i}
           youtubeUrl={session?.youtube_url}
         />

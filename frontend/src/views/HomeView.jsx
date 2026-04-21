@@ -10,9 +10,11 @@ import { Tag } from "../components/Tag";
  *   allSenators  { name, count, sessions }[]
  *   globalTags   [string, number][]
  *   getIdeas     fn(opts) → Idea[]
- *   push         fn(navEntry)
+ *   goSession    fn(id)
+ *   goSenator    fn(name)
+ *   goTheme      fn(tag)
  */
-export function HomeView({ sessions, allSenators, globalTags, getIdeas, push }) {
+export function HomeView({ sessions, allSenators, globalTags, getIdeas, goSession, goSenator, goTheme }) {
   return (
     <>
       {/* Sessions */}
@@ -30,7 +32,7 @@ export function HomeView({ sessions, allSenators, globalTags, getIdeas, push }) 
               session={s}
               count={ideas.length}
               senators={new Set(ideas.map((x) => x.congressman_name)).size}
-              onClick={() => push({ view: "session", session: s.session })}
+              onClick={() => goSession(s.session)}
               delay={0.06 * i}
               isLatest={i === 0}
             />
@@ -56,7 +58,7 @@ export function HomeView({ sessions, allSenators, globalTags, getIdeas, push }) 
               name={s.name}
               count={s.count}
               sessions={s.sessions}
-              onClick={() => push({ view: "senator", senator: s.name })}
+              onClick={() => goSenator(s.name)}
               delay={0.04 * i}
             />
           ))}
@@ -74,13 +76,9 @@ export function HomeView({ sessions, allSenators, globalTags, getIdeas, push }) 
           {globalTags.map(([t], i) => (
             <span
               key={t}
-              style={{ cursor: "pointer", animation: `fadeIn .35s ease ${0.03 * i}s both` }}
+              style={{ animation: `fadeIn .35s ease ${0.03 * i}s both` }}
             >
-              <Tag
-                tag={t}
-                size="md"
-                onClick={() => push({ view: "theme", tag: t })}
-              />
+              <Tag tag={t} size="md" onClick={() => goTheme(t)} />
             </span>
           ))}
         </div>

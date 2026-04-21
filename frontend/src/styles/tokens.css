@@ -2,6 +2,10 @@
    CURUL — Design Tokens
    Single source of truth for all visual variables.
    Import this first in index.css.
+
+   Accent: A2 — Warm white #F0EDE6
+   Chosen for political neutrality — no association
+   with any Colombian party.
    ============================================================ */
 
 :root {
@@ -13,13 +17,14 @@
   /* Borders */
   --border:    #2A2A30;
 
-  /* Accent */
-  --accent:    #F5C518;
+  /* Accent — Warm white (A2)
+     Paper temperature, no political color */
+  --accent:    #F0EDE6;
 
-  /* Text */
-  --text-primary:   #EAEAEC;
-  --text-secondary: #B0B0B8;
-  --text-tertiary:  #6B6B76;
+  /* Text — slightly warm to complement the accent */
+  --text-primary:   #E8E5DF;
+  --text-secondary: #A8A59E;
+  --text-tertiary:  #636059;
 
   /* Typography */
   --font-ui:      'DM Sans', sans-serif;

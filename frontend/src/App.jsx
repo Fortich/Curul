@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
+import { BrowserRouter, Routes, Route, useNavigate, useParams, Navigate } from "react-router-dom";
 import { useData } from "./useData";
 import { HomeView } from "./views/HomeView";
 import { SessionView } from "./views/SessionView";
@@ -6,18 +7,30 @@ import { SenatorView } from "./views/SenatorView";
 import { ThemeView } from "./views/ThemeView";
 
 /**
- * App — shell: data, navigation stack, layout chrome.
- * No business logic, no inline styles, no view rendering.
- * ~70 lines.
+ *   /                     → HomeView
+ *   /sesion/:id           → SessionView
+ *   /senador/:nombre      → SenatorView  (nombre URL-encoded)
+ *   /tema/:tag            → ThemeView    (tag URL-encoded)
  */
 export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
+  );
+}
+
+function AppShell() {
   const { sessions, ideas: ideasData, loading } = useData();
-  const [nav, setNav] = useState([{ view: "home" }]);
-  const current = nav[nav.length - 1];
+  const navigate = useNavigate();
 
   // ── Navigation ────────────────────────────────────────────
-  const push = (entry) => { setNav((prev) => [...prev, entry]); window.scrollTo({ top: 0 }); };
-  const pop  = ()      => { setNav((prev) => prev.length > 1 ? prev.slice(0, -1) : [{ view: "home" }]); window.scrollTo({ top: 0 }); };
+  const goHome    = ()       => navigate("/");
+  const goSession = (id)     => navigate(`/sesion/${encodeURIComponent(id)}`);
+  const goSenator = (name)   => navigate(`/senador/${encodeURIComponent(name)}`);
+  const goTheme   = (tag, session) =>
+    navigate(`/tema/${encodeURIComponent(tag)}${session ? `?sesion=${encodeURIComponent(session)}` : ""}`);
+  const goBack    = ()       => navigate(-1);
 
   // ── Derived data ──────────────────────────────────────────
   const allSenators = useMemo(() => {
@@ -49,35 +62,42 @@ export default function App() {
   // ── Loading ───────────────────────────────────────────────
   if (loading) return <div className="loading">Cargando…</div>;
 
-  // ── Shared view props ─────────────────────────────────────
-  const viewProps = { sessions, getIdeas, push, pop };
+  // ── Shared props ──────────────────────────────────────────
+  const nav = { goHome, goSession, goSenator, goTheme, goBack };
+  const data = { sessions, getIdeas };
 
   // ── Render ────────────────────────────────────────────────
   return (
     <div className="app-shell">
       <header className="app-header">
         <div className="app-header-inner">
-          <button className="app-logo" onClick={() => setNav([{ view: "home" }])}>
-            Curul
-          </button>
+          <button className="app-logo" onClick={goHome}>Curul</button>
           <span className="app-badge">Senado de Colombia</span>
         </div>
         <p className="app-tagline">Lo que dicen tus senadores, en sus propias palabras.</p>
       </header>
 
       <main className="app-main">
-        {current.view === "home" && (
-          <HomeView allSenators={allSenators} globalTags={globalTags} {...viewProps} />
-        )}
-        {current.view === "session" && (
-          <SessionView sessionId={current.session} {...viewProps} />
-        )}
-        {current.view === "senator" && (
-          <SenatorView senatorName={current.senator} {...viewProps} />
-        )}
-        {current.view === "theme" && (
-          <ThemeView tag={current.tag} sessionId={current.session} {...viewProps} />
-        )}
+        <Routes>
+          <Route
+            path="/"
+            element={<HomeView allSenators={allSenators} globalTags={globalTags} {...data} {...nav} />}
+          />
+          <Route
+            path="/sesion/:id"
+            element={<SessionRoute {...data} {...nav} />}
+          />
+          <Route
+            path="/senador/:nombre"
+            element={<SenatorRoute {...data} {...nav} />}
+          />
+          <Route
+            path="/tema/:tag"
+            element={<ThemeRoute {...data} {...nav} />}
+          />
+          {/* Fallback — redirects unknown routes to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
 
         <footer className="app-footer">
           <p>
@@ -87,5 +107,29 @@ export default function App() {
         </footer>
       </main>
     </div>
+  );
+}
+
+// ── Route wrappers — extract params from the URL ──────────────
+
+function SessionRoute(props) {
+  const { id } = useParams();
+  return <SessionView sessionId={decodeURIComponent(id)} {...props} />;
+}
+
+function SenatorRoute(props) {
+  const { nombre } = useParams();
+  return <SenatorView senatorName={decodeURIComponent(nombre)} {...props} />;
+}
+
+function ThemeRoute(props) {
+  const { tag } = useParams();
+  const sessionId = new URLSearchParams(window.location.search).get("sesion");
+  return (
+    <ThemeView
+      tag={decodeURIComponent(tag)}
+      sessionId={sessionId ? decodeURIComponent(sessionId) : undefined}
+      {...props}
+    />
   );
 }
