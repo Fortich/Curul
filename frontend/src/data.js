@@ -85,11 +85,3136 @@ export const SESSIONS = [
     ],
     "youtube_url": "https://www.youtube.com/watch?v=Jt2IGtinXoI",
     "date": "2026-04-14"
+  },
+  {
+    "session": "Abril-08-2026",
+    "summary": "La sesión parlamentaria colombiana estuvo dominada por un clima de alta polarización en el contexto de la campaña electoral, con discusiones acaloradas en torno al proyecto de bonos escolares que generó una férrea oposición de bancadas progresistas al considerarlo una amenaza para la educación pública. Paralelamente, se abordaron temas sensibles como la conmemoración de las víctimas del conflicto armado y la crisis de seguridad en el norte del Cauca, evidenciando las fracturas entre gobierno y oposición. Los intercambios estuvieron cargados de acusaciones cruzadas sobre corrupción y gestiones pasadas, reflejando un escenario legislativo fragmentado y poco propenso al consenso.",
+    "participants": [
+      "Fuelantala Delgado Richard Humberto",
+      "Muñoz León Fredy",
+      "Guevara Villabon Carlos Eduardo",
+      "Valencia Laserna Paloma Susana",
+      "Díaz Plata Edwing Fabián",
+      "Cepeda Castro Iván",
+      "Peralta Epieyu Martha Isabel",
+      "Quintero Cardona Esteban",
+      "Ortega Narváez Temístocles",
+      "Echeverry Alvarán Nicolás Albeiro",
+      "Espitia Jerez Ana Carolina",
+      "Pérez Oyuela José Luis",
+      "Daza Cotes Imelda",
+      "Guerra López María Angélica",
+      "Guerra Hoyos Andrés Felipe",
+      "Meisel Vergara Carlos Manuel",
+      "Riascos Riascos Paulino",
+      "Avella Esquivel Aída Yolanda"
+    ],
+    "themes": [
+      "Relaciones internacionales",
+      "Seguridad regional",
+      "Educación pública",
+      "Víctimas y reparación",
+      "Infraestructura vial",
+      "Debate político-electoral",
+      "Catastro multipropósito",
+      "Descentralización territorial"
+    ],
+    "youtube_url": "https://www.youtube.com/watch?v=laCXZxjLah4",
+    "date": "2026-04-08"
+  },
+  {
+    "session": "Abril-07-2026",
+    "summary": "La sesión parlamentaria se caracterizó por un clima político tenso y polarizado, con intercambios agresivos entre la oposición y el oficialismo. Los ejes centrales del debate fueron la crítica al deterioro del sistema de salud, con denuncias de desabastecimiento de medicamentos y altos gastos de bolsillo, y la seguridad, donde se cuestionó severamente la política de paz total por su presunto fracaso y vínculos con grupos armados. En economía, surgió un fuerte desacuerdo con la decisión del Banco de la República de aumentar las tasas de interés, vista como una medida antipopular y política. Además, se plantearon propuestas legislativas como el reconocimiento a la comunidad de Puerto Leguízamo y proyectos de ley sobre guardaparques e inclusión financiera de mujeres, reflejando una agenda diversa pero marcada por la confrontación.",
+    "participants": [
+      "Lozano Correa Angelica Listbeth",
+      "Daza Guevara Robert",
+      "Cepeda Castro Iván",
+      "Flórez Hernández Alex Xavier",
+      "Blel Scaf Nadya Georgette",
+      "González Villa Carlos Julio",
+      "Cepeda Sarabia Efraín José",
+      "Valencia Laserna Paloma Susana",
+      "Carreño Castro José Vicente",
+      "Avella Esquivel Aída Yolanda",
+      "Gnecco Zuleta José Alfredo",
+      "Hurtado Sánchez Norma",
+      "Muñoz León Fredy",
+      "Benavides Mora Carlos Alberto",
+      "Fuelantala Delgado Richard Humberto",
+      "Motoa Solarte Carlos Fernando",
+      "Giraldo Hernández Óscar Mauricio",
+      "Andrade Serrano Esperanza",
+      "Guerra Hoyos Andrés Felipe",
+      "Arias Castillo Wilson Neber",
+      "Virgüez Piraquive Manuel Antonio",
+      "Daza Cotes Imelda"
+    ],
+    "themes": [
+      "Política fiscal",
+      "Paz y víctimas",
+      "Corrupción",
+      "Infraestructura",
+      "Inclusión financiera",
+      "Política internacional",
+      "Seguridad ciudadana",
+      "Reformas sociales",
+      "Salud pública",
+      "Banco de la República"
+    ],
+    "youtube_url": "https://www.youtube.com/watch?v=Jt2IGtinXoI",
+    "date": "2026-04-07"
   }
 ];
 
 export const IDEAS_DATA =
   [
+  {
+    "congressman_name": "Ávila Martínez Ariel Fernando",
+    "session": "Abril-07-2026",
+    "quote": "Colombia tiene una democracia representativa es decir la gente vota para que se le represente El elabon más abajo más en el piso que hay son los ediles y edilhesas Se votan en las ciudades y son los que gestionan los problemas de recolección de basura de pavimento de vías etc y muchos de ellos no reciben sueldo reciben prestaciones de salud y regalorales pero no reciben un pago de pensión entonces lo que busca esto es equilibrar y que se les pague un sueldo se le reconozca la pensión para que hayan incentivos para que la gente participe en política y lo logramos es un proyecto de hace mucho tiempo lo logramos y por unanimidad en la comisión primera pasaría entonces a plenaria por su segunda debate y luego a cámara sus dos finales",
+    "summary": "Senador Ariel Ávila explica un proyecto legislativo que busca otorgar salarios y reconocimiento pensional a más de ocho mil ediles en Colombia, argumentando que esto incentivará la participación política y compensará a representantes locales; el proyecto fue aprobado por unanimidad en la comisión primera y avanza hacia plenaria.",
+    "start": 86.2,
+    "end": 130.4,
+    "tags": [
+      "Reformas sociales",
+      "Inclusión financiera",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "ediles",
+        "type": "cargo local"
+      },
+      {
+        "entity": "comisión primera",
+        "type": "comisión legislativa"
+      },
+      {
+        "entity": "plenaria",
+        "type": "órgano legislativo"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Ávila Martínez Ariel Fernando",
+    "session": "Abril-07-2026",
+    "quote": "Colombia está en unos en el tema presidencial estamos en unos debates importantes no pero son debates que no dan razón de las necesidades que tiene el país el problema más grave que tiene Colombia ahorita es un problema fiscal Está permitido en Colombia un déficit fiscal del tres por ciento eso es lo que llama la regla fiscal Hoy ese déficit se cree que está entre seis y siete por ciento incluso hay gente que dice que puede ser más que del siete por ciento eso lo que va a hacer es que desde junio julio el estado no tenga caja incluso porque el gobierno petro tomó la decisión de adelantar el recaudo de impuestos de este año el arrete fuente el año pasado entonces no va a haber caja el presidente que llegue o la presidenta que llegue se va a ganar la rifa de un tigre y ese problema fiscal nos puede llevar a una crisis económica ese es el principal problema que hay",
+    "summary": "Senador Ariel Ávila alerta que el déficit fiscal de Colombia ha escalado al 6-7%, superando la regla del 3%, y prevé una crisis de caja para junio-julio debido a políticas del gobierno actual; lo presenta como el mayor riesgo del país, con implicaciones económicas para el próximo gobierno.",
+    "start": 150.3,
+    "end": 200.5,
+    "tags": [
+      "Política fiscal",
+      "Economía"
+    ],
+    "mentions": [
+      {
+        "entity": "regla fiscal",
+        "type": "norma económica"
+      },
+      {
+        "entity": "gobierno petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "déficit fiscal",
+        "type": "indicador económico"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Ávila Martínez Ariel Fernando",
+    "session": "Abril-07-2026",
+    "quote": "Colombia tiene poco más de mil cien municipios de esos más o menos hay unos trescientos muy afectados por violencia a nivel rural a nivel urbano y en la vida real hoy lo que tenemos de esos trescientos municipios un grupo de más o menos cien ciento veinte que tienen una coadministración del crimen es decir que la ilegalidad administra parte del estado verbo y gracia al departamento de Aragua y esa crisis llegaba de varios años seis siete años de deterioro y no van a haber soluciones milagrosas Estamos proponiendo volver a crear una brigada de inteligencia militar eso vale dos billones de pesos y meter por lo menos 10 mil policías y 5 mil militares más eso vale una plata Mejora unos temas de equipamiento reformar el plan de vigilancias por cuadrantes crear fuerza de tarea de jurisdicción nacional contra organizaciones criminales unos ocho billones los vale eso y en una crisis fiscal por eso le digo hay que tomar decisiones pero no vamos a tener yo creo que Colombia no va a empeorar la seguridad como está pero no la va a mejorar rápidamente",
+    "summary": "Senador Ariel Ávila señala que unos 120 municipios colombianos sufren coadministración criminal, proponiendo una costosa reforma de seguridad que incluye una brigada de inteligencia militar y más personal, aunque reconoce limitaciones fiscales; advierte que la mejora será lenta pero necesaria.",
+    "start": 206.3,
+    "end": 310.5,
+    "tags": [
+      "Seguridad ciudadana",
+      "Política fiscal",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "municipios",
+        "type": "entidad territorial"
+      },
+      {
+        "entity": "brigada de inteligencia militar",
+        "type": "organismo militar"
+      },
+      {
+        "entity": "organizaciones criminales",
+        "type": "grupo ilegal"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Ávila Martínez Ariel Fernando",
+    "session": "Abril-07-2026",
+    "quote": "hay muchas organizaciones pero descohernadas la Unasur la OEA la ONU todas por como rueda suelta el presidente Donald Trump acaba de decir hace unas horas que a las ocho de la noche hora colombiana que es la misma hora del este en Estados Unidos podrá desaparecer Irán más o menos dice que una civilización se va a acabar en una amenaza nueva que hay el precio del petróleo está en ciento catorce dólares subiendo sigue cerrado el estrecho de Hormuz amenaza con que el Mar Rojo al frente de Yemen va a ser cerrado y se aproxime una crisis económica y Latinoamérica no ha reaccionado la Unasur no sirve la selag es un foro porque tomas decisiones de formas muy complejas con unanimidades totales la Can Mercosur no sirve y por tanto el próximo presidente presidente Colombia es muy parroquial en esto pero tendrá que asumir una política internacional de reconstruir organizaciones supranacionales",
+    "summary": "Senador Ariel Ávila critica la ineficacia de organizaciones internacionales latinoamericanas como UNASUR y Mercosur, destacando amenazas globales como las declaraciones de Trump sobre Irán y el alza del petróleo; urge al próximo presidente colombiano a reconstruir una política exterior proactiva.",
+    "start": 313.6,
+    "end": 375.2,
+    "tags": [
+      "Política internacional",
+      "Economía"
+    ],
+    "mentions": [
+      {
+        "entity": "Unasur",
+        "type": "organización internacional"
+      },
+      {
+        "entity": "Donald Trump",
+        "type": "líder extranjero"
+      },
+      {
+        "entity": "Irán",
+        "type": "país"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Ávila Martínez Ariel Fernando",
+    "session": "Abril-07-2026",
+    "quote": "Colombia va a vivir un proceso reformista muy grande decir si gana la derecha si gana el centro gana la izquierda va a haber reforma en la salud claro si gana la izquierda será de una forma si gana la derecha será de otra si la corte constitucional tumba la reforma pensional colombia va a haber reforma pensional gane quien gane entonces el país se va a ver abocado a un montón de reformas que van a caer sobre nosotros los congresistas y debemos llegar a algunos mínimos acuerdos sobre todo no va a haber acuerdos pero si unos mínimos acuerdos en materia de reforma la salud reforma pensional este congreso quedó muy fracturado este congreso que viene el dos mil veintiséis y requerimos de oposición y gobierno independientemente quién gane llegará un acuerdo mínimo sobre reforma la salud que va a ver o va a ver sobre reforma la educación porque además pues la gente no está teniendo hijos y pues va hay que hacer una reforma la educación de educación para la vida de más la ley ferroviaria la ley de jurisdicción agrada terminarla etcétera y si se pumba la reforma pensional habrá que tener una reforma pensional gane quien gane vuelvo y repito",
+    "summary": "Senador Ariel Ávila predice que Colombia enfrentará inevitables reformas en salud, pensiones y educación sin importar el resultado electoral, subrayando la necesidad de acuerdos mínimos en un Congreso fracturado para abordar estos desafíos sociales y legislativos.",
+    "start": 376.1,
+    "end": 441.4,
+    "tags": [
+      "Reformas sociales",
+      "Salud pública",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "corte constitucional",
+        "type": "órgano judicial"
+      },
+      {
+        "entity": "Congreso",
+        "type": "órgano legislativo"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Ávila Martínez Ariel Fernando",
+    "session": "Abril-07-2026",
+    "quote": "el arranque de este Congreso va a ser muy difícil Primero porque el gobierno que llega llega con una presión de no hacer pactos rápidos con congresistas después de todos los escándalos de corrupción que hay y segundo porque hay mucha gente nueva Y eso va a llevar mucho al sabotaje Entonces yo creo que va a haber una coalición de gobierno pero que en el transcurrido de los meses vamos a tener un congreso muy dinámico y de mucha pelea y discusión",
+    "summary": "Senador Ariel Ávila anticipa un inicio complicado para el nuevo Congreso debido a presiones anticorrupción y la entrada de muchos legisladores nuevos, pronosticando sabotaje inicial pero eventuales coaliciones dinámicas y debates intensos en la relación ejecutivo-legislativo.",
+    "start": 443.1,
+    "end": 477.2,
+    "tags": [
+      "Corrupción",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Congreso",
+        "type": "órgano legislativo"
+      },
+      {
+        "entity": "gobierno",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "González Villa Carlos Julio",
+    "session": "Abril-07-2026",
+    "quote": "hoy commemoramos el día mundial de la salud y es curioso que un día como este no tenga el impacto que debería tener Sin salud no hay vida sin salud no hay nada La salud es el bien preciado y el que deberíamos apreciar con mayor atención y con mayor gratitud estamos hablando de la salud física pero también de la salud mental la diabetes cuatro millones de economíanos padecen diabetes el gasto de bolsillo se está llegando hasta el sesenta y tres por ciento necesitamos un gran acuerdo nacional Esto no puede seguirse aplazando",
+    "summary": "Senador Carlos Julio González enfatiza la importancia del Día Mundial de la Salud, criticando la falta de conciencia sobre enfermedades como la diabetes y los altos gastos de bolsillo, y aboga por un acuerdo nacional urgente para reformar el sistema de salud colombiano.",
+    "start": 724.7,
+    "end": 941.6,
+    "tags": [
+      "Salud pública",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "día mundial de la salud",
+        "type": "evento"
+      },
+      {
+        "entity": "diabetes",
+        "type": "enfermedad"
+      },
+      {
+        "entity": "gasto de bolsillo",
+        "type": "indicador de salud"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "González Villa Carlos Julio",
+    "session": "Abril-07-2026",
+    "quote": "Existe una mejoría notable en materia de indicadores de salud en Colombia Hoy necesitamos un gran acuerdo nacional Esto no puede seguirse aplazando",
+    "summary": "El senador Carlos Julio González destaca avances en indicadores de salud pero urge un acuerdo nacional para no postergar más mejoras, subrayando la urgencia política de actuar.",
+    "start": 1075.3,
+    "end": 1082.6,
+    "tags": [
+      "Salud pública"
+    ],
+    "mentions": [
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "González Villa Carlos Julio",
+    "session": "Abril-07-2026",
+    "quote": "La semana anterior la plenaria del Senado probó el proyecto que está a punto de ser ley de la República que sería la nueva ley del adulto mayor que beneficiaría a cuantos abuelitos en ahora que están hoy en condiciones precarias en nuestro país y qué otras bondades tendría esa futura ley seis punto ocho millones de abuelitos de los cuales un porcentaje muy alto de ellos el veintisiete por ciento están en condiciones de extrema pobreza monetaria pero hay otros cuatro millones que son inactivos económicamente así que esto por lo menos debería beneficiar cuatro millones de adultos mayores unados de gratitud que tiene la sociedad con quienes envejecieron con quienes aportaron pero a quienes no reconocemos Esta ley que está para conciliación y próxima sanción presidencial tiene como objetivo visibilizar empoderar las políticas públicas de acompañamiento al envejecimiento de Colombia",
+    "summary": "El senador González promueve la nueva ley del adulto mayor, destacando que busca visibilizar y empoderar políticas públicas para enfrentar el envejecimiento poblacional, mientras denuncia la pobreza y abandono que sufren muchos ancianos en Colombia.",
+    "start": 1091.2,
+    "end": 1143.9,
+    "tags": [
+      "Reformas sociales",
+      "Salud pública"
+    ],
+    "mentions": [
+      {
+        "entity": "Senado",
+        "type": "cuerpo legislativo"
+      },
+      {
+        "entity": "ley del adulto mayor",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-07-2026",
+    "quote": "muchísimas gracias un saludo muy cordial a la Mesa Directiva del Congreso y le estoy pidiendo que si nos citan a las tres la sesión empiece a las tres porque llegamos aquí entonces cuando entramos el portero nos dice no es a las cuatro y después las cuatro se vuelven cinco y después las cinco se vuelven seis y eso no es serio",
+    "summary": "La senadora Avella critica la falta de puntualidad en el inicio de las sesiones del Senado, argumentando que los retrasos constantes afectan la seriedad del trabajo legislativo.",
+    "start": 1450.2,
+    "end": 1466.3,
+    "tags": [
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "Mesa Directiva del Congreso",
+        "type": "cuerpo legislativo"
+      },
+      {
+        "entity": "Senado",
+        "type": "cuerpo legislativo"
+      }
+    ],
+    "importance": 0.3
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-07-2026",
+    "quote": "No pues a mí sí me parece que la actitud de la mayoría del banco de la República que es de derecha está actuando como lo han hecho durante todos los gobiernos de la derecha en Colombia empobreciendo a los pobres y enriqueciendo a los ricos y un poquito que se bajen de su zona de confort los señores que hacen parte de la junta directiva del banco usted saben lo que sufre un empresario pequeño o mediano cuando tiene que hacer un préstamo en el banco ustedes como le van a poner semejante tasa de interés pero ustedes también consideran a los jóvenes que están pensando en adquirir una vivienda ustedes lo que están haciendo es contra la inversión y además contra los ciudadanos es una banca que está contra el pueblo",
+    "summary": "La senadora Avella acusa a la mayoría de derecha en la Junta Directiva del Banco de la República de tomar decisiones políticas en lugar de técnicas, al aumentar las tasas de interés, lo que empobrece a los más vulnerables y beneficia a los ricos, en oposición al gobierno actual.",
+    "start": 1481.4,
+    "end": 1524.6,
+    "tags": [
+      "Política fiscal",
+      "Banco de la República",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "Banco de la República",
+        "type": "organismo"
+      },
+      {
+        "entity": "Junta Directiva del Banco de la República",
+        "type": "organismo"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-07-2026",
+    "quote": "hay algunos que no les gusta que las concesiones sean a treinta años las quieren llevar a cuarenta y cinco mejor dicho lo que quieren es que la escrituremos el país a quienes hacen parte de los grandes consorcios de construcción de carreteras pero además no solamente las carreteras ahora se meten con los servicios públicos entonces son los que van a construir los acueductos los alcantarillados etcétera Eso es una vergüenza del proyecto el que han presentado y mañana nos vamos a ver Yo llevo la propuesta de archivar semejantes perpétuo de proyecto de ley que ha presentado también entre otros muchos del Centro Democrático",
+    "summary": "Avella se opone firmemente al proyecto de ley que extiende las concesiones de APP de 30 a 45 años, acusando a sus promotores de buscar entregar el país a grandes consorcios de construcción, y anuncia que propondrá archivar el proyecto.",
+    "start": 1768.0,
+    "end": 1786.8,
+    "tags": [
+      "Infraestructura",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "proyecto trescientos once",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "APP",
+        "type": "mecanismo"
+      },
+      {
+        "entity": "Centro Democrático",
+        "type": "partido"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Henríquez Pinedo Honorio Miguel",
+    "session": "Abril-07-2026",
+    "quote": "Muy poco que festejar no hay citas no hay medicamentos los pacientes cada día son víctimas de una imposición ideológica que no busca solucionar los problemas sino irlos acrecentando vimos esta semana cómo falleció un niño por falta de atención suméle lo que pasó en cúcuta la madre que buscando medicamentos fallece y toda la crisis que han originado la crisis explícita que tiene al sistema de salud colapsado",
+    "summary": "El senador Henríquez denuncia la crisis del sistema de salud, con falta de citas y medicamentos, atribuyéndola a una imposición ideológica del gobierno que agrava los problemas en lugar de resolverlos.",
+    "start": 1953.2,
+    "end": 1974.3,
+    "tags": [
+      "Salud pública",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "sistema de salud",
+        "type": "sistema"
+      },
+      {
+        "entity": "cúcuta",
+        "type": "ciudad"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Henríquez Pinedo Honorio Miguel",
+    "session": "Abril-07-2026",
+    "quote": "el desastre en materia de salud el desastre en materia de seguridad la corrupción que usted muy bien ha dicho la infraestructura del país que requiere ser revitalizada las vías terciarias Colombia no avanza nos hemos quedado en el ostracismo hay que avanzar también en la economía colombiana que requiere que se transite por un sendero de estabilidad de confianza para que la inversión llegue a la nación colombiana y se pueda generar mayor empleo formal",
+    "summary": "Henríquez enumera los principales desafíos que debe enfrentar el próximo gobierno, incluyendo salud, seguridad, corrupción, infraestructura y economía, enfatizando la necesidad de estabilidad para atraer inversión y generar empleo formal.",
+    "start": 2074.4,
+    "end": 2100.4,
+    "tags": [
+      "Salud pública",
+      "Seguridad ciudadana",
+      "Corrupción",
+      "Infraestructura",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Colombia",
+        "type": "país"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Daza Guevara Robert",
+    "session": "Abril-07-2026",
+    "quote": "bancada del Pacto Histórico Ellos hoy en la comisión Cesa adelantaron un importante debate control político sobre la situación del siniestro aéreo del avión Hércules de la fuerza aérsopalcolomiana siniestrado el pasado veintitrés de marzo en Puerto Leguísimo Butumayo senador qué pasó hoy en el debate qué respuestas dieron los altos funcionarios citados bueno muy buenas tardes Carlos buenas tardes a todos los que en este momento nos miren por el canal congreso creo que las respuestas que se dio por parte del ministerio de defensa de la aeronautica civil y de la ministra de transporte fueron contundentes respecto de este siniestro no de este lamentable accidente donde perdieron la vida más de sesenta y tres sí de nuestros soldados no que pues o sea nuevamente nos solidarizamos y estamos con estos jóvenes no que están defendiendo que están protegiéndonos de día y de noche el es un tema que está en investigación que tiene elementos de tipo técnico de tipo jurídico administrativo y que son procesos que se van llevando con mucha rigurosidad por parte del gobierno nacional y por parte de las entidades competentes todavía no hay una respuesta todo lo que se diga son especulaciones y mientras no se presente el informe inicial que tendrá que presentarse lo bueno en el lapso de un mes a partir de la realización del siniestro se tendrá una idea inicial de cuáles fueron las causas del accidente de este avión pero luego o sea ya la comisión de investigación sobre todo de tipo técnico tiene ya mucho más tiempo para de una vez o sea presentar un informe de las causas reales que se presentaron por las cuales se presentó este siniestro el llamado que se hizo en la comisión es que no se trate de utilizar este accidente lamentable para hacer política en el momento que estamos haciendo la coyuntura política que no se busquen los culpables o sea que se trate de buscar las causas y como estado se resuelvan las causas para que no se vuelva a presentar este tipo de accidentes porque se han presentado accidentes se vuelve y se presenta otro accidente tiene que estar pasando algo y eso es una responsabilidad de estado de cualquier gobierno que esté en el momento y que hay que resolverlo senador pero en el tema de mantenimientos y demás temas técnicos que era una preocupación que se teía al principio una posible hipótesis qué dijeron los funcionarios no o sea yo creo que la fuerza aérea espacial o sea todas las unidades de la policía del ejército cuando se sale a campo están en excelente estado de digamos o sea de reparación o sea de mantenimiento el tienen tienen personal experto que todo el tiempo está haciendo la vigilancia y ellos no van a permitir que una nave salga a campo teniendo fallas técnicas yo creo que hay que hay que creerle a nuestra fuerza a nuestra fuerza militar a nuestra fuerza armada y y podemos apartimos nosotros de eso porque los accidentes los siniestros se pueden presentar en cualquier momento pero yo quiero comentarle otra",
+    "summary": "Robert Daza Guevara resume un debate de control político sobre el siniestro del avión Hércules, expresando solidaridad con los soldados fallecidos y confianza en los protocolos de mantenimiento militar, mientras advierte contra la politización y enfatiza la necesidad de una investigación rigurosa.",
+    "start": 2444.8,
+    "end": 2665.9,
+    "tags": [
+      "Seguridad ciudadana",
+      "Infraestructura",
+      "Paz y víctimas"
+    ],
+    "mentions": [
+      {
+        "entity": "Pacto Histórico",
+        "type": "partido"
+      },
+      {
+        "entity": "avión Hércules",
+        "type": "aeronave"
+      },
+      {
+        "entity": "fuerza aérea colombiana",
+        "type": "institución militar"
+      },
+      {
+        "entity": "Puerto Leguísimo",
+        "type": "lugar"
+      },
+      {
+        "entity": "Ministerio de Defensa",
+        "type": "ministerio"
+      },
+      {
+        "entity": "Aeronáutica Civil",
+        "type": "organismo"
+      },
+      {
+        "entity": "Ministra de Transporte",
+        "type": "cargo"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Daza Guevara Robert",
+    "session": "Abril-07-2026",
+    "quote": "situación Carlos es que En este debate de control político otro tema fue también las inversiones para hacer en los aeropuertos y todo lo que tiene que ver con la seguridad aérea en nuestro país Los aeropuertos necesitan unas inversiones bastante importantes y cada que se hacen estos debates se está exigiendo al gobierno nacional que invierta en solucionar estos problemas que se presentan no por ejemplo el aeropuerto de Rio Negro el de Armenia del eje cafetero de sincelejo y de otros aeroportos otros aeropuertos más entre ellos el aeropuerto de Puerto Liguismo donde sucedió el accidente pero el llamado de atención también es para los senadores y senadoras de la oposición porque cuando se presenta el presupuesto General de la Nación que allí va incluido el presupuesto para hacer estas obras le le bajan le bajan el porcentaje de presupuesto y también o sea sucedió ahora en el año en el año pasado que no aprobaron la ley de financiamiento que con la ley de financiamiento también es para resolver inversiones de este tipo Se pide que el gobierno haga inversiones pero no se le está probando el presupuesto acá en el Congreso de la República y yo creo que ese es un llamado de atención que hay que hacer porque si se pide pues hay que darle los medios al gobierno las herramientas financieras para que se pueda resolver estas necesidades que se tienen a lo largo y ancho del país no hay coherencia decía usted durante su intervención por parte de algunos sectores de oposición senado roben muchas gracias bueno muchísimas gracias bendecida tarde para todos y todas",
+    "summary": "Critica a senadores de oposición por reducir asignaciones presupuestales para infraestructura aeroportuaria mientras exigen más inversión gubernamental en seguridad aérea, señalando incoherencia en sus políticas fiscales.",
+    "start": 2666.0,
+    "end": 2773.0,
+    "tags": [
+      "Política fiscal",
+      "Infraestructura",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "aeropuertos",
+        "type": "infraestructura"
+      },
+      {
+        "entity": "presupuesto General de la Nación",
+        "type": "presupuesto"
+      },
+      {
+        "entity": "ley de financiamiento",
+        "type": "ley"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Congreso de la República",
+        "type": "legislativo"
+      },
+      {
+        "entity": "senadores de la oposición",
+        "type": "legislador"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Carreño Castro José Vicente",
+    "session": "Abril-07-2026",
+    "quote": "Mira lo que queremos es que el Congreso en pleno le reconozcamos esa valentía esa gallardía que en medio de las dificultades que en medio del dolor que ya estamos viviendo los colombianos por ese sinistro aéreo en Puerto Lujismo en el Putumayo vimos como la solidaridad de sus habitantes vimos como hombres y mujeres corrían sin importar el riesgo auxiliar a nuestros héroes de la patria a nuestros soldados y las fuerzas militares que desafortunadamente tuvieron ese accidente y gracias a ello se logró salvar muchas más vidas y desafortunadamente se perdieron un buen número de vidas de esos hombres que tanto le sirven al país pero gracias a la solidaridad a la roja la valentía de los habitantes de Puerto Luisamo pudieron Salvarlos pudieron auxiliarlos en medio de cualquier situación de cualquier diferencia Allí se veo lo que es el sentir del pueblo colombiano representado hoy en los habitantes de Puerto Leguísamo Por eso queremos que el Congreso en pleno condecoremos a sus habitantes y a sus autoridades",
+    "summary": "Propone que el Senado reconozca formalmente a la comunidad de Puerto Leguísimo por su valentía y solidaridad al rescatar soldados tras el accidente aéreo, presentándolo como un gesto de aprecio nacional.",
+    "start": 2942.5,
+    "end": 3011.2,
+    "tags": [
+      "Paz y víctimas",
+      "Seguridad ciudadana"
+    ],
+    "mentions": [
+      {
+        "entity": "Puerto Leguísimo",
+        "type": "lugar"
+      },
+      {
+        "entity": "Putumayo",
+        "type": "departamento"
+      },
+      {
+        "entity": "soldados",
+        "type": "fuerzas militares"
+      },
+      {
+        "entity": "Congreso",
+        "type": "legislativo"
+      },
+      {
+        "entity": "héroes de la patria",
+        "type": "concepto"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Carreño Castro José Vicente",
+    "session": "Abril-07-2026",
+    "quote": "el cambio de tema sigue lamentablemente los ataques con drones en contra de la fuerza pública en el Tarragona norte de Santander vimos un último episodio qué hacer para contrarrestar esa nueva modalidad de los terroristas hombre qué hacer yo yo creo que ya este gobierno afortunadamente le quedó poco tiempo porque le quedó grande lo que hizo fue darle concesiones a la guerrilla a la fara lelen a las bandas criminales no se dedicó a golpearlos se dedicó fue a nombrar los gestores de paz a no permitir que las autoridades los capturen a eliminar las órdenes de capturas o a suspenderlas mejor las órdenes de captura que tenían contra todo esto pandío contra todo estos invergüenzas como el calacal al mordisco y demás y entonces esto lo que ha generado es que la la subversión los grupos terroristas hayan cogido más fuerza se han tomado más confianza y a la fuerza pública debilitada por eso se han presentado tantas situaciones ha sido en el periodo de gobierno donde más se han presentado ataques a la fuerza pública ataques a la a la sociedad civil y por eso el país se está hoy descoordenado totalmente aquí lo que necesitamos es un gobierno que le ponga mano firme que le ponga la contundencia de la fuerza pública nuestra fuerza pública está bien preparada para neutralizarlos para enfrentarlos pero el gobierno tiene que dar las herramientas y no debilitarlos esa ha sido la problemática que hemos tenido en los últimos tiempos ustedes saben que se disparó el nacional de estos invergüenzas en alrededor de ochocientos municipios han llegado en los últimos épocas se ha presentado más acciones terroristas que ningún otro gobierno se han incrementado las a doscientos cincuenta mil más el cultivo de la coca que es el combustible para estos terroristas y vemos cada día como el presidente Gustavo Petro lo que hace es dar de concesiones suspender órdenes de captura y esto demuestra muchísimo uno ve al bandito del Calaca accionando contra fuerza pública contra población civil estacionando secuestrando y vimos como el gobierno hace Alrededor de dos años cuando fue capturado por la fuerza pública en Flagrancia como no permitieron que se judicializara como tenía que ser porque lo tenía nombrado dentro de uno de los líderes dentro del supuesto proceso que lleva con las barras Es una canalla con el país Tú nunca se había visto Senor gracias y muy bien por esa iniciativa reconocida a las comunidades de Puerto Leguísimo",
+    "summary": "Critica duramente al gobierno de Gustavo Petro por hacer concesiones a grupos guerrilleros, suspender órdenes de captura y debilitar a la fuerza pública, lo que atribuye al aumento de ataques terroristas y desorden en el país.",
+    "start": 3120.2,
+    "end": 3276.9,
+    "tags": [
+      "Seguridad ciudadana",
+      "Corrupción",
+      "Paz y víctimas"
+    ],
+    "mentions": [
+      {
+        "entity": "Gustavo Petro",
+        "type": "presidente"
+      },
+      {
+        "entity": "guerrilla",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "FARC",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "bandas criminales",
+        "type": "grupo criminal"
+      },
+      {
+        "entity": "fuerza pública",
+        "type": "institución de seguridad"
+      },
+      {
+        "entity": "Calaca",
+        "type": "líder guerrillero"
+      },
+      {
+        "entity": "coca",
+        "type": "cultivo ilícito"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Hurtado Sánchez Norma",
+    "session": "Abril-07-2026",
+    "quote": "bueno muchísimas gracias muy buenas tardes a los amigos que están pendientes en sus hogares de la previa a través de todos los canales digitales y televisivos del Congreso de la República Una hora cómo están las cosas en materia global en lo que se refiere a la salud y en nuestro país exactamente Bueno la salud es bienestar la salud es vida la salud es la posibilidad que tenemos todos los seres humanos de tener una una vida con calidad y especialmente una vida saludable Lo primero seguir impulsando las campañas de autocuidado el deporte la buena alimentación los buenos hábitos alejarse del alcohol de las sustancias psicoactivas y tener la posibilidad de tener una vida emocionalmente y con una salud mental estable es el ideal esa es la primera etapa después que todos estemos en los programas preventivos y predictivos en los programas en los que la salud tiene que tener digamos que la posibilidad de prevenir enfermedades que tienen solución cuando son detectadas a tiempo pero hoy en este día mundial de la salud tenemos que hacer referencia a que los pacientes crónicos los pacientes de alto costo y las enfermedades huérfanas hoy son una realidad también reconocer en el día mundial de la salud que la población colombiana envejece y en la medida que la población colombiana envejece empiezan las dolencias Y empiezan también la necesidad de acudir a más especialistas de tener medicina más oportuna y adicionalmente tecnologías que garanticen una buena calidad de vida Y eso es lo que hoy reclamamos muchos colombianos al gobierno nacional al Ministerio de Salud que Colombia pueda estar hoy conmemorando el día mundial de la salud pero garantizando la vida y eso ha sido el llamado que he hecho a través de mis redes sociales que hago hoy a través de esta previa para decirles muchos miles de colombianos hoy necesitan acompañamiento las cps intervenidas están negando servicios están negando medicamentos están negando los pagos a una red prestadora y hay un gobierno que esto no habla y eso es una realidad que vive los colombianos el gasto de bolsillo volvió a convertirse en una realidad qué es el gasto de bolsillo es aquel dinero que usted gasta para comprar un medicamento para hacer un tratamiento para conseguir la ayuda que hoy sale de su propio recurso y que anteriormente se lo daba la EPS hoy eso está fallando en nuestro país y es una realidad pero también quiero hacer un llamado ustedes saben que yo he venido evidenciando dos cosas Una el tema de vapioadores dos el tema de biopolímeros y me preguntaste fuera de cámaras por Geraldine una mujer que tuvo un mal momento Tomó una mala decisión y fue aplicarse biopolímeros Los biopolímeros están en los barrios están en los consultorios están en manos inescrupulosas que ofrecen tratamientos de belleza que lastimosamente llevan es a una condena a una mala calidad de vida y a la muerte de muchas colombianas y colombianos Comunidad también el EGT vehículo más Hoy les quiero hacer ese llamado Geraldina y muchas en todo el territorio nacional pidiendo ayuda a las EPS para que puedan tener sus medicamentos que calman el dolor yeraldin lleva 13 años con dolor y la EPS ha sido indiferente a pesar de que hay fallos judicial de por medio senadora y la nueva EPS sigue como la canción sigue asordando bueno como tantas pacientes que tienen fallos de tutela tienen desacatos pero las cps incluida la nueva cps no acatan las decisiones judiciales Geraldino aclama por una tensión aclama por unos medicamentos y también aclama porque le garanticemos desde todas las instancias una mejor calidad de vida Es una mujer que merece vivir y es una mujer que representa a muchas víctimas de los polímeros en todo el territorio nacional Senador en temas legislativos qué futuro le ve a la reforma de la salud Crees que revive y con esa apelación que está pendiente por tramitarse aquí en el Congreso Bueno vamos a esperar una decisión responsable por parte de quienes han sido designados en la comisión hoy si cuando se tomó la decisión en la comisión séptima de archivar no habían los recursos necesarios para sacar adelante este proyecto hoy mucho menos hay la posibilidad de sustentar ante la plenaria del senado de la república una estabilidad y una sostenibilidad fiscal para ese proyecto ustedes lo saben lo hemos venido argumentando se necesitan muchas fuentes de financiación se necesita reconocer una deuda que se tiene con la red pública y se necesita colocar algo sobre el tintero y lo dejan amortizado hoy ante las cámaras del Congreso qué pasa con los auditores de las CPS intervenidas por el gobierno nacional que están gozando el sesenta el setenta el ochenta por ciento de la facturación de las CPS y no tienen ningún soporte es una estrategia de debilitamiento atentos auditores vamos a llamarlos a control político a través de las cps que ustedes hoy están auditando En la hora por último gusedar aparte del nuevo Congreso que se instalará el próximo 20 de julio que le augura al nuevo poder legislativo y su relacionamiento con el gobierno Bueno no ya hemos visto yo diría que muchos momentos del Congreso Un momento cuando se trabaja de una manera más comunada en beneficio de una población colombiana Hemos visto hoy un con una un gobierno que señala estigmatiza agrede pone nuestro nombre en las tarimas públicas con el propósito de señalarnos y bueno nosotros seguiremos de la mano de la comunidad yo vine aquí no a representar un gobierno vengo a representar ciento treinta y seis mil colombianos que le dieron el sí a Norma Hurtado y que le dicen vuelve a su curul y siga representándonos",
+    "summary": "En el Día Mundial de la Salud, la senadora Norma Hurtado denuncia la crisis del sistema de salud colombiano, incluyendo la negación de servicios por EPS intervenidas, gastos de bolsillo y casos como el de Geraldina afectada por biopolímeros, y aboga por una reforma fiscalmente sostenible mientras condena las auditorías gubernamentales como estrategia de debilitamiento.",
+    "start": 3381.8,
+    "end": 3765.0,
+    "tags": [
+      "Salud pública",
+      "Reformas sociales",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "EPS",
+        "type": "entidad de salud"
+      },
+      {
+        "entity": "Ministerio de Salud",
+        "type": "ministerio"
+      },
+      {
+        "entity": "Geraldina",
+        "type": "paciente"
+      },
+      {
+        "entity": "biopolímeros",
+        "type": "sustancia peligrosa"
+      },
+      {
+        "entity": "auditores de CPS",
+        "type": "auditor"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Congreso",
+        "type": "legislativo"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Andrade Serrano Esperanza",
+    "session": "Abril-07-2026",
+    "quote": "Buenas tardes Carlos muy buenas tardes y buenas tardes a todos los oyentes y televidentes sen ahora sus recomendaciones para los colombianos para que cuiden su salud para que tomen hábitos saludables a propósito del día mundial de la salud Bueno los colombianos sabemos que estamos viviendo una grave crisis en la salud Para ellos un mensaje hoy en el día mundial de la salud a cuidarnos Obviamente tenemos un gran compromiso desde el Congreso de la República de poder sacar adelante una reforma a la salud que necesiten los colombianos Así que esperamos si no fue en este periodo que sea en el próximo periodo Pero la salud es lo más importante para un ser humano Así que nuestra recomendación es cuidarnos en la salud en los buenos hábitos alimenticios en el deporte en la disciplina en todo lo que nos permita mantenernos con una buena salud Así de cen ahora sobre hábitos saludables y cultura de prevención es la clave verdad claro lo más importante es la prevención de las grandes enfermedades y esto lo da que los humanos los seres podamos cuidarnos en los hábitos alimenticios en el deporte en la cultura que tengamos para alimentarnos definitivamente",
+    "summary": "En el Día Mundial de la Salud, la senadora conservadora llama a los colombianos a adoptar hábitos saludables y cultura de prevención, reconociendo la grave crisis del sistema y el compromiso del Congreso con una reforma, aunque esta podría demorarse.",
+    "start": 3904.3,
+    "end": 3982.1,
+    "tags": [
+      "Salud pública",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Congreso de la República",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Andrade Serrano Esperanza",
+    "session": "Abril-07-2026",
+    "quote": "Bueno en política todo puede pasar En este momento ya hay una comisión especial para estudiar el recurso de apelación que presentó el senador Fabián Díaz de la comisión séptima Esperemos saber los resultados en nuestro caso Personal siempre hemos estado dispuestos a discutir la salud porque",
+    "summary": "La senadora señala que ya hay una comisión especial estudiando el recurso de apelación presentado por el senador Fabián Díaz, y espera que se defina pronto el futuro de la reforma a la salud revivida.",
+    "start": 3992.0,
+    "end": 4011.2,
+    "tags": [
+      "Salud pública",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "senador Fabián Díaz",
+        "type": "legislador"
+      },
+      {
+        "entity": "comisión séptima",
+        "type": "comisión legislativa"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Andrade Serrano Esperanza",
+    "session": "Abril-07-2026",
+    "quote": "ahora pasado mañana se celebra en nuestro país el día nacional de las víctimas y la solidaridad con ellas usted personalmente ve que la ley catorce cuarenta y ocho del dos mil once ha venido funcionando para subsanar y indignizar también ese universo de víctimas que ya supera los diez millones Carlos hay un avance en esta ley pero falta mucho la ley está pero el presupuesto no lo hay mientras no haya presupuesto para indignizar las víctimas es una letra muerta lo que tiene esa ley yo exijo a este gobierno y a los próximos que de verdad prioricen las víctimas de nuestro país que son muchas las víctimas llevan de verdad en su vida con su familia un acontecimiento muy triste y hay que resarcirlas y la única manera de resarcirlas es proporcionándoles recursos",
+    "summary": "En vísperas del Día Nacional de las Víctimas, la senadora critica que la Ley 1448 de 2011 no cuenta con presupuesto suficiente, convirtiéndola en 'letra muerta', y exige al Gobierno y futuros gobiernos priorizar la reparación de más de 10 millones de víctimas.",
+    "start": 4019.8,
+    "end": 4069.4,
+    "tags": [
+      "Paz y víctimas"
+    ],
+    "mentions": [
+      {
+        "entity": "Ley 1448 de 2011",
+        "type": "ley"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Andrade Serrano Esperanza",
+    "session": "Abril-07-2026",
+    "quote": "Se da ahora hablando de temas de agenda legislativa usted recientemente lideró en la comisión septima la ponencia del proyecto de una tercera opción para la disposición final de cada agua es ecológicamente más amigable y se denomina hidrólicis alcalina qué es ese término que la gente muchos desconocen Bueno el proyecto finalmente terminó denominándose despedida ecológica pero consiste en que hay una sustancia especial que se llama hidrólicis alcalina y que este nuevo método para poder obviamente descomponer un cadáver es una opción que los colombianos van a poder tener aparte de una cremación aparte de enterrar como siempre es la costumbre que se puede hacer a través de la hidrólisis alcalina esto es más amigable con el medio ambiente recursos menos costoso y sobre todo en el tema de energía pues realmente no se necesita porque al cadáver lo meten en una cámara simplemente le ponen la sustancia de hidrólices y el cadáver se va descomponiendo Esto lo tendría que regular el Ministerio de Salud y el Ministerio de Ambiente senador Ya tenemos visto bueno una vez que salga la ley por supuesto hay que regularlo para sobre todo poner en funcionamiento estas cámaras especiales que puedan ser autorizadas en las secretarías de salud",
+    "summary": "La senadora explica su liderazgo en un proyecto de ley que introduce la hidrólisis alcalina como método ecológico para disposición de cadáveres, una opción más amigable con el medio ambiente y menos costosa que la cremación o entierro, y que requiere regulación del Ministerio de Salud y Ambiente.",
+    "start": 4075.1,
+    "end": 4159.0,
+    "tags": [
+      "Salud pública",
+      "Infraestructura"
+    ],
+    "mentions": [
+      {
+        "entity": "proyecto de ley de despedida ecológica",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "Ministerio de Salud",
+        "type": "ministerio"
+      },
+      {
+        "entity": "Ministerio de Ambiente",
+        "type": "ministerio"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Silva Idrobo Ferney",
+    "session": "Abril-07-2026",
+    "quote": "rápidamente buenas tardes consejos para la gente en Colombia sobre el alto cuidado el ejercicio físico y hábitos saludables a propósito del día mundial de la salud y no solamente la salud física sino la salud mental en un país donde todos llevamos una vida agitada lleno de preocupaciones es importante tener tiempo para meditar para reflexionar para descansar para compartir en familia porque eso también hace parte de la salud ese contacto y ese afecto con los seres queridos indudablemente hay que hacer las medidas preventivas de una buena alimentación hacer ejercicio hacer los controles médicos que se requieren y todo lo demás pero la salud es un aspecto mucho más integral que va más allá de la tensión o de la precaución pero también hay elementos importantes un buen acueducto que requiere en nuestros países y nuestras comunidades un servicio agua potable que nos permita nosotros continuar con la salud es supremamente vital en este día tan importante como ese día la salud",
+    "summary": "El senador enfatiza que la salud abarca tanto lo físico como lo mental, recomendando tiempo para la meditación, el descanso y la familia, y subraya la necesidad de infraestructura básica como agua potable para una salud integral.",
+    "start": 4415.8,
+    "end": 4475.6,
+    "tags": [
+      "Salud pública"
+    ],
+    "mentions": [],
+    "importance": 0.4
+  },
+  {
+    "congressman_name": "Silva Idrobo Ferney",
+    "session": "Abril-07-2026",
+    "quote": "Que llamado a decirle al Senado de la República para que dé trámite a la apelación de la revivida reforma de la salud eso lo vamos a hacer vamos a dejar la constancia hoy de que por favor de una vez por todas se define la apelación de la reforma la salud que fue un día en la comisión séptima de senado y esperamos que de manera despedita y contrató pronóstico se pueda definir de manera clara cuál va a ser la comisión y si se va a aceptar la apelación comunal que creemos no debe haber ninguna objeción para ello creemos que eso es una deuda que tiene el Congreso la República con la salud de todos los colombianos",
+    "summary": "El senador urge al Senado a definir de una vez por todas la apelación de la reforma a la salud revivida, considerándola una deuda pendiente con los colombianos.",
+    "start": 4475.6,
+    "end": 4508.4,
+    "tags": [
+      "Salud pública",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Senado de la República",
+        "type": "institución"
+      },
+      {
+        "entity": "Congreso de la República",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "González Villa Carlos Julio",
+    "session": "Abril-07-2026",
+    "quote": "Señor Presidente Honores senadores hoy se conmemora el Día Mundial de la Salud Y es un día que llama a una profunda reflexión sobre uno de los elementos condiciones más importantes en la vida que es la salud Sin salud no hay vida Esta es una discusión compleja es técnica es una discusión que además para requerir aplicar consensos buscar conciliar diferentes posturas pero tener un plan de choque sobre lo que significa hoy la crisis por la que está atravesando la salud de los colombianos Los indicadores son alarmantes los hemos venido mencionando una y otra vez cerca de cuatro millones de colombianos padeciendo diabetes el setenta y cinco por ciento de ellos o no están tratados o están mal tratados solamente un millón de cuatro están adecuadamente tratados con lo que eso significa Los enormes problemas del cáncer que una y otra vez aquí hemos mencionado con motivo del año legislativo lucha contra el cáncer 114 mil diagnósticos 520 mil personas padeciéndolos los enormes problemas relacionados con patologías que vienen creciendo y aumentando incluyendo los de la salud mental que también una y otra vez aquí en la plenaria del Senado hemos tratado de discutir con ustedes Mientras que se logra una reforma que en muchos aspectos podemos compartir se hace necesario un plan de choque para evitar lo que está sucediendo en la nación Por eso nos estamos preguntando sobre el abastecimiento de medicamentos Un reinforme de la Defensoría del Pueblo que nos ha suministrado nos dice que los incrementos de reclamos en salud registrados en la Super Salud han aumentado el treinta y cuatro punto dos por ciento en el dos mil veinticinco de los cuales seiscientos ochenta y cinco mil reclamos es por medicamentos Así como hay un incremento de treinta y cuatro punto uno por ciento por tutelas en salud de enero del dos mil veinticuatro a julio del dos mil veinticinco y un millón de quejas relacionadas con la salud de los colombianos El costo de bolsillo ha aumentado a una condición medida en el año dos mil veinticuatro de catorce punto cinco millones de pesos de los cuales el gasto bolsillo directo en los hogares son mil desde Colombia ha aumentado el 63 por ciento mostrando una crisis absolutamente importante y una crisis que requiere una intervención de choque eso pasa como cuando estamos en cuidados intensivos porque el paciente se accidentó porque hay que amputarlo porque se cayó hay muchas razones pero hoy requerimos un gran consenso nacional en donde el cálculo no sea electoral no sea político no sea partidista sino sea el centro que debería ser un modelo de salud la dignidad y la humanización Senador un minuto para que termine de lo que significa el ser humano Todos estos indicadores y muchos más que tenemos nos obligan a repensar qué está pasando con la superintendencia de salud el alcalde la rigurosidad de sus decisiones las EPS intervenidas los criterios los resultados las condiciones en las cuales están dando atención de salud a los colombianos el Instituto Nacional de Salud y su capacidad técnica limpima y su desempeño lo que está pasando con Los medicamentos en Colombia los hospitales públicos asignados Yo una vez más señor Presidente queridos colegas desde una visión propositiva constructiva y sincera llamamos un gran acuerdo nacional por la salud de los colombianos en el día mundial de la salud Gracias Presidente",
+    "summary": "El senador presenta indicadores alarmantes de la crisis en salud —como diabetes, cáncer, salud mental, aumento de reclamos y gasto de bolsillo— y llama a un gran acuerdo nacional que trascienda cálculos políticos, priorizando la dignidad y humanización del sistema.",
+    "start": 4651.2,
+    "end": 4896.1,
+    "tags": [
+      "Salud pública",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Defensoría del Pueblo",
+        "type": "organismo"
+      },
+      {
+        "entity": "Superintendencia de Salud",
+        "type": "organismo"
+      },
+      {
+        "entity": "EPS",
+        "type": "entidad de salud"
+      },
+      {
+        "entity": "Instituto Nacional de Salud",
+        "type": "instituto"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "García Turbay Lidio Arturo",
+    "session": "Abril-07-2026",
+    "quote": "Bueno antes de continuar quiero dejarles el mensaje claro a la honorable plenaria del Senado que esta semana trabajaremos martes miércoles y jueves que el jueves es 9 de abril y nos corresponde por obligación estar acompañando a las víctimas de este país celebrando el día que se escogió aquí en el Congreso de la República para ellos entonces para que estén pendientes de tickets y todo que no es para miércoles sino para Jueves en la tarde en la noche como ustedes quieran Muchas gracias Continuamos con las constancias",
+    "summary": "El presidente Lidio García informa que la plenaria trabajará martes, miércoles y jueves, y recuerda que el jueves 9 de abril deben acompañar a las víctimas en el Día Nacional de las Víctimas.",
+    "start": 4898.6,
+    "end": 4938.6,
+    "tags": [
+      "Paz y víctimas"
+    ],
+    "mentions": [
+      {
+        "entity": "Congreso de la República",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.2
+  },
+  {
+    "congressman_name": "Muñoz León Fredy",
+    "session": "Abril-07-2026",
+    "quote": "Muchas gracias señor presidente Colombia tiene que estar enterada toda Colombia de lo que está pasando en Medellín Álvaro Uribe primero manda a sus energúmenos con sus bates a golpear a la gente y luego llega Fico y manda a los agentes de seguridad a golpear a la gente con bolillos y con puños pongamos el video por favor vean este video ... Vean vean no son los policías no son los policías ... eso no fueron los policías los que estaban maltratando a civiles eran los agentes de seguridad y el orden del municipio de Medellín del alcaldía de Federico Gutierrez Esta es la manera como están promoviendo los agentes de seguridad y el orden así empezaron las convivir en Antioquia y ustedes saben compañeros y compañeras colegas en qué se convirtieron las convivir en paramilitarismo esa historia no la queremos volver a repetir esta historia la queremos dejar en el pasado pero claro el gobernador de Antioquia y el alcalde de Medellín quieren seguir promoviendo este tipo de prácticas ... Yo si le quiero hacer un llamado a la procuraduría una investigación profunda al señor Federico Gutierrez Al secretario de seguridad del municipio de Medellín Manuel Villamegía porque aquí lo que están haciendo con estos agentes de seguridad y del orden Es sustituyendo a la fuerza pública y sustituir la fuerza pública es la parapoliciación y esto no va a salir bien Esto se va a convertir en paramilitarismo y Antioquia y Colombia no quieren más eso Antioquia y Colombia quieren la paz quieren justicia y quieren el respeto por los derechos humanos Gracias presidente",
+    "summary": "El senador denuncia que agentes de seguridad del municipio de Medellín, bajo órdenes del alcalde Federico Gutiérrez, golpearon a civiles, advirtiendo que esta sustitución de la fuerza pública puede derivar en paramilitarismo, y pide una investigación a la Procuraduría.",
+    "start": 4953.2,
+    "end": 5152.4,
+    "tags": [
+      "Seguridad ciudadana",
+      "Paz y víctimas"
+    ],
+    "mentions": [
+      {
+        "entity": "Álvaro Uribe",
+        "type": "expresidente"
+      },
+      {
+        "entity": "Federico Gutiérrez",
+        "type": "alcalde"
+      },
+      {
+        "entity": "Manuel Villamegía",
+        "type": "secretario de seguridad"
+      },
+      {
+        "entity": "Procuraduría",
+        "type": "organismo"
+      },
+      {
+        "entity": "Medellín",
+        "type": "municipio"
+      },
+      {
+        "entity": "Antioquia",
+        "type": "departamento"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Moreno Hurtado Gustavo Adolfo",
+    "session": "Abril-07-2026",
+    "quote": "Yo desde Zacurul quiero decir que no todas las ideas que tengo un alcalde o un alcalde son buenas ideas y que tienen cabida en nuestra realidad social yo lo digo por lo que está pasando en la alcaldía de Bogotá hoy hay una violencia ciudadana muy grande cerca de 60 casos de violencia tres de casos de violencia tres casos por hora y hoy la alcaldía quiere implementar Que un ciudadano que cometa una infracción de tránsito en esta ciudad cualquier ciudadano con su celular puede reportar una infracción de tránsito si oílas La ciudadanía no respeta a las autoridades de tránsito Ahora van a generar una guerra civil en la ciudad en la capital del país donde una persona con un celular puede reportar una infracción de una persona mal parqueada de una persona que cometa una infracción de tránsito en esta ciudad eso no salva vidas hoy convirtieron muchas veces la el año pasado entre el dos mil veinticuatro y dos mil veinticinco han generado cerca de cuatrocientos mil fotomultas generando medio millón de pesos quinientos mil millones de pesos de ingresos a causa de una caja facturadora como la Fotomultas y ahora quieren generar otra caja facturadora a costillas de los ciudadanos de Bogotá de cerca de 10 millones de ciudadanos que tiene esta ciudad de que cualquier ciudadano lo conviertan en sapo o lo conviertan en reportar infracciones de tránsito y eso a nadie le va a gustar hoy para eso están las autoridades para eso está la policía para eso están los agentes de tránsito en la ciudad de Bogotá y hoy desde esta curul le pido a la alcaldía de Bogotá que esas buenas ideas muchas veces están apartadas de la real realidad social y lo que va a generar es más violencia más víctimas y más caos en la ciudad como las riñas y muertos a diario en la ciudad de Bogotá muchísimas gracias presidente",
+    "summary": "El senador critica la propuesta de la alcaldía de Bogotá de permitir que ciudadanos reporten infracciones de tránsito con celulares, argumentando que aumentará la violencia y es solo una 'caja facturadora' que no salva vidas.",
+    "start": 5169.8,
+    "end": 5302.0,
+    "tags": [
+      "Seguridad ciudadana",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Alcaldía de Bogotá",
+        "type": "gobierno local"
+      },
+      {
+        "entity": "Fotomultas",
+        "type": "empresa"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Carreño Castro José Vicente",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente Querido presidente si me permita voy a hacer uso aquí de la lectura más bien quiero agradecer y saludarlos a todos Quiero pedirles queridos congresistas que me llegaren dos minutos Solicité ante la Mesa Directiva del Senado y de Protocolo condecorar a la comunidad puertoolísma en Putumayo por su valentía por ese gesto humanitario tras el siniestro aéreo que se presentó con nuestras fuerzas militares por la solidaridad que honra Colombia colegas colombianos Lo que pasó en el accidente aéreo nos dio odio a todos Fue un momento muy duro para el país para nuestras fuerzas militares Pero en medio de esa tristeza también vimos cómo Se nos devolvió la esperanza la gente de Puerto Loquiso en Putumayo nos recordó lo mejor del ser colombiano sin pensar nuevos meses usted vieron como hombres y mujeres corrieron y salieron a ayudar sin importar el riesgo que aún presentaba ello no importan las dificultades estuvieron allí con valentía con solidaridad con ese corazón grande que tantas veces nos define como colombianos En un país muchas veces sentimos que la violencia aquí en Colombia nos golpea Ello nos demostró la humanidad que sigue en Colombia impacta que siempre hay un espacio para hacer lo correcto y eso fue lo que hicieron los amigos y habitantes allí en Puerto Loquisamo Por eso este gesto no puede pasar presidente por desapercibido merece ser reconocido valorado y apoyado por todos los colombianos colombianos que ustedes y yo representamos en este congreso colegas Colegas todos sin importar el color político los invito a que juntos digamos sí a esta salutación que estamos proponiendo hoy para reconocer a Puerto Rico y somos como el mejor reconocimiento que Colombia le hace a su pueblo y a sus autoridades colegas la vida es el punto de encuentro nada admite discusión ante un hecho de esto Hemos visto en nuestras partes del país que se han presentado accidentes y por el contrario corren a robar los carros o los buses y Puerto Leguísima dio un ejemplo de solidaridad con nuestros seres de la patria Por eso Presidente yo quisiera que no haya nada de cañón que no nosotros como centro democrático sino todo un congreso todo un senado aprobemos esta iniciativa y vayamos a Puerto Leguísamo condecoremos a sus habitantes y a sus ... Termina tiene un minuto No ya presidente sencillamente quiero que colegas ustedes también se sumen a esto también nos apoyen y en ese acto de solidaridad y de reconocimiento por el colegio Majumder Patuayo le hagamos este reconocimiento cómo sería bueno presidente que la mesa indirectiva y fuéramos allí los congresistas que quieran ir hacer este reconocimiento de valentía a este departamento del Putumayo más exactamente al municipio de Puerto Regisamo gracias presidente por su generosidad",
+    "summary": "El senador propone condecorar a la comunidad de Puerto Leguísamo (Putumayo) por su valiente y solidaria respuesta al accidente aéreo de las fuerzas militares, e invita a todo el Congreso a aprobar esta iniciativa de reconocimiento.",
+    "start": 5330.1,
+    "end": 5556.4,
+    "tags": [
+      "Paz y víctimas"
+    ],
+    "mentions": [
+      {
+        "entity": "Puerto Leguísamo",
+        "type": "municipio"
+      },
+      {
+        "entity": "Putumayo",
+        "type": "departamento"
+      },
+      {
+        "entity": "Fuerzas Militares",
+        "type": "fuerza pública"
+      },
+      {
+        "entity": "Mesa Directiva del Senado",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Lobo Silva Sandra Ramírez",
+    "session": "Abril-07-2026",
+    "quote": "Gracias señor presidente señor presidente honorables senadoras y senadores Hoy no intervengo únicamente en mi calidad de congresista de la República Hoy hablo como firmante del Acuerdo de Paz como mujer en proceso de reincorporación Y como ciudadana que hoy enfrento un riesgo real contra mi vida lo que vengo a poner ante esta plenaria no es un hecho aislado es la expresión de un patrón sistemático de violencia política que se ha venido consolidando desde la firma del Acuerdo de Paz un acuerdo que no puede ser reducido a un documento porque detrás de él senadores hay vidas hay triste y hoy tristemente hay muertes cerca de quinientos firmantes de paz han sido asesinados en Colombia y cada uno de esos asesinatos no comenzó con un arma comenzó con una palabra comenzó con un discurso y con una narrativa de odio hoy quiero decirlo con claridad ante ese congreso la violencia contra quienes firmamos la paz no inicia con el ataque físico inicia con la extimatización con la difamación Con el uso irresponsable de la libertad de expresión para convertirla en instrumento de persecución porque cuando la opinión se desborda cuando la información deja de ser veraz cuando se normaliza la injuria y la calumnia lo que sigue es la muerte Y en mi caso particular he sido objeto de una campaña sistemática de desprestigio Organizada y sostenida con una finalidad clara debilitar mi ejercicio político y poner en riesgo mi vida No se trata de críticas legítimas Se trata de discursos que cruzan la línea de lo constitucional que construyen narrativas falsas que afectan mi dignidad y que han generado consecuencias muy graves y esas consecuencias ya están aquí en este en este congreso he recibido más de 50 amenazas de muerte más de 50 senadores no son cifras son advertencias son señales de riesgo inminentes pero hay algo mucho más grave en Colombia estamos viendo cómo algunos sectores han normalizado el lenguaje de la violencia al punto de que hoy Públicamente se llega a pedir que se repitan hechos como la Operación Orión una operación por la cual el Estado colombiano fue condenado internacionalmente Un minuto para que termine esa hora Gracias presidente Pero hoy quiero recordar que la corte constitucional mediante la sentencia T cincuenta quinientos veinte del dos mil veinticinco ya reconoció que mis derechos fundamentales al buen nombre a la honra y a una vida libre de violencia han sido vulnerados no es una opinión senadores es una decisión judicial Y además el Estado Colombiano a través de la Unidad Nacional de Protección ha elevado mi nivel de riesgo de extraordinario a extremo Esto significa algo muy claro que mi vida está en riesgo iminente Ante esto a esto se suma una situación que no puedo dejar de denunciar la presencia constante de personas en el Congreso de la República sin plena identificación ubicados en puntos es Termina He ubicado en puntos estratégicos generándome y generándome escenarios de intimidación Es mucho más pero con esto dejo constancia en el Congreso de la República los riesgos que está corriendo mi vida Muchas gracias señor Presidente",
+    "summary": "La senadora Sandra Ramírez denuncia un patrón sistemático de violencia política contra firmantes del Acuerdo de Paz, vinculando discursos de odio y desinformación con asesinatos, y expone su propio caso donde ha recibido más de 50 amenazas de muerte y un riesgo extremo a su vida, respaldado por decisiones judiciales y elevación de su nivel de protección.",
+    "start": 5602.1,
+    "end": 5869.3,
+    "tags": [
+      "Paz y víctimas",
+      "Seguridad ciudadana",
+      "Corrupción",
+      "Reformas sociales",
+      "Violencia política"
+    ],
+    "mentions": [
+      {
+        "entity": "Acuerdo de Paz",
+        "type": "acuerdo"
+      },
+      {
+        "entity": "Estado colombiano",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Corte Constitucional",
+        "type": "institución judicial"
+      },
+      {
+        "entity": "Unidad Nacional de Protección",
+        "type": "organismo"
+      },
+      {
+        "entity": "Operación Orión",
+        "type": "operación militar"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Cepeda Sarabia Efraín José",
+    "session": "Abril-07-2026",
+    "quote": "Muchas gracias señor presidente Esta es una breve pero firme constancia en nombre del Partido Conservador Colombiano La constancia dice El Partido Conservador Colombiano expresa Su profunda preocupación ante el intento reiterado del Gobierno Nacional de favorecer delincuentes desconociendo la autonomía de la justicia y debilitando el Estado de Derecho La reciente decisión de la señora Fiscal General de la Nación Doctora Luz Adriana Camargo que reboca parcialmente la suspensión de órdenes de cartura en el marco de la denominada inalograda paz total Confirma la gravedad de una práctica que nunca debió existir La coyuntura evidencia que estos beneficios se otorgan de forma selectiva y oportunista soltando delincuentes con claras motivaciones electorales Esto agrava las cosas pues a la impunidad se suma el presunto delito electoral Insistir en intervenir intervenir decisiones judiciales para beneficiar delincuentes no es un hecho aislado sino parte de una tendencia preocupante a concentrar poder erosionar los contrapesos institucionales y poner en riesgo los derechos de los colombianos convertir la benevolencia hacia estructuras criminales en política envía un mensaje equivocado a la sociedad y sobre todo a las víctimas Este no es el camino hacia la paz sino un antecedente peligroso que debilita la justicia y amenaza la confianza ciudadana en las instituciones Colombia necesita firmeza respeto por la ley y garantías para las víctimas no concesiones que rozan la complicitad con el crimen Muchas gracias señor presidente",
+    "summary": "El senador Efraín Cepeda, en nombre del Partido Conservador, critica al Gobierno Nacional por intentar favorecer a delincuentes mediante la suspensión de órdenes de captura, acusándolo de debilitar la justicia y el Estado de Derecho con fines electorales, y advierte que esto compromete la paz y la confianza institucional.",
+    "start": 5888.3,
+    "end": 6059.0,
+    "tags": [
+      "Corrupción",
+      "Seguridad ciudadana",
+      "Paz y víctimas",
+      "Política internacional"
+    ],
+    "mentions": [
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Fiscal General Luz Adriana Camargo",
+        "type": "funcionario"
+      },
+      {
+        "entity": "Partido Conservador Colombiano",
+        "type": "partido"
+      },
+      {
+        "entity": "Estado de Derecho",
+        "type": "principio jurídico"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-07-2026",
+    "quote": "Muchas gracias señor presidente Yo voy a dejar una constancia sobre el banco de la República La banca contra el pueblo Cuando el banco de la República sube las tasas de interés a un once punto veinticinco por ciento no está haciendo un ajuste técnico está dando un concepto de carácter político Ha dado un mensaje péssimo al país Ese mensaje es simplemente No compre y no invierta Esos defensores supuestamente de la inversión lo que están están desacelerando y están en últimas perjudicando la economía del país mientras las familias ven como su crédito hipotecario la banca privada nunca ha ganado tanto dinero Y nunca ha ganado tanto dinero porque tampoco nunca había aumentado las tasas de interés como lo ha hecho en el gobierno de Gustavo Petro En 2024 superaron los 10 billones de pesos un 32 más del año anterior según también el informe de la Super Intendencia Financiera Solo en el 2026 las ganancias bancarias aumentaron un 75 por ciento Con respecto al mismo año de al mismo periodo del 2025 en total desde el 2022 hasta hoy el sistema financiero ha acumulado utilidades por más de 35 billones de pesos Que significa que los bancos ganan más cuanto más cara es la deuda para los colombianos con créditos Cada vez que el Banco de la República sube la tasa de utilidades de los bancos pues esos tienen unas ganancias récord Este modelo es una decisión política que protege a los grandes capitales y también castiga al pueblo Saludo la decisión del ministro de Hacienda de convocar un foro un foro sobre el Banco de la República Ellos no son infalibles y como simple ciudadana no como senadoras de la República sino como simple ciudadana tengo el derecho de criticar lo que hace el Banco de la República contra los pobres contra los industriales medianos y pequeños que están en la práctica cercados por las tasas de interés por eso señor presidente la pelea con el banco de la República es en esencia la pelea por el bolsillo de las mayorías Continúo en ahora un minuto Presidente muy poco me falta para decirle que lo que ha hecho el Banco de la República es simple y sencillamente sacarle la plata del bolsillo a los pobres del país y lo que ha hecho la derecha ahí en esa mayoría de derechistas que están en el Banco de la República es empobrecer los pobres y enriquecer los ricos Muchas gracias señor presidente",
+    "summary": "La senadora Aída Avella critica al Banco de la República por aumentar las tasas de interés, argumentando que es una decisión política que beneficia a la banca privada y perjudica a familias y pequeñas empresas, exacerbando la desigualdad y desacelerando la economía real.",
+    "start": 6072.1,
+    "end": 6285.1,
+    "tags": [
+      "Economía",
+      "Banco de la República",
+      "Inclusión financiera",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Banco de la República",
+        "type": "organismo"
+      },
+      {
+        "entity": "Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Superintendencia Financiera",
+        "type": "organismo"
+      },
+      {
+        "entity": "ministro de Hacienda",
+        "type": "funcionario"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Lobo Chinchilla Didier",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente Hoy quiero dejar esta constancia con gran preocupación por nuestro país Esta semana santa que debía ser de paz y reflexión fue una de las más violentas de los últimos diez años el vil asesinato de luis carlo vallejo román reconocido en su tierra como un líder afrodescendiente un hombre bueno que dedicó su vida a defender la tierra y los derechos de las comunidades negras en la costa pacífica del cauca lo secuestraron el mismo día de las elecciones y lamentablemente su cuerpo fue hallado sin vida al inicio de la semana santa a él lo silenciaron por proteger y alzar la voz por su gente La guerra se ha vuelto aún más cruel porque ahora el terror cae del cielo Los grupos armados están usando drones que son esos pequeños aparatos voladores a control remoto para llevar y soltar explosivos sobre las casas y sobre nuestros policías en lugares como Hambaló en el cauca familias enteras quedaron atrapadas por horas escondidas escuchando las explosiones caer desde el aire el miedo es tan grande que los campesinos cuentan que ya no solo tienen que cuidarse de no pisar una mina en la tierra sino que ahora le tienen terror al sonido de los motores en el cielo y esto está pasando en muchas regiones presidente En diseño en Tokio hicieron estallar una moto con explosivo justo el viernes Santo y dieron a un policía llenaron de pánico a la comunidad que estaba en sus ceremonias religiosas las cifras nos duelen en el alma En apenas los primeros tres meses de este año del 2026 ya hemos sufrido 35 masacres que nos han dejado 133 personas asesinadas La gente en el campo está corralada encerrada y con mucho miedo Esto no refleja la paz que se ha prometido Hoy levanto la voz para exigir que el Estado proteja de verdad a la gente sencilla a los líderes sociales y a nuestras familias campesinas que hoy se sienten abandonadas frente a los violentos Muchas gracias señor presidente",
+    "summary": "El senador Didier Lobo denuncia la violencia extrema durante Semana Santa, incluyendo el asesinato de un líder afrodescendiente y el uso de drones con explosivos por grupos armados, exigiendo mayor protección estatal para comunidades rurales y líderes sociales ante el incremento de masacres e inseguridad.",
+    "start": 6306.8,
+    "end": 6491.4,
+    "tags": [
+      "Seguridad ciudadana",
+      "Paz y víctimas",
+      "Reformas sociales",
+      "Violencia política"
+    ],
+    "mentions": [
+      {
+        "entity": "Luis Carlo Vallejo Román",
+        "type": "víctima"
+      },
+      {
+        "entity": "grupos armados",
+        "type": "organización ilegal"
+      },
+      {
+        "entity": "Hambaló",
+        "type": "lugar"
+      },
+      {
+        "entity": "Estado",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Motoa Solarte Carlos Fernando",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente Estamos en una crisis de seguridad sin precedente en el país producida por los efectos de la pasto tal y la desidia y desinterés del gobierno nacional determinarla por lo menos modificarla se volvió paisaje ver a los jefes de las bandas criminales circulando por el territorio nacional sin ninguna limitación en el territorio Acrecentando su poder financiero y de violencia Por eso el país sigue rechazando lo ocurrido en el departamento de Antioquia con el suceso de Alias Calarcá Durante el año 2025 Colombia registró un incremento de cerca del 108 por ciento de víctimas de secuestros duplicando las cifras del año 2024 Departamentos como el Valle del Caucás se vieron afectados por el delito homicidio con más de 2300 casos muy por encima del promedio nacional De igual manera Cali ha sido la ciudad más afectada por el terrorismo con cerca de 80 casos en el año 2025 Por no mencionar que Colombia en su conjunto experimentó un auge de la coca las masacres y el asesinato de informados que exige preguntarnos Cuanto más debemos tolerar los experimentos del presidente Gustavo Petro cabe recalcar qué pesa gravedad de los hechos mencionados delincuentes como Calarcá y otros más llamados gestores recuperaron su libertad en razón a la suspensión de órdenes de captura en el marco de la fracasada política de paz total generando riesgos para la seguridad física y jurídica de los colombianos Por lo tanto como miembro de la oposición y en virtud del principio de supremacía constitucional consagrado en el artículo 4 de la Carta Política Me permito recordarle a los jueces de la República y a la Fiscal General de Nación que es deber de toda autoridad pública aplicar la excepción de inconstitucionalidad cuando existe incompatibilidad entre la Constitución y cualquier norma jurídica En ese sentido frente a la situación jurídica de los 23 gestores de patentes asignados por el gobierno se hace necesario que la autoridad judicial y el ente excusador evalúen la aplicación de tal excepción Particularmente en lo relacionado con el avantamiento o suspensión de órdenes de captura vigentes todas veces que resultan contrarias a los principios derechos y fines esenciales del Estado colombiano Lo anterior teniendo en cuenta que la búsqueda de la paz Deber harmonizarse con otros principios superiores como es la seguridad la legalidad la protección de los derechos fundamentales y la preservación del orden constitucional en otras palabras no todo vale en la búsqueda de la paz mucho menos si implica sacrificar la tranquilidad de los ciudadanos respetosos de la ley y ponerle trabas a la labor de la fuerza pública muchas gracias presidente",
+    "summary": "El senador Carlos Fernando Motoa critica la crisis de seguridad, señalando el aumento de secuestros y homicidios, y acusa al gobierno de Gustavo Petro de liberar delincuentes mediante la suspensión de órdenes de captura, instando a los jueces a aplicar la excepción de inconstitucionalidad para proteger el Estado de Derecho.",
+    "start": 6500.7,
+    "end": 6740.5,
+    "tags": [
+      "Seguridad ciudadana",
+      "Paz y víctimas",
+      "Corrupción",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Alias Calarcá",
+        "type": "delincuente"
+      },
+      {
+        "entity": "Fiscal General de Nación",
+        "type": "funcionario"
+      },
+      {
+        "entity": "Constitución",
+        "type": "documento legal"
+      },
+      {
+        "entity": "fuerza pública",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Daza Cotes Imelda",
+    "session": "Abril-07-2026",
+    "quote": "Gracias Presidente Quiero referirme también a la decisión Senadora me me regala un segundo Le agradezco a los senadores bajar un poco la voz y a los invitados o quienes no son senadores que están dentro del recinto por favor hacer silencio si no me toca lamentablemente pedirles que se retire senador Hilda tiene luz en la palabra muchas gracias señor presidente Quiero dejar una constancia en contra de la decisión que tomó la junta directiva del banco de la República de incrementar la tasa de interés La decisión no obedece a una simple razón técnica o estrictamente económica es una decisión política no solo desalineada sino en clara oposición a las políticas públicas implementadas por el gobierno de Gustavo Petro y en contra del bienestar de la mayoría de los colombianos afirma que su intención es prevenir una alta inflación pero a costa de aumentar el desempleo y a costa de restringir el crédito por su encarecimiento es absurdo en la economía colombiana no hay datos que muestren que existen presiones inflacionarias hoy Incluso con el incremento del salario mínimo se dijo que se iba a disparar la inflación No ha ocurrido eso Empeñarse en una política monetaria restrictiva por supuestamente mantener una tasa baja de inflación no conviene si esa medida desestimula el empleo si las familias ven reducidos sus ingresos y las empresas quiebran por falta de inversión sobre todo las mipimes pequeñas y medianas empresas Lo que el banco parece estar buscando es conducir a la economía a un menor consumo menor flujo de dinero circulante menor inversión en vivienda quien va a comprar vivienda con crédito a esas tasas de interés y menor crédito en general esto afecta directamente el bolsillo de los hogares colombianos de menores ingresos Hay que dejar muy claro que la independencia del Banco de la República no puede interpretarse como un poder incondicional y absoluto desligado de su responsabilidad de dar cuenta de sus decisiones a la sociedad colombiana y no puede ser ajena a las necesidades actuales y al estado real de la economía hoy el debate nacional está pues abierto invito a la comisión tercera a que estemos muy atentos al informe que rendirá Senadora tiene un minuto para que termine Al estar atentos al informe que rendirá este semestre el Banco de la República para exigirle que exponga claramente al país Los argumentos que soportan técnicamente y constitucionalmente la decisión tomada Esperamos que ese debate se dé de manera clara y serena en el contexto de la Comisión Tercera del Senado Gracias señor Presidente",
+    "summary": "La senadora Imelda Daza critica la decisión del Banco de la República de subir tasas de interés como una medida política que perjudica el empleo y el crédito, especialmente para hogares de bajos ingresos y pequeñas empresas, y exige transparencia en la justificación técnica y constitucional de la medida ante la Comisión Tercera del Senado.",
+    "start": 6764.8,
+    "end": 7012.9,
+    "tags": [
+      "Economía",
+      "Banco de la República",
+      "Política fiscal",
+      "Inclusión financiera"
+    ],
+    "mentions": [
+      {
+        "entity": "Banco de la República",
+        "type": "organismo"
+      },
+      {
+        "entity": "Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Comisión Tercera del Senado",
+        "type": "institución legislativa"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Arias Castillo Wilson Neber",
+    "session": "Abril-07-2026",
+    "quote": "Muchas gracias presidente A pesar de la virulencia pesimista con la que los sectores de extrema derecha batisinaban la catástrofe laboral a consecuencia del reconocimiento y mejora de los salarios percibidos por los trabajadores colombianos y del histórico incremento del 23 por ciento al salario mínimo legal vigente Las cifras del mercado laboral nos hablan de una primavera en la creación de empleos dignos Al corte de febrero del presente año se registró una tasa de desocupación de solo un dígito nueve punto dos por ciento La cifra de desempleo más baja para un febrero desde el 2001 reduciéndonos en 11 puntos porcentuales frente a febrero de 2020 y siendo prueba fehaciente de la resiliencia del mercado laboral confirmada en los más de 624 mil empleos creados durante el último gobierno Perdón durante el último año Sumado a esto incluso la clase rentista tan beneficiada por las medidas contracíclicas aprobadas por el Banco de la República en contravía del empleo y la economía real da cuenta de los avances positivos en los mercados laborales de nuestro país La banca de inversión JPMorgan una de las entidades financieras más grandes y poderosas del mundo reconoció informe país del treinta y uno de marzo comillas que el mercado laboral colombiano se mantiene fuerte con desempleo bajo y salarios en ascenso cierra comillas mientras que el impulso laboral ha venido explicando en gran medida por el sector privado Qué explicación puede dar Randy Ha quedado demostrado el beneficio amplificador de mejorar el ingreso de los hogares cosa que Jimmy Morgan también resalta Reconocer los derechos laborales no solo beneficia a los trabajadores tiene un efecto multiplicador en el bienestar de nuestra economía Mantener el cambio en el modelo es seguir apostando por un mercado laboral fuerte y digno Y permítame presidente sumerse a las voces sumarme a las voces que han replicado al Banco de la República con su determinación alcista de las tasas de interés Es peligroso por mil razones porque básicamente obedece al interés del capitalismo rentista del sector financiero parasitario especulativo aquel que renta mientras el país y la economía real pierde aquel que renta mejor cuando pierde la clase trabajadora y me ratifico en cuanto a que esa medida despoja o pretende despojar Senador continúe un minuto por favor Despojar al obrero de los recientes ingresos disponibles de su mejor salario por la vía de un crédito incarecido ahora que la clase obrera piensa en buscar el crédito como propósito para comprar entre otras cosas el consumo durable que ha impulsado la actividad económica según viene a conocer recientemente el Banco de la República En el escritorio de ustedes está el informe del Banco de la República que da cuenta de esta manifestación del modo como impulsa la actividad económica el ingreso disponible de los hogares propiciado principalmente por el aumento salarial y finalmente El Banco de la República en su reciente informe al reconocer el mejor estado del empleo se da un mentis asimismo aquí trajo un informe diciendo que se había reforma laboral dizque perderíamos cuatrocientos cincuenta mil empleos y poco tiempo después los hechos la vida material del pueblo colombiano desmiente",
+    "summary": "El senador Wilson Arias destaca la mejora en el mercado laboral con baja tasa de desempleo y aumento salarial, criticando a la extrema derecha y al Banco de la República por políticas que benefician al capital rentista en detrimento de los trabajadores, y enfatiza el impacto positivo de los derechos laborales en la economía.",
+    "start": 7025.1,
+    "end": 7276.0,
+    "tags": [
+      "Economía",
+      "Banco de la República",
+      "Reformas sociales",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Banco de la República",
+        "type": "organismo"
+      },
+      {
+        "entity": "JPMorgan",
+        "type": "entidad financiera"
+      },
+      {
+        "entity": "sector financiero",
+        "type": "sector económico"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Flórez Hernández Alex Xavier",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente La agradezco gracias Vuelvo y repito como se ha denunciado de manera reiterativa en este senado de la República a ver si por fin y frente a la grave crisis que enfrenta la ciudad de Cincilejo ponemos atención Están evolutando la plata de la comida de los niños pobres de Cincilejo Están evolutando la plata de la comida de los niños pobres de Cincilejo Por favor senadores senadoras colombianos crónica una muerte anunciada lo que hemos advertido frente al mal manejo de los recursos incluso proyectando videos en este recinto donde el mismo alcalde de la ciudad estaría hablando de cómo se coge para sí mismo los recursos de la plata de los niños de sincelejo denuncia por la que el señor presentó su querella ante la corte suprema de justicia que recientemente me dio la razón archivando ese proceso ahora sucede que se acaba de suspender el servicio de alimentación de la ciudad de Cincilejo del plan de alimentación escolar para los niños más pobres por la falta de treinta y cinco mil millones de pesos como es posible que una ciudad que acumula un déficit que supera los doscientos mil millones de pesos no tiene plata ni siquiera para garantizar el funcionamiento del plan de alimentación y está planeando como posible solución cambiar los horarios de entrada de los niños básicamente para que el padre no les tenga que dar desayuno si un funcionario en el ejercicio del gobierno Hombre más bien un funcionario en el ejercicio del gobierno podría cometer errores como retrasarse en una obra firmar un papel de forma anticipada o retrasada pero equivocarse frente a la incapacidad de garantizar la alimentación de los niños más pobres demuestra una absoluta incompetencia de una persona que frente al homa básico no ha tenido la capacidad de cumplirle a los habitantes del municipio de Cincilejo a los habitantes del departamento de Sucre Denunció esto ante ustedes se ha suspendido el plan de alimentación escolar en la ciudad de Sinseljo y miles de niños hoy no tienen la garantía de poder alimentarse para poder estudiar Recuerden que se trata de niños que encuentran en el plan de alimentación escolar la única posibilidad de comer en el día",
+    "summary": "El senador Alex Flores denuncia la suspensión del plan de alimentación escolar en Sincelejo debido a un déficit financiero y mal manejo de recursos, acusando al alcalde de incompetencia y priorizar gastos inadecuados sobre la alimentación de niños pobres, lo que considera una crisis humanitaria evitable.",
+    "start": 7295.8,
+    "end": 7450.4,
+    "tags": [
+      "Corrupción",
+      "Infraestructura",
+      "Salud pública",
+      "Educación"
+    ],
+    "mentions": [
+      {
+        "entity": "Alcalde de Sincelejo",
+        "type": "funcionario local"
+      },
+      {
+        "entity": "Corte Suprema de Justicia",
+        "type": "institución judicial"
+      },
+      {
+        "entity": "plan de alimentación escolar",
+        "type": "programa social"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Flórez Hernández Alex Xavier",
+    "session": "Abril-07-2026",
+    "quote": "En segunda medida alzó la voz por la ciudad de Medellín donde el alcalde Federico Gutierrez ha decidido conformar una fuerza violenta que se parece más a unas convivir que a unos supuestos gestores de convivencia En la ciudad de Medellín las convivir le dieron origen al paramilitarismo y estamos viendo hoy nuevos inicios de forma de violencia de un gobernante que ha vestido civiles y los autorizados Un minuto continuo senador y los autorizados para usar la violencia contra ciudadanos indefensos Federico Guzieri se ha convertido en enemigo de las personas más humildes y pobres ha utilizado a los gestores del espacio público para recoger a venteros informales sin ninguna capacidad de defenderse y que necesitan de esa labor para la subsistencia diaria Ahora forma una fuerza civil agresiva que cuesta Miles de millones de pesos con la plata de los antioqueños para cercenarles sus derechos coaccionarlos y limitarlos violentamente Es hora de que este Congreso se pronuncie en favor de los colombianos y se deje de estar haciendo el de la vista gorda frente a estas frente a estos asuntos que afectan a todos los medellinenses Muchas gracias Presidente a usted",
+    "summary": "El senador Alex Flores acusa al alcalde de Medellín, Federico Gutiérrez, de crear una fuerza civil violenta que recuerda a las convivir paramilitares, utilizándola para reprimir a vendedores informales y vulnerar derechos ciudadanos, y exige que el Congreso tome cartas en el asunto.",
+    "start": 7450.4,
+    "end": 7528.4,
+    "tags": [
+      "Seguridad ciudadana",
+      "Corrupción",
+      "Violencia política",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Federico Gutiérrez",
+        "type": "funcionario local"
+      },
+      {
+        "entity": "convivir",
+        "type": "organización"
+      },
+      {
+        "entity": "paramilitarismo",
+        "type": "fenómeno histórico"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Valencia Laserna Paloma Susana",
+    "session": "Abril-07-2026",
+    "quote": "Gracias señor presidente Yo quiero aprovechar que el candidato de pronto del Pacto Histórico estuviera por aquí para que le dé un poquito de explicaciones al país Dado que deciden no ir a los debates ni salir a los medios de comunicación y yo si quiero dar una constancia presidente en torno a las declaraciones del ex senador y parte del Pacto Histórico Roy Barreras donde está reconociendo que los grupos ilegales les están poniendo votos a punta de fusil en los territorios y que aquí le vienen levantando las órdenes de captura a los preores criminales de Colombia con propósitos electorales imagínese senador Savi que el alcalde de Bogotá está protestando porque él todo el esfuerzo que tiene que hacer con la policía nacional para meter a los sicarios a la cárcel y el gobierno acaba de levantarle la orden de captura a esos cabecillas presidente hay uno que tiene 51 homicidios y esto contrasta con lo que está pasando en Antioquia como allá no ganan entonces quieren liberar otros 23 criminales los mismos que llevaron a hacer política en una tarima con el presidente y esto se empieza a sumar con el hecho de que el pacto histórico sacó el cincuenta y cuatro por ciento de sus votos para el Congreso en esos municipios donde la defensoría del pueblo dice que hay riesgo electoral Entonces si quisiéramos que nos aclaren cómo es que es la cosa aquí van a ser combinación de formas de lucha y van a estar vinculándose con los violentos para poder ganar elecciones y liberando violentos para que vayan avanzando electoralmente A mí me preocupó mucho mi departamento del cauca donde a la gente la están obligando a votar por el candidato del gobierno y le dicen que pongan atención porque lunes después de elecciones vienen a verificar los resultados y atención con lo que pasó con el ex diputado Alejandro del pacífico caucano que se atrevió a ir en contravía de las disidencias y tuvo una candidatura con un amigo de él de la región y ganaron la curul y entonces señor presidente lo torturan para que lo encuentren bien destruido y después lo asesinan para mandarle un mensaje a las comunidades del pacífico no solo caucano sino todo el pacífico de colombia Y yo si tengo una preocupación señor presidente porque aquí hay que decirlo que es lo que está haciendo la fiscalía levantándole las órdenes de captura a los delincuentes Si la corte constitucional ya fue absolutamente clara en el sentido de que el gobierno puede solicitar el levantamiento pero la rama judicial es autónoma independiente y puede negar ese levantamiento porque aquí Continúe senador a Paloma Valencia Aquí volvieron a aparecer los vínculos de Calarcá infiltrado por este gobierno en la fuerza pública haciéndole una depuración 23 mil hombres han sacado más de 80 generales del ejército y qué le parece que además tienen infiltrada la inteligencia y tienen infiltrada la superintendencia de seguridad y sorprendanse senadores no solamente las disidencias sino papapitufo que los reciben allá a ofrecerle beneficios para que se quede calladito frente a toda la platica Aquí exigámosle al candidato al gobierno que saque el video donde supuestamente le devuelven los quinientos millones de pesos a papapitufo donde está el video y exigámosle al candidato que nos cuente por qué quien organizó el atentado contra Miguel Uribe tenía un era gestor de paz Y andaba por todo el país con esa con ese estor de paz y que nos expliquen por qué Calarcá cometiendo delitos a infagrancias sigue suelto y que nos diga la fiscal general de la nación por qué no ordenado la captura de Calarcá y reactivado la orden de captura porque aquí ya son muchos los escándalos pero claro uno de los que tendría que contar quién fue el que dio la plata para financiar la elección de Pedro la presidencia hoy le van vacaciones será que le va a llevar saludos a Carlos Ramón González allá donde el tirano ortega en Nicaragua Continuo señora Yo quiero dejar aquí la constancia señor presidente de que este país hoy enfrenta una combinación de forma de lucha que está organizando el gobierno para ganar las elecciones utilizando a los violentos que los están sacando de las cárceles hacer política y no lo digo yo lo dice un miembro de ese partido Roy Barreras y lo repiten ya muchos sectores políticos en el territorio colombiano Señor Presidente exigimos garantías y exigimos respuestas no más silencio no más corrupción y no más pactos con criminales",
+    "summary": "Paloma Valencia acusa al gobierno y al Pacto Histórico de manipular elecciones mediante la liberación de criminales y el uso de grupos violentos para obtener votos, citando declaraciones de Roy Barreras y casos específicos como el asesinato de un diputado en Cauca. Exige explicaciones y garantías, denunciando una combinación de formas de lucha organizada por el gobierno para ganar las elecciones.",
+    "start": 7549.5,
+    "end": 7906.3,
+    "tags": [
+      "Corrupción",
+      "Seguridad ciudadana",
+      "Paz y víctimas",
+      "Política internacional",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Pacto Histórico",
+        "type": "partido"
+      },
+      {
+        "entity": "Roy Barreras",
+        "type": "legislador"
+      },
+      {
+        "entity": "Fiscalía",
+        "type": "institución"
+      },
+      {
+        "entity": "Corte Constitucional",
+        "type": "institución"
+      },
+      {
+        "entity": "Calarcá",
+        "type": "individuo"
+      },
+      {
+        "entity": "Miguel Uribe",
+        "type": "individuo"
+      },
+      {
+        "entity": "Carlos Ramón González",
+        "type": "individuo"
+      },
+      {
+        "entity": "Ortega",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.9
+  },
+  {
+    "congressman_name": "Cepeda Castro Iván",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente Hace un tiempo advertí en este recinto que pedía comedidamente a la candidata de la extrema derecha que no utilizáramos este recinto para nuestros debates sencillamente porque son los recursos de los ciudadanos y esos recursos hay que emplearlos en legislar y hacer control político pero veo senadora Valencia que usted Utiliza el recinto para eso y le voy a responder claro está Usted plantea unas situaciones hipotéticas que no están probadas judicialmente que son el resultado de calumnias que ustedes desde el centro democrático y desde su candidatura usan y abusan ante los medios de comunicación pero yo le propongo que hablemos de hechos judicialmente probados Dónde está uno de sus congresistas hoy senadora Valencia Condenado por la justicia colombiana por robarse los recursos de la paz Repito colombianas y colombianos un señor que vino aquí lo recuerdo bien que nos daba lecciones a todos los congresistas sobre qué es moral qué es ética cómo hay que actuar ante los jueces hoy ya no estás sentado aquí porque sencillamente fue condenado por la dora Ladrón de recursos de la paz y usted tiene la cara de venir aquí a cuestionarnos sobre ética no tenga tanto descaro le pido el favor tenga un poco de vergüenza segundo porque no he terminado no se desespere usted quiere debate y cuando uno comienza a debatir se desespera entonces cómo hacemos la última vez que tuvimos un debate en este recinto senadora Valencia usted gritó porque no lo hizo ni siquiera en un tono razonable que yo la estaba amenazando de muerte usted tiene pruebas de eso o era también otra mentira lanzada al aire sin ninguna responsabilidad porque lo que usted hace es eso mentir calumniar nunca prueba nada de lo que dice así es fácil y ya que está aquí le pido que le diga al hermano del jefe paramilitar de Jarumal condenado a 28 años que tenga la Senador continúe Gracias presidente que tenga la gentileza de explicarle al país si mientras su hermano comandaba la banda los doce apóstoles él estaba emperado o no de las masacres que se cometían en esa parte del país cuando él era además gobernador de Antioquia El hermano del jefe de los doce apóstoles que fue luego luego presidente de la república y hoy es hermano de un convicto jefe paramilitar esa no es una hipótesis es un hecho probado judicialmente y gracias enada era muy amable",
+    "summary": "Iván Cepeda responde a Paloma Valencia acusándola de utilizar el recinto para calumnias no probadas judicialmente, y señala que un congresista de su partido fue condenado por robar recursos de la paz. Además, cuestiona sus vínculos familiares con paramilitares, defendiendo la ética y pidiendo debates basados en hechos probados.",
+    "start": 7928.6,
+    "end": 8181.8,
+    "tags": [
+      "Corrupción",
+      "Paz y víctimas",
+      "Seguridad ciudadana",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Centro Democrático",
+        "type": "partido"
+      },
+      {
+        "entity": "Jarumal",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "Los doce apóstoles",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "Gobernador de Antioquia",
+        "type": "cargo"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Pulido Hernández Jonathan Ferney",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente Lástima que iba en CPD Dispara y se va Dispara yuye a él no le gustan los debates y ya dicho que no va a asistir a debates y entonces por eso tampoco quiere debatir en el salón de los debates y en el salón de la democracia que es el Congreso y este el Senado de la República yo quiero que los colombianos tengan claro que este lugar está para debatir y cuando el senador Manifesta que aquí no se debe batir que porque no se deben irrespetar los recursos yo digo y acaso el respeto a los recursos cuando ha fallado más de 50 veces a esta plenaria prácticamente robándose el salario Inventándose que excusa médica nosotros le estamos a decir porque si está tan enfermo no está entonces listo para presidir un país qué enfermedad tiene qué adicción tiene qué es lo que le pasa porque no viene a trabajar eso sí debería ser respetar los recursos asistir a su trabajo segundo él habla de decisiones judiciales y pregunta dónde está el senador Paloma Valencia yo pregunto Y Van Zepeda respondanos dónde está Olmelo López quien manejó miles y miles de millones de la platíca de la Guajira y que se lo terminaron robando Olmelo López era uno de los candidatos de la lista decentes de ustedes de la izquierda y terminó siendo un ladrón un ampon por el que ahora no quieren responder dónde están los ministros del gobierno petro no están en la cárcel ricardo bonilla nada más ni nada menos que ministro hacienda luis fernando velasco dónde están responda por ellos también Por último él dice que no quiere ir a debates será porque no quiere responderle al país por los aberrantes apoyos que tiene como candidato Paloma Valencia usted sabe quienes han manifestado apoyar a Iván Cepeda Y al pacto histórico y al candidato de Petro a la presidencia nada más que cabecillas de incidencias del alfar nada más que líderes del LN han dicho que están listos para apoyar al candidato de Petro entonces por qué no ir a debates quizás porque teme que hagan estas preguntas y le cuestionen la basura Suxia y porquería de campaña que están haciendo replicando lo que ya hicieron como fue el pacto de la picota ya el mismo Roy Barreras que les articuló la primera campaña presidencial Continúa un minuto por favor El mismo Roy Barreras que les articuló la campaña de Gustavo Petro es el mismo que hoy está diciendo que esas liberaciones de esos criminales de esos delincuentes Si van a incidir en las elecciones presidenciales y según las palabras de Roy Barreras a punta de fusil van a llevar a varias personas a votar por el heredero Yo creo que Iván Cepeda no es que no quiera debates por cuidar recursos porque los recursos ahí no les gusta cuidarlos por eso prácticamente se roba el salario cuando no viene a trabajar El heredero lo que quiere es no ir a debates para que Colombia no conozca la realidad que es un peligro para nuestro país si llega a ganar la presidencia que no creo",
+    "summary": "El senador Jonathan Pulido critica a Iván Cepeda por evitar debates y cuestiona su ausentismo, mientras señala casos de corrupción en la izquierda como Olmelo López y ministros de Petro. Acusa al Pacto Histórico de recibir apoyo de grupos ilegales y de replicar tácticas electorales cuestionables, argumentando que Cepeda teme enfrentar preguntas incómodas.",
+    "start": 8215.0,
+    "end": 8491.8,
+    "tags": [
+      "Corrupción",
+      "Seguridad ciudadana",
+      "Política fiscal",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Cepeda Castro Iván",
+        "type": "legislador"
+      },
+      {
+        "entity": "Olmelo López",
+        "type": "individuo"
+      },
+      {
+        "entity": "Pacto Histórico",
+        "type": "partido"
+      },
+      {
+        "entity": "Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Roy Barreras",
+        "type": "legislador"
+      },
+      {
+        "entity": "LN",
+        "type": "grupo armado"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Valencia Laserna Paloma Susana",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente mire muy brevemente calumnias Cuáles calumnias Acaso no mataron al diputado Vallejo en el cauca por haber apoyado el candidato que de las disidencias que no quiso Calumnias cuáles calumnias Acaso el Pacto Histórico no sacó el cincuenta y cuatro por ciento de los votos en las zonas rojas que tenían riesgo electoral detectado por la defensoría del pueblo Calumnias cuáles calumnias Que las disidencias están ordenando votar por se pedan los territorios donde ellos mandan con los fusiles al hombro calumnias Que el senador Roy Barrera no salió en una entrevista diciendo que están liberando los violentos para que salgan a conseguirles votos cuales calumnias Cuáles son las calumnias Senador Cepeda que no está Cuáles son las calumnias Calumnias las suyas que fabrica ofreciéndole beneficios en las cárceles a los criminales Calumnias las suyas que construye todo tipo de historias fantásticas Aquí hablemos de los que han tenido vínculos con los grupos criminales Yo no tengo fotos con criminales abrazados yo no tengo fotos ni intervenido para que la justicia libere gente que está en la cárcel por haber asesinado colombianos yo no tengo fotos ni he estado haciendo gestiones para que los secuestradores de este país queden libres yo siempre he perseguido a los criminales lo he denunciado y claro que me da miedo denunciarlo a usted que lo acompañan todos los que cargan fusiles con los que usted se toma fotos abrazados y que le dan las gracias claro que me da miedo Llamar la atención sobre lo que está pasando en los territorios colombianos pero los miedos senador J P Sevencel los senadores del Centro Democrático damos la cara y claro que hay uno de nosotros condenado por corrupción le queda una instancia ojalá logre probar su inocencia Yo no he sido complaciente ni cómplice de la corrupción de nadie ni la corrupción de nadie me ha llevado a ocupar ningún escenario político ni gente con armas ha dicho que voten por mí Yo quiero dejar las cosas aquí claras senador Cepeda que veo que ya se fue para que más bien miremos Dónde está Santrich y por qué está libre y no extraditado en los Estados Unidos Dónde está Ivan Marquez y por qué no está extraditado y preso en los Estados Unidos donde están los cabecillas del LNM con los que usted negocia y por qué no están en las cárceles por qué no están los de las disidencias de las farc y por qué el que mató a Miguel Uribe gozaba de una gestor de paz para recorrer el territorio y poderle hacer seguimientos",
+    "summary": "En su réplica, Paloma Valencia rechaza las acusaciones de calumnias, enumerando hechos como el asesinato de un diputado, el alto porcentaje de votos del Pacto Histórico en zonas de riesgo y las declaraciones de Roy Barreras. Niega tener vínculos con criminales y cuestiona por qué figuras como Santrich e Iván Márquez no están extraditadas, acusando a Iván Cepeda de negociar con grupos armados.",
+    "start": 8494.2,
+    "end": 8681.9,
+    "tags": [
+      "Corrupción",
+      "Seguridad ciudadana",
+      "Paz y víctimas",
+      "Política internacional"
+    ],
+    "mentions": [
+      {
+        "entity": "Pacto Histórico",
+        "type": "partido"
+      },
+      {
+        "entity": "Roy Barreras",
+        "type": "legislador"
+      },
+      {
+        "entity": "Santrich",
+        "type": "individuo"
+      },
+      {
+        "entity": "Iván Márquez",
+        "type": "individuo"
+      },
+      {
+        "entity": "LNM",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "FARC",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "Miguel Uribe",
+        "type": "individuo"
+      },
+      {
+        "entity": "Centro Democrático",
+        "type": "partido"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Benavides Mora Carlos Alberto",
+    "session": "Abril-07-2026",
+    "quote": "Gracias presidente Nuestro partido logró después de un proceso largo construir y fundar una unidad política esa unidad política hoy representa como se ha expresado en las distintas elecciones El partido político más importante de este país y yo tengo que exigir respeto por cada uno de los colombianos por cada uno de los trabajadores de las trabajadoras de los campesinos de las campesinas de los estudiantes de la gente de a pie de aquellos que construyen veredas y barrios en este país que son los que han depositado los votos por cada uno de nosotros en una consulta y por nosotros como lista cerrada el 8 de marzo dos señores colombianos y colombianas Por fin estamos construyendo un camino de democracia un camino de democracia que se pone con lealtad con dignidad a defender el derecho al trabajo a defender el derecho a la salud a defender la reforma agraria a defender la economía productiva que por fin le ponga punto final al matrimonio entre la oligarquía y las mafias que le ponga punto final a la gente que le quita ojos a los jóvenes en sus movilizaciones que le ponga punto final a las formas de violencia en mis recorde contra la gente en cada barrio y que han escondido durante décadas durante décadas justamente utilizando aparatos judiciales y mediáticos esa realidad que nos llevó a ser el país más violento más pobre y desigual por fin una senda distinta y no la van a pagar no señores ni señoras no la van a pagar aquí con injurias y levantando la voz nosotros hemos construido propuestas y lo hacemos edificado a partir de las luchas sociales a partir de cada una de las revindicaciones regionales no nos van a venir a decir que nuestros votos están manchados de sangre porque nuestros votos escuchen lo bien son expresión de dignidad del pueblo colombiano a la patria se la respeta a los ciudadanos se la respeta y esa misma patria y esos mismos ciudadanos oyen altecen a Iván Zepeda que no estuvo durante el primer año quizás asistiendo todo el tiempo a esta plenaria porque Senador con calma por favor Tiene para continuar Tercero segundo que se le apagó el micrófono Y escúchelo bien Vamos a seguir insistiendo en la paz porque la paz es la única posibilidad que tenemos los colombianos para lograr una convivencia y los invitamos invito a la bancada del pacto del pacto del centro democrático a que superemos juntos el miedo yo mismo saqué en setecientos ochenta y nueve municipios de este país votos no me van a decir a mí que esos votos están manchados de sangre A mí mismo me dijeron que no fuera muchas regiones y a muchos departamentos pero ahí fuimos a construir democracia Los invito colegas del Centro Democrático a superar el miedo conjuntamente en un pacto por esta patria y por la democracia Dejemos las incurias dejemos los odios y construyamos prosperidad y dignidad Eso es el pacto el pacto",
+    "summary": "Carlos Benavides defiende los logros de su partido como la fuerza política más importante, exigiendo respeto para trabajadores, campesinos y estudiantes, y promoviendo un camino de democracia con derechos sociales. Llama a superar el miedo y construir prosperidad, rechazando injurias y destacando la paz como única vía para la convivencia.",
+    "start": 8717.2,
+    "end": 8897.3,
+    "tags": [
+      "Reformas sociales",
+      "Paz y víctimas",
+      "Política fiscal",
+      "Inclusión financiera"
+    ],
+    "mentions": [
+      {
+        "entity": "Centro Democrático",
+        "type": "partido"
+      },
+      {
+        "entity": "Iván Zepeda",
+        "type": "legislador"
+      },
+      {
+        "entity": "Pacto",
+        "type": "acuerdo"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Guerra Hoyos Andrés Felipe",
+    "session": "Abril-07-2026",
+    "quote": "Presidente muy buena tarde a usted y a todos mis compañeros y compañeras en la plenaria Presidente creo que he sido un hombre supremamente respetuoso en esta prenaria Creo que he sido un hombre que he asistido juiciosamente durante prácticamente estos 44 meses a comisiones y a prenaria Creo que he sido respetuoso de cada una de las senadoras y senadores desde el 2022 y los seré nunca lo duden hasta el 20 de julio del 2026 cuando paso como único senador a la Cámara de Representantes Pero yo sí le pido presidente Por cuarta ocasión colegas por cuarta ocasión Que aprueben el debate sobre los poderes mafiosos locales que es un nuevo paramilitarismo en Colombia En el 2004 un representante a la cámara se hizo célebre con un debate que realizó sobre los poderes mafiosos locales Se llamaba Gustavo Francisco Petro y esos poderes mafiosos locales estaban soportados sobre tres items poderes políticos locales economías emergentes ilegales y ejércitos privados Presidente le pido el favor Creo que es el único senador en este cuatrénio que ha solicitado en cuatro ocasiones Con la firma de toda la bancada del partido un debate que merezco realizar Creo que lo más justo es lo más respetuoso porque aquí no deben existir senadores de playa alta y senadores de playa baja creo que cada uno de nosotros eligió con la condición necesaria la educación y la capacidad académica de poder hablar en un micrófono y expresar desde lo político desde lo académico desde la economía qué puede estar pasando en este país con los poderes mafiosos locales que son una mutación durante los últimos 22 años que no entiendo por qué no me dejan hacer el debate o es que me pregunto si hay un sector de la clase política sentado en este congreso que no quiere que hagamos dicho debate gracias presidente",
+    "summary": "Andrés Guerra solicita por cuarta vez la aprobación de un debate sobre los poderes mafiosos locales, un nuevo paramilitarismo en Colombia, recordando que Gustavo Petro hizo un debate similar en 2004. Argumenta que todos los senadores tienen la capacidad para debatir estos temas y cuestiona por qué se bloquea su propuesta.",
+    "start": 8973.9,
+    "end": 9160.7,
+    "tags": [
+      "Seguridad ciudadana",
+      "Corrupción",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Gustavo Francisco Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Poderes mafiosos locales",
+        "type": "fenómeno social"
+      },
+      {
+        "entity": "Paramilitarismo",
+        "type": "grupo armado"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Fuelantala Delgado Richard Humberto",
+    "session": "Abril-07-2026",
+    "quote": "Gracias señor presidente El Instituto Geográfico de Agustín Codazzi está subiendo de manera improvisada los avalúos catastrales que sirven de base para el impuesto predial al amparo de la Resolución 1912 del 2024 En departamentos como Cundinamarca y Boyacá se han registrado incrementos de hasta el mil por ciento a pesar de que los mayores incrementos En el impuesto predial se darán a partir de 2027 igual que se hizo como con la gasolina el presidente Gustavo Petro ha dicho que esta situación no afecta a los pobres que solo afecta a una parranda de grandes terrenientes improductivos lo cual no es verdad El propio Instituto Geográfico de Agustín Codazzi reconoce que se afectará a un millón seiscientos treinta y nueve mil ciento cuarenta predios de los cuales el noventa y ocho punto seis por ciento son predios de pequeña propiedad rural Este golpe al campesinado y otros sectores vulnerables también es denunciado por la defensoría del pueblo en su documento de recomendaciones a los candidatos presidenciales Candidatos presidenciales que hasta el momento tampoco se han referido sobre este tema envío un mensaje de apoyo y pongo esta curul a disposición a los campesinos indígenas y afros que se movilizarán este 9 de abril por un catastro justo Exigimos que se derogue la resolución 1912 y que se construya una hoja de ruta para la planeación territorial y fiscal en el campo sobre la base de proteger la soberanía alimentaria y reconocer la participación de los sujetos de especial protección constitucional Muchas gracias señor presidente",
+    "summary": "El senador Richard Fuelantala denuncia aumentos excesivos en los avalúos catastrales por parte del IGAC, que impactarán el impuesto predial y afectarán principalmente a pequeños propietarios rurales, contradiciendo las afirmaciones del presidente Petro. Anuncia su respaldo a las protestas campesinas del 9 de abril y exige la derogación de la Resolución 1912 de 2024 y una hoja de ruta para una planeación fiscal justa.",
+    "start": 9201.9,
+    "end": 9340.9,
+    "tags": [
+      "Política fiscal",
+      "Reformas sociales",
+      "Infraestructura",
+      "Corrupción",
+      "Seguridad ciudadana"
+    ],
+    "mentions": [
+      {
+        "entity": "Instituto Geográfico Agustín Codazzi",
+        "type": "organismo"
+      },
+      {
+        "entity": "Resolución 1912 del 2024",
+        "type": "resolución"
+      },
+      {
+        "entity": "Cundinamarca",
+        "type": "departamento"
+      },
+      {
+        "entity": "Boyacá",
+        "type": "departamento"
+      },
+      {
+        "entity": "Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Defensoría del Pueblo",
+        "type": "organismo"
+      },
+      {
+        "entity": "Candidatos presidenciales",
+        "type": "entidad política"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Blel Scaf Nadya Georgette",
+    "session": "Abril-07-2026",
+    "quote": "Gracias señor presidente y un saludo muy especial para todos Antes de iniciar en nombre de la representante Julia Miranda y en nombre propio y de nuestros equipos de trabajo primero queremos enviarle un abrazo solidario a toda la familia de Guarda Parques a los compañeros de trabajo y especialmente a la familia del guardaparques Christian Hernán Anchila que falleció hace pocos días cumpliendo su deber este proyecto queridos colegas es precisamente un reconocimiento a la labor que hacen los guarda parques de nuestro país para conservar la biodiversidad en el territorio colombiano una labor que es invulnerable pero en muchos casos invisibles una labor que exige soportar temperaturas altas climas adversos problemas de seguridad estar lejos de su familia y este proyecto precisamente es un reconocimiento hace invaluable aporte con esta iniciativa de las representantes Julia Miranda lo que se busca es crear un sistema específico de carrera administrativa para quienes ejercen esas funciones Este proyecto incluye primero que todo reglas claras para el ingreso la permanencia y el ascenso dentro del sistema de carrera Asimismo crea unas condiciones laborales por la labor que desempeñan los guarda pares de nuestro país estableciendo garantías para su formación para el transporte para la alimentación para el hospedaje y también reconociendo el pago de primas de seguridad y de riesgo teniendo en cuenta la labor que ellos desempeñan Este proyecto también establece un régimen especial de pensión reconociendo las exigencias de la labor que desempeñan los guarda parques de nuestro país Cuidando y protegiendo esas zonas que son tan importantes para nuestra biodiversidad y por último crea la Escuela de Guarda Parques Una iniciativa que busca y que permitirá consolidar los procesos de formación de capacitación de actualización de quienes ejercen estas funciones Con esta iniciativa presidente lo que se busca es reconocer la labor de estos actores estratégicos en la conservación de nuestra biodiversidad Este es un proyecto sencillo que ha contado con El visto bueno de la Comisión Nacional del Servicio Civil y de Parques Nacionales Asimismo agradecer por último la labor de nuestros colegas en la Comisión Séptima el Senador Fabián Díaz y el Senador Wilson Arias quien también me acompañaron en la ponencia que hice presente Esa es la presentación del proyecto señor Presidente",
+    "summary": "La senadora Nadia Blel presenta un proyecto de ley para establecer una carrera administrativa especial para guardaparques, destacando su labor crucial en la conservación de la biodiversidad y proponiendo mejoras laborales como primas de riesgo, un régimen de pensión y una escuela de formación.",
+    "start": 10216.0,
+    "end": 10405.0,
+    "tags": [
+      "Reformas sociales",
+      "Infraestructura",
+      "Salud pública",
+      "Política fiscal",
+      "Seguridad ciudadana"
+    ],
+    "mentions": [
+      {
+        "entity": "Proyecto de ley 262/2024",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "Guardaparques",
+        "type": "cuerpo"
+      },
+      {
+        "entity": "Parques Nacionales Naturales de Colombia",
+        "type": "organismo"
+      },
+      {
+        "entity": "Christian Hernán Anchila",
+        "type": "guardaparques"
+      },
+      {
+        "entity": "Comisión Nacional del Servicio Civil",
+        "type": "organismo"
+      },
+      {
+        "entity": "Comisión Séptima",
+        "type": "comisión legislativa"
+      },
+      {
+        "entity": "Senador Fabián Díaz",
+        "type": "legislador"
+      },
+      {
+        "entity": "Senador Wilson Arias",
+        "type": "legislador"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Cruz Bonilla Saúl",
+    "session": "Abril-07-2026",
+    "quote": "dice prima de seguridad los empleados públicos que desempeñen empleos del cuerpo de guardaparques en áreas protegidas tendrán derecho al reconocimiento de una prima de seguridad en la zona las especiales condiciones en desarrollo de sus funciones de inspección vigilancia y control en territorios difíciles de acceso y con riesgos asociados al orden público y a la protección ambiental la prima de seguridad será reconocida de conformidad con los criterios objetivos que determina el gobierno nacional atendiendo a la clasificación de riesgo del área protegida la condición de prestación de servicio y la disponibilidad presupuestal en el marco fiscal de mediano plazo Parágrafo la prima de seguridad no constituye factor salarial salvo disposición expresa en contrario y su reconocimiento y pago estará sujeto a la reglamentación que expida el Gobierno Nacional dentro de los seis meses siguientes a la vigencia de la presente ley",
+    "summary": "El subsecretario del senado Saúl Antonio Correa lee propuesta de una enmienda al artículo 6 del proyecto de ley para establecer una prima de seguridad para guardaparques, sujeta a criterios objetivos y reglamentación gubernamental, excluyéndola del factor salarial.",
+    "start": 10571.6,
+    "end": 10641.3,
+    "tags": [
+      "Reformas sociales",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Prima de seguridad",
+        "type": "beneficio laboral"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Cruz Bonilla Saúl",
+    "session": "Abril-07-2026",
+    "quote": "dice lo siguiente del senador Antonio José Correa quien se encuentra en el recinto Artículo sesto Prima de riesgo los empleados públicos que se empleen en empleos de cuerpo de guarda parques en áreas protegidas tienen derecho al reconocimiento de una prima de riesgo en consideración a la exposición permanente a condiciones climáticas adversas riesgos ambientales sanitarios y aislamiento geográfico El gobierno nacional determinará los criterios técnicos al reconocimiento de la prima de riesgo incluyendo la categorización de las áreas protegidas el nivel de exposición al riesgo y las condiciones reales de prestación del servicio garantizando la sostenibilidad fiscal de la medida Parágrafo único la prima de riesgo no constituye factor salarial salvo disposición expresa en contrario y no será incompatible con otros reconocimientos que tengan la misma finalidad en los términos que establezca la reglamentación",
+    "summary": "El senador Antonio Correa propone una enmienda al artículo 7 para crear una prima de riesgo para guardaparques, basada en exposición a riesgos ambientales y climáticos, con criterios técnicos y sostenibilidad fiscal.",
+    "start": 10650.8,
+    "end": 10712.9,
+    "tags": [
+      "Reformas sociales",
+      "Salud pública",
+      "Política fiscal"
+    ],
+    "mentions": [
+      {
+        "entity": "Prima de riesgo",
+        "type": "beneficio laboral"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Benavides Mora Carlos Alberto",
+    "session": "Abril-07-2026",
+    "quote": "en el artículo 12 en el segundo insisto se elimina el siguiente párrafo atendiendo el principio de inters disciplinialidad que debe orientar esta actividad formativa para dotar personal de guarda parques del perfil de conocimiento y competencias requeridos para desempeñar cumplida y eficazmente las funciones correspondientes este párrafo se elimina y se agrega lo siguiente esta actividad formativa Se desarrollará bajo los principios de interdisciplinariedad y diálogo de saberes Para tal fin la escuela deberá como mínimo primero incorporar en sus programas curriculares el reconocimiento de los conocimientos ancestrales tradicionales y locales de los pueblos indígenas Comunidades negras abrodesendientes raizales palenqueras y comunidades campesinas que habiliten o colindan con las áreas protegidas Segundo fomentar metodologías de enseñanzaaprendizaje participativas donde los saberes técnicos y científicos converjan con la sabiduría territorial para fortalecer la conservación efectiva de la biodiversidad y tercero promover que expertos locales y autoridades tradicionales de las comunidades puedan participar como instructoras o facilitadores en módulos específicos de gestión territorial y resolución de conflictos El gobierno nacional establecerá La ubicación de la escuela dentro de la estructura orgánica de la entidad sus funciones específicas y los parámetros académicos y de investigación necesarios para cumplir esta función",
+    "summary": "El senador Carlos Alberto Benavides propone modificar el artículo 12 para enfatizar la interdisciplinariedad y el diálogo de saberes en la escuela de guardaparques, incorporando conocimientos ancestrales y participación comunitaria.",
+    "start": 10726.9,
+    "end": 10849.4,
+    "tags": [
+      "Reformas sociales",
+      "Educación",
+      "Inclusión financiera"
+    ],
+    "mentions": [
+      {
+        "entity": "Escuela de Guardaparques",
+        "type": "institución educativa"
+      },
+      {
+        "entity": "Pueblos indígenas",
+        "type": "comunidad"
+      },
+      {
+        "entity": "Comunidades negras",
+        "type": "comunidad"
+      },
+      {
+        "entity": "Comunidades campesinas",
+        "type": "comunidad"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Miranda Londoño Julia",
+    "session": "Abril-07-2026",
+    "quote": "Muchas gracias Presidente especialmente a usted por permitirnos traer este importante proyecto de ley a la plenaria del Senado A todos y cada uno de los senadores un agradecimiento inmenso pero sobre todo a la senadora Nadia Abel que asumió la defensa de este proyecto de una manera ejemplar teniendo en cuenta que es un proyecto importante para Colombia el país más mega diverso del planeta y que tiene un sistema de parques Muy importante en donde están los tesoros ambientales de nuestro país pero que sin guardaparques no podría trabajarse ni conservarse la formación de ellos y las condiciones especiales para que tengan un ejercicio de sus labores de manera digna será lo que logremos en el con la aprobación de este proyecto de ley muchas gracias presidente",
+    "summary": "La representante Julia Miranda agradece al Senado por el debate del proyecto de ley para guardaparques, destacando la importancia de la conservación de la biodiversidad y el rol clave de los guardaparques.",
+    "start": 10985.1,
+    "end": 11038.2,
+    "tags": [
+      "Reformas sociales",
+      "Infraestructura"
+    ],
+    "mentions": [
+      {
+        "entity": "Senadora Nadia Blel",
+        "type": "legislador"
+      },
+      {
+        "entity": "Proyecto de ley para guardaparques",
+        "type": "proyecto de ley"
+      }
+    ],
+    "importance": 0.4
+  },
+  {
+    "congressman_name": "Lozano Correa Angelica Listbeth",
+    "session": "Abril-07-2026",
+    "quote": "Mil gracias señor presidente agradecerle a la plenaria la aprobación de este proyecto que con el liderazgo de Julia Miranda representante que fue directora de Parques Nacionales pudimos construir e insistir con sus equipos y el mío y siempre con la oficina de de Marcos Daniel y ahora con la ponente Nadia Bledel destacar que este proyecto hace que los 600 días guardaparques que actualmente tiene Colombia implica que tienen a su vez la tarea de custodiar 17 millones de hectáreas eso hace que la responsabilidad sea enorme las condiciones muchas veces inhumanas de trabajar lejos de su casa sin ninguna conectividad muchas veces ni de transporte ni de comunicación impone una carga y un desgaste emocional y personal a cada uno de los trabajadores de parques nacionales de guarda parques así como a sus familias así que es de esa trascendencia este proyecto que celebro y agradezco haya sido aprobado mil gracias gulita y a nuestros equipos mi asesora que se fue a estudiar a Brasil está muy feliz por lograr que este proyecto avance a ser ley mil gracias",
+    "summary": "La senadora Lozano Correa agradece la aprobación de un proyecto de ley que beneficia a los guardaparques, destacando las duras condiciones de trabajo y la enorme responsabilidad de custodiar millones de hectáreas, lo que refleja un compromiso con la protección ambiental y el bienestar laboral.",
+    "start": 11054.3,
+    "end": 11133.5,
+    "tags": [
+      "Medio ambiente",
+      "Condiciones laborales",
+      "Protección ambiental"
+    ],
+    "mentions": [
+      {
+        "entity": "Miranda Londoño Julia",
+        "type": "legislador"
+      },
+      {
+        "entity": "Parques Nacionales",
+        "type": "organismo"
+      },
+      {
+        "entity": "Nadia Bledel",
+        "type": "legislador"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Benavides Mora Carlos Alberto",
+    "session": "Abril-07-2026",
+    "quote": "presidente No estas proposiciones en general nosotros hacemos una lectura muy juiciosa de todos los proyectos y por eso Solemos prácticamente participar en cada uno de ellos Y este proyecto es de un interés particular porque yo he dedicado buena parte de mi vida a trabajar con organizaciones de pescadores en varias regiones del país en la Amazonía en la Orinoco y de forma especial en el Magdalena medio y obviamente parte de esa reflexión de lo que implica la vida pescadora como parte de la vida campesina tiene que ver con la necesidad de que nuestros proyectos de ley tengan una base constitucional nosotros logramos este congreso este este congreso en julio en junio del dos mil veintitrés logró transformar el artículo sesenta y cuatro de la constitución yo estoy seguro que mis colegas lo recuerdan muy bien ese artículo sesenta y cuatro quiero decirles Reconoce a los campesinos y a las campesinas a las pidas campesinas como sujetos especiales de derecho y eso que implica que los diversos oficios las diversas actividades las diversas modos de producir de crear de cuidar territorio de trabajar de organizar tienen que ser contempladas en las leyes que tienen de una otra forma que ver con esas vidas y sin duda esta propuesta tiene que ver con las una parte de esas vidas campesinas que son las vidas de los pescadores y las pescadoras porque este proyecto como ustedes saben está reconociendo y quiere que justamente conmemorar un día de julio como un día de los pescadores de la pesca pues yo lo que les he dicho y les he propuesto es que siguiendo esa orientación constitucional pues se transforme el artículo segundo y que en ese artículo segundo pues justamente se revindique a estos sujetos especiales de derecho de forma directa como ese artículo lo menciona y que se asuma La definición que está en la Constitución es que reconocer también es valorar y valorar es comprender profundamente lo que se está hablando por eso Hemos transformado hemos pedido que se transforme ese artículo en términos de que se busque que esas actividades diversas de la pesca se revindí que ese proceso diverso pesquero se revindí que las vidas campesinas relacionadas con él los roles que desempeñan se revindí que la pesca artesanal no solo como una cuestión folclorizante y de por allá Incluso aquí a veces hasta lo hablan de las zonas rojas y esas cosas sino de una gente que produce y crea territorio y economía la pesca artesanal comercial la pesca de subsistencia para que hablemos en profundidad de lo que estamos intentando revivificar en este Artículo de este proyecto de ley por eso yo quisiera que se vote por lo tanto que se incluya lo que el artículo sesenta y cuatro de la Constitución Colombiana reivindica en las vidas campesinas y las vidas pescadoras como parte de esas vidas campesinas Muchas gracias",
+    "summary": "El senador Benavides argumenta que el proyecto del Día Nacional del Pescador debe enmarcarse en la reforma constitucional que reconoce a campesinos y pescadores como sujetos especiales de derecho, buscando que la ley reivindique sus actividades diversas y evite una visión folclórica, para fortalecer la protección de sus derechos.",
+    "start": 12836.1,
+    "end": 13068.7,
+    "tags": [
+      "Reformas sociales",
+      "Derechos campesinos",
+      "Pesca",
+      "Legislación simbólica"
+    ],
+    "mentions": [
+      {
+        "entity": "Constitución Colombiana",
+        "type": "constitución"
+      },
+      {
+        "entity": "Artículo 64",
+        "type": "artículo constitucional"
+      },
+      {
+        "entity": "campesinos",
+        "type": "grupo social"
+      },
+      {
+        "entity": "pescadores",
+        "type": "grupo social"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Agudelo García Ana Paola",
+    "session": "Abril-07-2026",
+    "quote": "autores son representantes a la cámara en este proyecto que se debate Sobre el día del pescador que es un proyecto de honores que estamos votando aquí en la plenaria Entonces tiene el uso de la palabra el senador Virguez",
+    "summary": "La mesa directiva anuncia que se debate un proyecto de ley de honores para institucionalizar el día nacional del pescador y concede la palabra al senador Virgüez como ponente.",
+    "start": 13091.5,
+    "end": 13109.2,
+    "tags": [
+      "Procedimiento parlamentario"
+    ],
+    "mentions": [
+      {
+        "entity": "Proyecto de ley de honores",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "Cámara de Representantes",
+        "type": "institución"
+      },
+      {
+        "entity": "Senador Virgüez",
+        "type": "legislador"
+      }
+    ],
+    "importance": 0.2
+  },
+  {
+    "congressman_name": "Virgüez Piraquive Manuel Antonio",
+    "session": "Abril-07-2026",
+    "quote": "Muchas gracias Presidenta Bueno primero agradecerle al senador Benavides por la iniciativa las proposiciones la explicación y la justificación que hace desde el punto de vista de la constitución son pertinentes y nosotros recordemos como partido mira apoyamos esa reforma constitucional que garantiza que los campesinos sean sujetos especiales de derecho sin embargo permítame senador decirle que no podemos acompañar las proposiciones primero porque este es un proyecto de honores realmente es un proyecto de honores que lo que busca es simplemente institucionalizar un día crear el día nacional del pescador y resaltar y reconocer la importancia de esta actividad como como un sector estratégico para la sociedad y básicamente es establecer ese día ese reconocimiento y autorizar al gobierno nacional que en las posibilidades de su presupuesto fiscal pueda vincularse porque recordemos que esta ley De honores es una ley facultativa que simplemente le da al gobierno la potestad de tomar una iniciativa sobre todo cuando se trata de orden presupuestal La propuesta que trae el senador tiene un impacto fiscal que no fue consensuada ni construida con el Ministerio de Hacienda No sabemos cuánto puede costar esto y necesitamos que el gobierno en el autonomía y en el manejo de su presupuesto pueda atender o no la necesidad y el objeto de la ley por lo tanto presidenta y senadores yo les solicitaría no apoyar digamos las proposiciones que hizo senador Benavides que en buena hora y en otro proyecto podríamos acompañar ese es un proyecto que además es una propuesta que tampoco fue discutida en ninguna de las sesiones de cámara es el último debate y por lo tanto no sería procedente apoyarlas y poder garantizar que esta ley salga adelante ya para ser sancionada por el presidente de la república gracias presidente",
+    "summary": "El senador Virgüez, como ponente, rechaza las enmiendas propuestas por el senador Benavides al proyecto de ley de honores para el día del pescador, argumentando que introducen un impacto fiscal no consensuado y que el proyecto debe limitarse a su carácter simbólico, instando a la plenaria a votar en contra para asegurar su aprobación.",
+    "start": 13111.7,
+    "end": 13246.3,
+    "tags": [
+      "Política fiscal",
+      "Reformas sociales"
+    ],
+    "mentions": [
+      {
+        "entity": "Senador Benavides",
+        "type": "legislador"
+      },
+      {
+        "entity": "Proyecto de ley de honores",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Ministerio de Hacienda",
+        "type": "ministerio"
+      },
+      {
+        "entity": "Constitución",
+        "type": "documento legal"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Benavides Mora Carlos Alberto",
+    "session": "Abril-07-2026",
+    "quote": "No no puedo dejarlas como constancia porque ningún honor es vacío de sujeto Y lo único que estamos reivindicando ya existen dos fechas conmemorativas alrededor de la pesca Y lo único que estamos reivindicando es que existe el sujeto no existen honores abstractos sino referidos a actividades concretas que realizan hombres y mujeres concretos entonces no la puedo dejar obviamente yo fui parte de quienes construyeron la reforma del artículo sesenta y cuatro estaría contrariando mi mismos principios y lo que yo expresaba no hay impacto fiscal por lo tanto solo estamos Generando una definición que ya está en la Constitución y que debe ser recogida en este caso nada más Así que no la puedo dejar como constancia",
+    "summary": "El senador Benavides defiende sus proposiciones de incluir a los pescadores como sujetos de derecho en el proyecto, basándose en la reforma constitucional que reconoce a los campesinos, y niega que haya impacto fiscal, acusando a la oposición de obstaculizar un reconocimiento necesario.",
+    "start": 13262.1,
+    "end": 13314.1,
+    "tags": [
+      "Reformas sociales",
+      "Constitución"
+    ],
+    "mentions": [
+      {
+        "entity": "Reforma constitucional artículo 64",
+        "type": "documento legal"
+      },
+      {
+        "entity": "Pescadores",
+        "type": "grupo social"
+      },
+      {
+        "entity": "Constitución",
+        "type": "documento legal"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Ortega Narváez Temístocles",
+    "session": "Abril-08-2026",
+    "quote": "Senador usted es el coordinador de la comisión de víctimas a propósito del día nacional que mañana el país conmemora en solidaridad con un universo de por lo menos diez millones de colombianos que han sufrido con todo rigor los embates de la violencia en nuestro país que se espera mañana en este Congreso pleno que empezará tipo nueve de la mañana mañana hacemos como ocurre cada año un homenaje a las víctimas en Colombia para seguir insistiendo en todos los niveles y sectores a la sociedad colombiana sobre la importancia de reconocer a las víctimas y de apoyarlas de acompañarlas de estar con ellas siempre y al gobierno del estado cumplir con la obligación cada vez requerimos más y más inversión más recurso más instrumentos más herramientas para poder hacer efectivos los derechos a las víctimas a la verdad la justicia la reparación y la garantía no repetición las víctimas deben estar siempre en el centro de los debates y de los intereses nacionales",
+    "summary": "El senador Temístocles Ortega resalta la conmemoración del Día Nacional de las Víctimas, subrayando la necesidad de reconocer y apoyar a los más de diez millones de colombianos afectados por la violencia, y aboga por mayores recursos para garantizar sus derechos a verdad, justicia, reparación y no repetición.",
+    "start": 45.9,
+    "end": 109.4,
+    "tags": [
+      "Víctimas y reparación"
+    ],
+    "mentions": [
+      {
+        "entity": "Congreso pleno",
+        "type": "institución"
+      },
+      {
+        "entity": "gobierno del estado",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Ortega Narváez Temístocles",
+    "session": "Abril-08-2026",
+    "quote": "Señor la ley catorce cuarenta y ocho de dos mil once o ley general de víctimas sí ha funcionado La ley ha funcionado sin duda es un instrumento muy importante por parte de las víctimas por supuesto que requerimos mucho más no ha sido suficiente las víctimas están reclamando cada vez más vigencia de sus derechos y tienen toda la razón en hacerlo pero la ley es un instrumento valioso que tenemos que conservar y por supuesto ojalá practicar poner en práctica hacerla vigente para que los derechos que ahí están reconocidos se conviertan en realidad desde la vía de haya de cada una de nuestras víctimas y en lo posible lograr que no haya más víctimas en Colombia",
+    "summary": "El senador reconoce que la Ley de Víctimas (1448 de 2011) ha funcionado pero de manera insuficiente, y aboga por su implementación efectiva para materializar los derechos de las víctimas y prevenir nuevas víctimas.",
+    "start": 110.4,
+    "end": 152.3,
+    "tags": [
+      "Víctimas y reparación"
+    ],
+    "mentions": [
+      {
+        "entity": "ley 1448 de 2011",
+        "type": "ley"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Ortega Narváez Temístocles",
+    "session": "Abril-08-2026",
+    "quote": "Senador en temas de agenda legislativa que ha venido sucediendo con la evolución de la ley de competencias que es una tarea pendiente por tramitarse y que es además un proyecto que va a reglamentar el acto legislativo que modificó el acto al sistema general de participaciones que le daría mayor autonomía territorial a las regiones colombianas la ley de competencias se ha presentado por parte del gobierno en cumplimiento el requisito exigido en el artículo legítimo número tres el veinte veinticuatro está en debate en la comisión primera de la cámara esperamos que cursústeis el debate ayer precisamente estuvimos con las naciones unidas haciendo una elaboración con expertos del texto de esa ley la ley en su debate va a ser mejorada requiere por supuesto numerosos ajustes porque La finalidad debe ser siempre la de dotar de más autonomía a los territorios para que desde allá podamos establecer el plan de desarrollo y hacer que el país reconozca la diferencia regional territorial y podamos crear un país realmente pluralista que en la práctica con alcaldes gobernadores y comunidades podamos hacerle frente a este centralismo tan odioso que ha causado tanto mal en el país durante tanto tiempo señor la norma conserva el espíritu de pasar de un veintitrés por ciento que hoy tenemos en transferencias a un treinta y nueve cinco para las regiones en una transición de unos doce años sí este es el texto de materia cuantitativa Aspiramos llegar a una transferencia de recursos de treinta y nueve por ciento o diecisiete puntos más durante doce años Pero lo más importante es que esos recursos establezcan competencias en los territorios nuevas y puedan contribuir para achicar el Estado central No tiene ninguna ninguna razón no tiene ninguna explicación que haya competencia para los territorios y el estado nacional mantenga su aparatosa estructura requerimos que se despose el delación de competencias y pasen a los departamentos y municipios por supuesto con recursos para hacer objetivos esos mayores recursos que recibirían las regiones para qué sector de inversión serían prioridades fundamentalmente para salud y educación pero hay que también Establecer criterios de manera que permitan que haya recursos de libre disposición para que las regiones puedan irse autónomamente diseñar su propio desarrollo No podemos seguir creyendo que los proyectos y recursos de los pavillanes pueden ser los mismos que se ejecutan en el Chocó o en la costa pacífica o atlántica Este es un país de regiones un país de diferencias profundas étnicas territoriales geográficas culturales que requieren darle repito autonomía a los territorios para que de allá diseñen su forma de desarrollo además también que se inveterían senadores en el componente de agua potable y saneamiento básico",
+    "summary": "El senador defiende la ley de competencias como una herramienta clave para aumentar la autonomía territorial y las transferencias de recursos a las regiones, criticando el centralismo histórico y enfatizando la necesidad de descentralización para un desarrollo pluralista que incluya inversión en salud, educación e infraestructura básica.",
+    "start": 153.1,
+    "end": 334.0,
+    "tags": [
+      "Descentralización territorial",
+      "Infraestructura vial"
+    ],
+    "mentions": [
+      {
+        "entity": "ley de competencias",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Naciones Unidas",
+        "type": "organismo"
+      },
+      {
+        "entity": "comisión primera de la cámara",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Ortega Narváez Temístocles",
+    "session": "Abril-08-2026",
+    "quote": "hacemos ahora senador temas regionales que se espera mañana en el municipio de Guachencaucá con un consejo de seguridad que se ha citado por las autoridades para evaluar el tema del orden público allí en esta región del caud mañana está programado un consejo de seguridad con diferentes ministerios identidades del gobierno los acá desde el norte del cauca para hacerle un análisis y hacerle frente a una situación de orden público de seguridad muy complicada que hay en la región ha sido objeto de masacres permanentemente hay bandas juveniles de estudiantes de colegios que se han armado y están enfrentándose entre ellas esperamos que mañana pueda ser haber hay un análisis con todas autoridades y poder fijar acciones concretas para enfrentar la inseguridad ciudadana el norte del cauca es un territorio muy importante limita con el valle con cali es una zona industrial en nuestro departamento y requiere como currículum ya no la presencia del estado para que en matanáles hayan recursos y hayan medidas efectivas para enfrentar los violentos",
+    "summary": "El senador describe la crítica situación de seguridad en el norte del Cauca, caracterizada por masacres y bandas juveniles armadas, y anuncia un consejo de seguridad con múltiples autoridades para coordinar acciones concretas contra la inseguridad.",
+    "start": 336.8,
+    "end": 403.0,
+    "tags": [
+      "Seguridad regional"
+    ],
+    "mentions": [
+      {
+        "entity": "municipio de Guachencaucá",
+        "type": "entidad territorial"
+      },
+      {
+        "entity": "consejo de seguridad",
+        "type": "organismo"
+      },
+      {
+        "entity": "ministerios",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Ortega Narváez Temístocles",
+    "session": "Abril-08-2026",
+    "quote": "senador por último indepasa señalado que ya el país registra treinta y cinco masacres en lo corrido este año en unas cifras imprevendentes en los últimos diez años por lo menos Qué debe hacer el nuevo gobierno para combatir a esos grupos criminales en las regiones y prevenir que más colombianos sigan muriendo en los territorios No hay duda que hay que recoger la experiencia que hemos tenido en estos últimos años y pues decir ajustes una estrategia diferente que contenga elementos como el fortalecimiento de la universidad pública el fortalecimiento de la justicia la inversión social en los territorios fundamentalmente para oportunidades para la gente joven y por supuesto una acción ciudadana que permita crear confianza entre la ciudadanía y las autoridades porque hoy estas confianzas están rota integralmente el estado tiene que considera esta temática y replantear lo que Estados Unidos está haciendo que por supuesto no ha dado los mejores resultados",
+    "summary": "El senador propone una estrategia integral contra los grupos criminales, basada en fortalecer la educación pública, la justicia y la inversión social, y en reconstruir la confianza ciudadana, mientras critica enfoques previos influenciados por Estados Unidos.",
+    "start": 404.1,
+    "end": 464.4,
+    "tags": [
+      "Seguridad regional",
+      "Educación pública"
+    ],
+    "mentions": [
+      {
+        "entity": "nuevo gobierno",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Estados Unidos",
+        "type": "país"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Muñoz León Fredy",
+    "session": "Abril-08-2026",
+    "quote": "Señor hay una serie de cuestiones que han indignado muchos antioqueños por cuenta de unos funcionarios de la alcaldía Medellín que golpearon en unas manifestaciones a población civil Qué fue lo que realmente pasó y qué exigen ustedes de las dos autoridades y los organismos de control al respecto Bueno a ver ya esto es reiterativo hay unas personas de civil son civiles funcionarios de la secretaría de seguridad del municipio de Medellín se llaman los agentes de seguridad y el orden y estos se están comportando es como paramilitares o sea es una es una tragedia lo que está pasando ya es la segunda vez que ocurre ocurrió la primera vez fue en una manifestación una marcha pacífica que estábamos allí yo estaba allí una marcha en por la paz en Palestina por el llamado al cese de hostilidades en Palestina y llegó esos esos señores que se llaman los de los de seguridad y el orden que son gente civil a golpear o sea a golpear a las personas y entonces lo que están haciendo es que están sustituyendo las funciones de la fuerza pública y cuando alguien sustituye funciones de la fuerza pública pues eso es para policía o para militares se están comportando como tal y hace poco ocurrió igual en el centro de Medellín allí son mismos señores golpearon a unas personas civiles que estaban allí gente de civil golpeando a unos civiles y esto sí es gravísimo lo que está pasando el presidente Gustavo Petro llamó a la procuraduría a investigar hoy se le abren procesos en personería en procuraduría no solamente a Federico Restrepo porque es el jefe sino al secretario y también a cada uno de los funcionarios identificados con estos hechos eso lamentable cosas como esta no pueden volver a pasar antioquia ha vivido una era de violencia de muchos años Somos el departamento con más víctimas del país más de un millón setecientos mil víctimas en Antioquia nacieron las convivir que luego se convirtieron en paramilitarismo y eso es lo que no queremos volver a que se repita y estas prácticas hoy es como empezaron las convivir y luego se volvieron en paramilitarismo y vean las tragedias que nos dejó no queremos que eso vuelva a pasar por eso yo también le solicité el día de ayer a que en la plenaria a la procuraduría una investigación profunda al alcalde de Medellín al secretario de seguridad y a cada uno de esos funcionarios que están allí maltratando y no solamente son ellos también concejales que salen combates a golpear personas yo creo que ya se están exagerando y esto va cuyendo esto va cuyendo fuerza y al último van a salir matando la gente en las calles estos señores tanto los del bate como los funcionarios de la alcaldía eso es lamentable que ocurra",
+    "summary": "El senador Fredy Muñoz León denuncia el comportamiento paramilitar de agentes de seguridad de la alcaldía de Medellín que golpean a civiles en manifestaciones, vinculándolo con el histórico paramilitarismo en Antioquia, y exige investigaciones exhaustivas por parte de la Procuraduría y otros organismos de control.",
+    "start": 608.1,
+    "end": 775.9,
+    "tags": [
+      "Seguridad regional",
+      "Debate político-electoral"
+    ],
+    "mentions": [
+      {
+        "entity": "alcaldía Medellín",
+        "type": "institución"
+      },
+      {
+        "entity": "presidente Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "procuraduría",
+        "type": "organismo de control"
+      },
+      {
+        "entity": "Federico Restrepo",
+        "type": "funcionario"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Muñoz León Fredy",
+    "session": "Abril-08-2026",
+    "quote": "senor usted hace referencia que en Antioquia son unos mil setecientos mil víctimas a propósito mañana se celebra el día nacional de la solidaridad con las víctimas Cómo ha sido esa reparación o qué conocimientos tiene usted de esa reparación integral que por ley catorce cuarenta y ocho se debe hacer a ese universo de víctimas y cómo están las cosas en su región frente a eso bueno yo creo que este gobierno es el que más ha logrado avanzar hemos logrado que de un debate que nosotros dimos del periodo anterior de alargar diez años más la ley catorce cuarenta y ocho hemos logrado también en este gobierno por lo menos en la entrega de tierras que las víctimas tengan más tierras la restitución de tierras hemos logrado que se entregue un poco más ha sido insuficiente porque son muchos años que se lleva y es poca la tierra que se ha entregado si esto sigue así hemos se ha entregado el diez punto cinco de las hectáreas solicitadas recuerden que son más de seis millones de hectáreas que se les quitaron a los pequeños campesinos hoy están solicitadas pero se ha avanzado muy poco en catorce quince años que va la ley Lo que estamos tramitando es una ley que esos que no tengan esos que no tengan terceros demandantes se dé por vía administrativa Si esto lo logramos pues avanzaríamos un treinta y ocho por ciento de la entrega de tierras para las víctimas Pero claro aquí hay unas personas de la extrema derecha que no quieren que eso pase porque claro de alguna manera hay algunos congresistas involucrados en la tenencia de estas tierras y no quieren que esta ley pase pero bueno en Antioquia particularmente hay regiones que el setenta por ciento están inscritos en el libro único de mi tema el caso del uruguayo Antioqueño Luravante Oquello la mayoría de la población es víctima de este conflicto armado el bajo cauca bueno y mucha gente desplazada es el departamento con más víctimas de todo el país Es donde se han hecho los peores experimentos de la guerra allá donde nació el las convivir luego se convivieron en paramilitarismo allí también las guerrillas hicieron sus estragos bueno ha sido un conflicto interno hoy gracias a este gobierno se ha logrado avanzar pero es cuestión de plata es que resarcir a las víctimas reparar a las víctimas cuesta mucha plata y el país que nos entregaron es un país quebrado un país donde lo administraron doscientos años y llevamos tres años y unos meses en otorgar un país quebrado aquí se trata de plata pero este gobierno puso las víctimas en el centro del debate y eso es muy importante que el día de mañana que se conmemora el día de las víctimas pues que no solamente sea un día sino que sea el día para poder generar las condiciones de no revictimización sino de poder avanzar en resarcir todo el daño que se le han hecho entonces creo que ese gobierno ha avanzado mucho y vamos a seguir en el próximo gobierno que es el segundo gobierno popular el segundo gobierno progresista vamos a avanzar más y van a seguir siendo las víctimas el centro del debate y el centro del progreso por eso precisamente senador se prolongó diez años más la vigencia de la ley de víctimas para alcanzar a cubrir más ese universo de víctimas que hoy ya tenemos superando los diez millones más de diez millones de víctimas tenemos hoy y eso que son los que están inscritos Mucha gente no se inscribe mucha gente no se inscribe porque claro es es es engorroso muchas veces porque no se quieren tan ver revictimizados porque hay señalamientos mucha gente no pero pero pero la verdad es lamentable más de diez millones de víctimas en nuestro país es muy muy lamentable lo que ha ocurrido en esta guerra que nadie pidió que así fuera y hay mucha gente que le gusta la guerra que le gusta la sangre que saca reditos políticos de esto hay gente que no le gusta la paz nosotros le apostamos a la paz los progresistas le apostamos a la paz y por eso vamos a seguir luchando porque se dé la paz en nuestro país",
+    "summary": "El senador evalúa los avances en reparación a víctimas en Antioquia, destacando la extensión de la Ley de Víctimas y la restitución de tierras, pero critica la lentitud y la oposición de sectores de derecha, mientras enfatiza el compromiso del gobierno progresista y aboga por la paz.",
+    "start": 775.9,
+    "end": 1006.1,
+    "tags": [
+      "Víctimas y reparación",
+      "Debate político-electoral"
+    ],
+    "mentions": [
+      {
+        "entity": "ley 1448",
+        "type": "ley"
+      },
+      {
+        "entity": "extrema derecha",
+        "type": "partido"
+      },
+      {
+        "entity": "congresistas",
+        "type": "legisladores"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Muñoz León Fredy",
+    "session": "Abril-08-2026",
+    "quote": "se abrió una última pregunta y pasando a temas de agenda legislativa usted ayer en la comisión primera avanzaron con un interesante proyecto que busca reglamentar el tema de la ley seca es cuando se aplica este tema en vísperas de elecciones y al parecer pues esto estaría afectando al comercio a los emprendedores y tiene cierto impacto en la economía como quedaría a partir de la modificación estos temas de la ley seca bueno la famosa ley seca que para mí la ley mojada porque la gente cuando le prohíben algo le genera más deseo entonces si si les dicen es que no puede tomar de tal hora tal hora pues van y compran y se emborrachan en la casa clandestinamente o en cualquier lugar no en los bares no en los restaurantes bar y de estas cosas nosotros hemos llamado la atención desde hace rato este es un país este es un país que constantemente están elecciones que las que la concejo municipal de juventud que las locales que la primera vuelta que las consultas que no sé qué tipo de cosas son un montón de cosas y lo que hoy existe es que son una ley seca de setenta y dos horas eso le hace un daño a la economía y no hay ningún estudio ningún estudio que determine que sea positivamente negativamente la ley seca entonces lo que proponemos es que no sea setenta y dos horas sino que sea doce horas la ley seca desde seis de la mañana a seis de la tarde para que continúen los gastróbaros los bares las discotecas en sus funciones son un millón doscientos mil empleos de empleos que se generan alrededor de este de esta economía y mayoritariamente son empleos de muchos jóvenes jóvenes que están en la universidad además de cada bueno mujeres y bueno todo ese tipo de cosas que se quedan esos días sin ese recurso que le sirve muchas veces para los pasajes para la universidad o para sostener el hijo bueno en fin es una economía fuerte y como les digo no hay ningún estudio que termine que eso sí realmente afecte positivamente las lesiones el que quiera la gente que se va a borrarse en borracha está y le seca o no y le seca yo creo que aquí antes el mensaje que se manda cuando se prohíbe es es diferente nosotros sí estamos por regular la irregular la esas doce horas y no afectar la economía del país entonces vamos a ver si vamos a hablar del del sistema electoral pero hay una reforma profunda de otras cosas no esto yo creo que esto es menor la ley seca es un tema menor que ojalá los demás colegas ayer logramos pasarlo en primer debate ojalá sea pronto y que y que no se afecte la economía nuestro país Bien la propuesta entonces sería que la ley seca ya no aplique en sus setenta y dos horas como está hoy en día sino que se restrinja únicamente a doce horas",
+    "summary": "El senador argumenta en contra de la ley seca de 72 horas durante elecciones, proponiendo reducirla a 12 horas para minimizar el impacto económico en bares, discotecas y empleos, especialmente para jóvenes, y critica la falta de estudios que respalden su efectividad.",
+    "start": 1006.1,
+    "end": 1172.3,
+    "tags": [
+      "Debate político-electoral",
+      "Economía"
+    ],
+    "mentions": [
+      {
+        "entity": "ley seca",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "comisión primera",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Pérez Oyuela José Luis",
+    "session": "Abril-08-2026",
+    "quote": "hoy senador usted es experto en temas internacionales que ese también ha sido un punto neurálgico en los gobiernos colombianos ahora mismo Ecuador anuncia que seguirá con esa guerra comercial afectando a muchos sectores productivos de nuestro país qué hacer para contrarrestar esa crisis que hoy se vive una de las principales dificultades del actual gobierno ha sido el manejo de las relaciones internacionales las relaciones con el mundo no podemos tratar de estar bien con un sector del globo terráqueo en materia de relaciones internacionales pero con otros sectores no colombia tradicionalmente ha tenido un comportamiento en las relaciones internacionales de cercanía y de integración de los pueblos y siempre ha estado sumado al libre y principio universal del comercio y hoy es necesario mantener esas relaciones internacionales fíjense usted cómo por ejemplo se acaba de levantar la mesa de diálogo binacional en materia de comercio en materia de seguridad con Ecuador siendo un país aquí hermano vecino tenemos que hacer esfuerzos para que nuestra agenda internacional nuestras relaciones con el mundo sean mejores fluyan puedan tener entendimientos puedan avanzar en materia de cooperación y ese es el camino yo creo que hay que restablecer rápidamente la posibilidad de que Ecuador no avance de manera agresiva con Aranceles con Colombia porque afecta por supuesto a Colombia pero también afecta al Ecuador y eso hay que avanzarlo a través de la diplomacia de la diplomacia no hay otro camino y también voy a ponerle un ejemplo Colombia debe avanzar con países que en su primer orden por ejemplo yo fui ponente del Acuerdo de París Acuerdo Global para la protección del medio ambiente",
+    "summary": "El senador José Luis Pérez critica el manejo de las relaciones internacionales del gobierno, abogando por una diplomacia activa para resolver la guerra comercial con Ecuador y mantener la integración regional, basada en principios de libre comercio y cooperación.",
+    "start": 1280.4,
+    "end": 1405.0,
+    "tags": [
+      "Relaciones internacionales",
+      "Seguridad regional"
+    ],
+    "mentions": [
+      {
+        "entity": "Ecuador",
+        "type": "país"
+      },
+      {
+        "entity": "Acuerdo de París",
+        "type": "acuerdo internacional"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Pérez Oyuela José Luis",
+    "session": "Abril-08-2026",
+    "quote": "camino yo creo que hay que restablecer rápidamente la posibilidad de que Ecuador no avance de manera agresiva con Aranceles con Colombia porque afecta por supuesto a Colombia pero también afecta al Ecuador y eso hay que avanzarlo a través de la diplomacia de la diplomacia no hay otro camino",
+    "summary": "Aboga por el restablecimiento diplomático urgente para evitar que Ecuador imponga aranceles agresivos, argumentando que perjudican a ambos países y que la diplomacia es la única vía viable.",
+    "start": 1386.6,
+    "end": 1405.0,
+    "tags": [
+      "Relaciones internacionales",
+      "Seguridad regional"
+    ],
+    "mentions": [
+      {
+        "entity": "Ecuador",
+        "type": "país"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      },
+      {
+        "entity": "Aranceles",
+        "type": "concepto"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Pérez Oyuela José Luis",
+    "session": "Abril-08-2026",
+    "quote": "y también voy a ponerle un ejemplo Colombia debe avanzar con países que en su primer orden por ejemplo yo fui ponente del Acuerdo de París Acuerdo Global para la protección del medio ambiente Y hablamos con el director de la Policía Internacional de Interpol que está en Lyon Francia y que también es el director de la Policía Francesa para efectos de tener cooperación con Ameripol que es una figura transfronteriza en donde Colombia tiene la presidencia de la policía de las Américas para combatir la minería ilegal especialmente la del oro Colombia tiene grandes yacimientos en reserva de oro En el solo Choco Pacífico se están extrayendo de manera ilegal más de 40 toneladas vimentuales de oro Hemos crecido las exportaciones de oro legal pero ha crecido más la ilegal Ni se diga las Minas de explotación en el Nariño Pacífico en el Caucano Pacífico en el Tolima al sur del Tolima en el río Saldaña en donde está Coyama Ataco está Planadas río Blanco Está Chaparral grandes grandes yacimientos de oro que hoy están en manos de grupos ilegales criminales pero hay que diferenciar el que hay una minería ilegal de la ilicitud y otra de la ilegalidad la ilícitud es con armas con grupos criminales y hay otra que es ilegal que son mineros que son ancestrales que no están legalizados colombia tiene que poner en su agenda prioritaria ese tema ese es un tema que con cooperación Por citar un ejemplo en un esfuerzo partner de Interpol con Ameripol y la policía colombiana de controlar ese flagelo de explotación del oro en Colombia y si lo hacemos vamos a encontrar que esos grandes yacimientos en oro pudieran darle una tranquilidad muy importante a Colombia en la bolsa bursátil porque recuerde usted que la capacidad económica y la bolsa en el mundo se mueve por las reservas en oro",
+    "summary": "Destaca la gravedad de la minería ilegal de oro en Colombia, citando regiones específicas y abogando por la cooperación internacional a través de Interpol y Ameripol para controlar este flagelo, lo que podría estabilizar la economía colombiana.",
+    "start": 1405.5,
+    "end": 1555.5,
+    "tags": [
+      "Seguridad regional",
+      "Economía"
+    ],
+    "mentions": [
+      {
+        "entity": "Acuerdo de París",
+        "type": "acuerdo internacional"
+      },
+      {
+        "entity": "Interpol",
+        "type": "organismo"
+      },
+      {
+        "entity": "Ameripol",
+        "type": "organismo"
+      },
+      {
+        "entity": "Colombia",
+        "type": "país"
+      },
+      {
+        "entity": "Chocó Pacífico",
+        "type": "región"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Pérez Oyuela José Luis",
+    "session": "Abril-08-2026",
+    "quote": "Senador usted qué posición tiene frente a la intención de Colombia de ser parte de la ruta de la Ceda con China a propósito hoy en la cámara hubo un debate sobre esto y el avance de esta figura binacional porque se cuestionó mucho de que se estaría dejando un poco en este gobierno de un lado las relaciones con Estados Unidos que ha sido históricamente el principal socio comercial a lo largo de estos doscientos años de vida republicana no podemos renunciar a mantener y crecer la balanza comercial con los Estados Unidos es una agenda prioritaria toda vez que la balanza comercial con los Estados Unidos es la principal hoy en materia de exportación y de importaciones por supuesto yo he sido amigo de no renunciar por eso hablé del principio universal del libre comercio hay que abrir comercio en la ruta de la seda por supuesto no podemos renunciar a tener comercio con los países asiáticos pero no significa que porque yo lo haga con la China yo voy a cerrar Estados Unidos o más aún si lo hago con la China que la China tampoco nos condice para hacerlo con Taiwán Hoy el primer país productor de semiconductores en el mundo y que nosotros hoy no podemos ser condicionados por ningún país del mundo en materia comercial Es decir yo estoy de acuerdo con la ruta de la ceda pero no condicionada a que digan que nosotros ampliemos nuestro comercio Con la China continental pero condicionada a que no tengamos comercio por ejemplo con otros países Colombia debe ser soberano en el principio universal del libre comercio",
+    "summary": "Apoya la participación de Colombia en la Ruta de la Seda de China, pero insiste en que no debe comprometer las relaciones comerciales históricas con Estados Unidos, defendiendo la soberanía y el libre comercio sin condiciones.",
+    "start": 1555.5,
+    "end": 1659.1,
+    "tags": [
+      "Relaciones internacionales",
+      "Debate político-electoral"
+    ],
+    "mentions": [
+      {
+        "entity": "China",
+        "type": "país"
+      },
+      {
+        "entity": "Estados Unidos",
+        "type": "país"
+      },
+      {
+        "entity": "Ruta de la Seda",
+        "type": "iniciativa internacional"
+      },
+      {
+        "entity": "Taiwán",
+        "type": "país"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Pérez Oyuela José Luis",
+    "session": "Abril-08-2026",
+    "quote": "Bueno es inevitable que el próximo gobierno cualquiera sea de derecha de izquierda de centro debe mantener una agenda de restablecer la movilidad entre los dos países el libre comercio entre los dos países y avanzar en la en ese restablecimiento comercial que recuerde usted que después de Estados Unidos nuestro principal socio era Venezuela y hoy lamentablemente no hemos podido avanzar más allá de tener abierta la frontera el comercio no viene creciendo no viene avanzando creo que en los próximos días hay una reunión con la presidenta hoy de de Venezuela del Ciro Rodríguez y que seguramente se plasma no una agenda de gobierno sino una agenda de estado en donde Venezuela pueda ser y siga representando el interés para Colombia en la región y superemos seguramente la situación que hoy atraviesa Venezuela en transición seguramente y cualquiera sea el gobierno de Colombia en Venezuela luego mi posición frente al tema con Venezuela es que siempre será importante mantener nuestros lazos comerciales la integración de nuestros pueblos y por supuesto la agenda comercial permanente",
+    "summary": "Sostiene que cualquier próximo gobierno colombiano debe priorizar el restablecimiento del comercio y la movilidad con Venezuela, históricamente un socio clave, para superar las tensiones actuales y fortalecer la integración regional.",
+    "start": 1664.6,
+    "end": 1757.6,
+    "tags": [
+      "Relaciones internacionales",
+      "Víctimas y reparación"
+    ],
+    "mentions": [
+      {
+        "entity": "Venezuela",
+        "type": "país"
+      },
+      {
+        "entity": "Estados Unidos",
+        "type": "país"
+      },
+      {
+        "entity": "Ciro Rodríguez",
+        "type": "persona"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Pérez Oyuela José Luis",
+    "session": "Abril-08-2026",
+    "quote": "senador y por último Colombia tiene un nuevo general de la República hoy ustedes en la Comisión segunda ascendieron al Mayor Roger Gómez Serrera que le augura usted este nuevo oficial de nuestro ejército colombiano el Mayor General Roger para su ascenso a General de la República pues es una obligación de orden constitucional primero en la comisión segunda del senado ya la surtimos como usted bien lo anota y ahora vendrá la plenaria del senado En el caso del General Roger yo debo destacar su vida dedicada como soldado de la patria en el Ejército de Colombia Es un hombre capaz es un hombre con experiencia es un hombre formado dentro de la academia militar es ingeniero por demás Yo siempre he dicho que el batallón de ingenieros en Colombia debe estar en todo el territorio nacional debe estar cubriendo lo que llamamos hoy técnicamente territorios vacantes o vacíos donde precisamente la ilegalidad toma la decisión de hacerle mantenimiento una carretera eso no puede suceder Para eso puede estar nuestro ejército nacional en algo que se llama seguridad multidimensional La seguridad tiene varias dimensiones no solamente la dimensión de las armas y la presencia en el territorio con un poderío militar sino también de manera integral con la comunidad Entonces el General Roger representa eso como ingeniero como soldado de la patria por su experiencia su formación estoy convencido que será un gran comandante del ejército de Colombia en estos momentos tan difíciles",
+    "summary": "Respaldó el ascenso del Mayor General Roger Gómez Serrera, elogiando su trayectoria y formación ingenieril, y subrayó el papel del ejército en una seguridad multidimensional que va más allá del poderío militar para incluir el desarrollo comunitario.",
+    "start": 1757.6,
+    "end": 1865.9,
+    "tags": [
+      "Seguridad regional",
+      "Infraestructura vial"
+    ],
+    "mentions": [
+      {
+        "entity": "General Roger Gómez Serrera",
+        "type": "militar"
+      },
+      {
+        "entity": "Ejército de Colombia",
+        "type": "institución"
+      },
+      {
+        "entity": "Comisión Segunda",
+        "type": "comisión legislativa"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Fuelantala Delgado Richard Humberto",
+    "session": "Abril-08-2026",
+    "quote": "senador qué tan grave se ha vuelto esto para los usuarios en las regiones porque ya pues vemos unos incrementos exageradamente altos El día de ayer precisamente hacemos una constancia en la plenaria del Senado de la República dando a conocer la problemática y cómo el Congreso y la República tiene que asumir este tema con toda la seriedad posible y a raíz del anuncio de una movilización que se va a realizar el día de mañana tanto la Liga de usuarios de servicios públicos nacional como la escuela Manuel Beltrán convocan y mandan una carta al presidente de la República pidiendo que se tomen medidas para que estos impactos este impacto del ajuste de la valuocatastrar que se prácticamente se eleva a los valores comerciales de los predios pensando que los campesinos tienen sus predios como negocio y que estos asuntos llevan en casos exageradamente graves como de Sarabena en Araucanía que le incrementa hasta el 25 millones por ciento o también aquí tenemos varios casos de Manati en el Atlántico el 300 mil por ciento en Sacha Boyacá el veinticinco mil por ciento o en Buenos Aires Caucá el once mil por ciento asuntos que son absurdos y que hoy la presidencia de la República le pone toda la carga a los alcaldes y a los concejales sabiendo que desde los actos administrativos resoluciones y plan de desarrollo artículo cuarenta y nueve del plan nacional de desarrollo contempla la actualización del catastro multipropósito como una herramienta de planificación y no como una segunda reforma tributaria regional o local por eso hoy los más golpeados son los campesinos y de los municipios periféricos pero además tiene otra consecuencia grave que a raíz de ese incremento de los avalúos catastrales por el higado que predios que costaban cuarenta millones pasan a valer cuatrocientos quinientos o mil millones de pesos y que ese impuesto obviamente terminará incrementándose no solo también tiene unas consecuencias del pago predial sino que se está llevando a que también los ajustes de cisven la categorización del cisven pasen de personas que estaban en la categoría de pobres o muy pobres a categorías de de tres de quince de catorce que son personas con un nivel de riqueza ya que les llaman los ricos de papel así es que es inconcebible y por lo tanto la movilización de mañana que nos solidarizamos y apoyamos desde nuestra curur también invitamos a que el gobierno nacional tome la iniciativa de derogar estos actos administrativos la resolución veinte cincuenta y siete y la resolución diecinueve doce que es la que da los lineamientos para la reglamentación de la metodología de los evaluos catastrales",
+    "summary": "Denuncia los incrementos desproporcionados en los avalúos catastrales debido al catastro multipropósito, que afectan gravemente a campesinos y municipios periféricos, y exige al gobierno nacional derogar las resoluciones responsables y suspender los cobros coactivos.",
+    "start": 2083.2,
+    "end": 2263.0,
+    "tags": [
+      "Catastro multipropósito",
+      "Descentralización territorial",
+      "Economía"
+    ],
+    "mentions": [
+      {
+        "entity": "Instituto Geográfico Agustín Codazzi",
+        "type": "organismo"
+      },
+      {
+        "entity": "Resolución 2057",
+        "type": "resolución"
+      },
+      {
+        "entity": "campesinos",
+        "type": "grupo social"
+      },
+      {
+        "entity": "municipios",
+        "type": "entidad territorial"
+      },
+      {
+        "entity": "Liga de usuarios de servicios públicos",
+        "type": "organización"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Riascos Riascos Paulino",
+    "session": "Abril-08-2026",
+    "quote": "Hola bueno muy buena tarde honorables compañeros y compañeras Quiero hacerlo someramente y es manifestar que en las elecciones pasadas particularmente no estuve la garantía de poder trabajar políticamente en este país eso se ve reflejado en la votación que pudimos obtener como paulino riasco riasco me siento orgulloso de alcanzar siete mil votos casi a nivel de opinión del país pero no tuve la posibilidad de moverme como lo debieron o lo debía hacer como político en ese país como jefe de partido por las situaciones que estamos atravesando Por eso quería dejar esta constancia hoy de una manera somera que hoy la política en nuestro país no está dando las garantías necesarias para que los liderazgos nos podamos mover Yo soy un hombre reconocido en mi región pacífica en municipios como López de Mica y Whapiti in Biki donde muchas coaliciones políticas sacaron más votos que Paulino Riasco por ejemplo en López de Mi Casa el pueblo donde nació pero meramente fue porque no tuve la garantía de poder llegar ni siquiera a mi territorio quería dejar esa constancia en este día muchas gracias a usted senador muchas gracias",
+    "summary": "Paulino Riascos expresa que, a pesar de obtener alrededor de 7,000 votos en las elecciones pasadas, no pudo ejercer plenamente su actividad política debido a la falta de garantías de seguridad en su región, particularmente en municipios del Pacífico. Su constancia subraya la crítica a las condiciones actuales que limitan el movimiento de los líderes políticos en Colombia.",
+    "start": 2966.8,
+    "end": 3057.8,
+    "tags": [
+      "Debate político-electoral",
+      "Seguridad regional"
+    ],
+    "mentions": [
+      {
+        "entity": "López de Mica",
+        "type": "municipio"
+      },
+      {
+        "entity": "Whapiti",
+        "type": "municipio"
+      },
+      {
+        "entity": "Biki",
+        "type": "municipio"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-08-2026",
+    "quote": "Gracias señora Presidenta Voy a hablar como sobreviviente del partido político de la Unión Patriótica sometido a un genocidio que avergüenza la historia política colombiana El 13 de abril hace 96 años nació Manuel Cepeda Vargas Militante del Partido Comunista y escritor y director del Seminario Bos luchando por alcanzar la paz y por la unidad de la izquierda Pero Manuel fue asesinado el 9 de agosto de 1994 todavía siento la tristeza enorme que nos dejó su muerte y lo siento porque fue a manos de un su oficial del ejército y por tarea impuesta en un curso de inteligencia militar Mañana 9 de abril día de la memoria de las víctimas En honor a esa memoria hoy su nombre vuelve a ser atacado por la extrema derecha Lo señalaron entonces como hoy al señalor Ahí van Cepeda su hijo él también senador Esa misma lógica la usaron para estigmatizar a toda una fuerza política y justificar el genocidio contra la Unión Patriótica La verdad es que Manuel Cepeda fue un periodista revolucionario un dirigente popular Un poeta un pintor un defensor de la clase trabajadora y del campesinado juntas con Yira Castro formaron una pareja ejemplar que todo el mundo anhelaría tenerla que la extrema derecha ataque hoy la memoria de Manuel Zepeda no es un exabrupto es el negacionismo frente a verdades ya juzgadas por la justicia interamericana y por la justicia nacional El sacrificio de Manuel y de miles de militantes de la Unión Patriótica no fue en vano Vivimos un momento de cambio político que reivindica su lucha con mucho honor y que la victoria de Iván Cepeda sea la derrota del miedo de la impunidad y del odio por Manuel por la verdad y por el pueblo colombiano Por eso mañana estaremos en este acto pero hoy hacemos la defensa de su vida la defensa de su trabajo y la defensa de un hombre que sacrificó su vida por el pueblo colombiano y que fue la extrema derecha quien lo mató quien lo asesinó y quien dirigió su asesinato Señora Presidenta",
+    "summary": "Aída Avella, como sobreviviente de la Unión Patriótica, conmemora a Manuel Cepeda Vargas, asesinado en 1994, y denuncia que su memoria sigue siendo atacada por la extrema derecha. Reivindica su lucha y la de la UP, vinculándola con el actual momento político de cambio, y defiende la verdad histórica frente al negacionismo.",
+    "start": 3069.2,
+    "end": 3248.2,
+    "tags": [
+      "Víctimas y reparación",
+      "Debate político-electoral"
+    ],
+    "mentions": [
+      {
+        "entity": "Unión Patriótica",
+        "type": "partido político"
+      },
+      {
+        "entity": "Manuel Cepeda Vargas",
+        "type": "víctima"
+      },
+      {
+        "entity": "Partido Comunista",
+        "type": "partido político"
+      },
+      {
+        "entity": "Cepeda Castro Iván",
+        "type": "legislador"
+      },
+      {
+        "entity": "extrema derecha",
+        "type": "grupo político"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-08-2026",
+    "quote": "Por último quiero hacer un llamado a la aeronáutica civil Se que el aeropuerto de Turbo está terminado solamente falta su inauguración Ese aeropuerto es muy importante para el departamento de Antioquia Ese aeropuerto es muy importante para el desarrollo de Urabá Y por eso estoy pidiendo en esta sesión que desde el aeronáutico civil inmediatamente lo reabran como un factor de desarrollo para esa importante región del país Muchas gracias señora presidenta",
+    "summary": "Aída Avella solicita a la Aeronáutica Civil la pronta inauguración del aeropuerto de Turbo, argumentando su importancia para el desarrollo de Urabá en Antioquia, y subraya que la infraestructura ya está concluida.",
+    "start": 3256.3,
+    "end": 3291.3,
+    "tags": [
+      "Infraestructura vial",
+      "Descentralización territorial"
+    ],
+    "mentions": [
+      {
+        "entity": "Aeronáutica Civil",
+        "type": "organismo"
+      },
+      {
+        "entity": "aeropuerto de Turbo",
+        "type": "infraestructura"
+      },
+      {
+        "entity": "departamento de Antioquia",
+        "type": "entidad territorial"
+      },
+      {
+        "entity": "Urabá",
+        "type": "región"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Guevara Villabon Carlos Eduardo",
+    "session": "Abril-08-2026",
+    "quote": "Mi gracias Presidenta queremos poner de manifiesto aquí en la bancada el partido político mira y sobre todo también solidarizarnos con las víctimas que infortunadamente perecieron en un accidente de tránsito en el peaje Casa Blanca allí en la vía ZipaquiraUbateChiquinquirá era un accidente totalmente predecible no solamente porque esta esta vía es una de las más peligrosas del departamento de con dynamarka que conecta con dynamarka con boyacá por el alto nivel de accidentalidad por el trazado vial es una vía que de tiempo atrás desde el año dos mil diecinueve se tiene previsto ampliar en sus carriles y que infortunadamente no ha sido completada al cien inclusive el peaje donde sucedió el accidente es un peaje donde está ubicado en declive en desnivel allí los vehículos toman mayor velocidad y una de las hipótesis es que el vehículo este camión se quedó sin frenos es una de las hipótesis y en virtud de la pendiente pues terminó generando este hecho catastrófico cinco personas fallecidas nos solidarizamos con las víctimas de este hecho de este accidente tan tan terrible veintiuno personas heridas y veintiuno vehículos involucrados qué lo más lo más complejo es que parte de esta vida también la tiene que modernizar y por supuesto ampliar el envías Invías que depende el Ministerio de Transporte y a la fecha no ha sido posible la modernización la actualización mira mandar una cantidad de fotografías de UAT de esta vía con huecos con desniveles con problemas de seguridad vial sin demarcación sin señalización Por más muy complejos donde infonutamente se ha dado Manuel Virués allí en esta vía motociclistas han fallecido por los huecos porque la noche no se ven y producto de las de las trampas mortales para los motociclistas y quedan allí infonutamente como víctimas de estos siniestros viales se han invertido más de setecientos cincuenta mil millones de pesos y ojo al dato que pienso dar el 6 de abril se vencirá el plazo para renovar y la prórroga porque ellos solicitaron prórroga porque no han cumplido los contratos contratos que tenían que ver haber terminado en diciembre del año pasado tres meses más le prórrogaron el 6 de abril se supone que volvieron a prologarle pero no puede ser que ese corredor que es uno de los corredores más transitados de condinamarque boyacá Este albaicen de las pruebas y de la prologitis causando no solamente tragedias como la que sucedió la semana pasada sino víctimas mortales producto de la falta de mantenimiento diseño vial la ampliación de este corredor tan importante que es el corredor vuelvo y repito zipaquira ubate y chiquinquirá aquí están las fotos inclusive un alcalde ubate ha radicado tutelas para que rápidamente intervengan este corredor y puedan hacer el mantenimiento al menos preventivo no ha sido posible por parte del Ministerio de Transporte y queremos dejar esta costancia a nombre también de nuestro Consejero Aldo Buate que ha sido es el Consejero de las Vías y él nos hizo llegar también esta constancia porque infelizmente no ha sido atendido por parte del Ministerio de las Peticiones de los habitantes de este importante municipio lechero que también Valga resalta requiere el apoyo urgente del Gobierno Nacional que se comprometió a apoyarlos y a la fecha no ha llegado el apoyo que Hace unos meses se comprometió a dar Muchísimas gracias presidente queríamos dejar esta constancia a nombre de la bancada del Partido Mil",
+    "summary": "Carlos Guevara se solidariza con las víctimas del accidente en el peaje Casa Blanca en la vía Zipaquira-Ubate-Chiquinquirá, y critica al Invías y al Ministerio de Transporte por la falta de mantenimiento y ampliación de esta vía peligrosa, señalando que los contratos han sido prorrogados sin cumplimiento, lo que genera tragedias evitables.",
+    "start": 3301.6,
+    "end": 3544.3,
+    "tags": [
+      "Infraestructura vial",
+      "Seguridad regional"
+    ],
+    "mentions": [
+      {
+        "entity": "Invías",
+        "type": "organismo"
+      },
+      {
+        "entity": "Ministerio de Transporte",
+        "type": "ministerio"
+      },
+      {
+        "entity": "peaje Casa Blanca",
+        "type": "infraestructura"
+      },
+      {
+        "entity": "vía Zipaquira-Ubate-Chiquinquirá",
+        "type": "vía"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Echeverry Alvarán Nicolás Albeiro",
+    "session": "Abril-08-2026",
+    "quote": "Presidenta muchísimas gracias En primer lugar quiero sumarme a las manifestaciones de pensar y dolor por la pérdida de la vida de un empresario antioqueño a quien se aprecia y se ha querido bastante a su familia la muerte del doctor Hugo Zuloaga no llena de luto de pesar y me sumo a todas esas manifestaciones de dolor y solidaridad",
+    "summary": "Nicolás Echeverry expresa condolencias por la muerte del empresario antioqueño Hugo Zuloaga, sumándose al dolor de su familia.",
+    "start": 3552.7,
+    "end": 3581.0,
+    "tags": [
+      "Otro"
+    ],
+    "mentions": [
+      {
+        "entity": "Hugo Zuloaga",
+        "type": "empresario"
+      }
+    ],
+    "importance": 0.3
+  },
+  {
+    "congressman_name": "Echeverry Alvarán Nicolás Albeiro",
+    "session": "Abril-08-2026",
+    "quote": "En segundo lugar Presidenta quiero reiterarle y dejar como constancia que la comisión segunda y sobre todo quien les habla este senador y el partido conservador advirtió permanentemente que sumado a la crisis diplomática que vive Colombia en diferentes escenarios se suma la crisis de los pasaportes hoy centenares de personas que necesitan viajar a estudiar a hacer sus negocios o por qué no a recrearse se encuentran con un proceso pacídérico suspendido lo advirtió la contraloría nacional que la falta de planificación que la improvisación en un proceso contractual le iba a ocasionar problemas caros y costosos a todo el país La procuraduría general de la nación y la mayoría de los miembros de la comisión segunda le advirtieron al gobierno los riesgos operativos y de desabastecimiento por falta de calidad y por falta de tecnología la improvisación no se perdona presidenta y hoy la están pagando la mayoría de los colombianos que ven suspendidas sus citas y que ven truncadas y frustradas sus aspiraciones sus procesos y sus intercambios internacionales Rechazo contundentemente esa improvisación Invito al gobierno a reflexionar a que revise la procuraduría y la contraloría lo que está pasando con las cédulas de extranjería en su falta de calidad en su falta de oportunidad y pertinencia y hoy se traslada al mismo problema técnico de planeación y contractual a los pasaportes Le quedó grande a la imprenta nacional realizar los pasaportes de los colombianos Uno de los mejores procesos que surtían los colombianos a través de la cancillería hoy se ven opacados se ven retrasados y se ven suspendidos por falta de pericia claridad y responsabilidad Rechazo contundentemente esta improvisación e invito al Congreso de la República a que le exija al gobierno que mantenga sus estándares de calidad en ese documento vital para el relacionamiento internacional",
+    "summary": "Nicolás Echeverry critica duramente la improvisación del gobierno en la contratación para la emisión de pasaportes, lo que ha llevado a la suspensión del servicio, afectando a colombianos. Rechaza la falta de planificación y exige al gobierno mantener estándares de calidad en este documento vital para las relaciones internacionales.",
+    "start": 3581.0,
+    "end": 3725.3,
+    "tags": [
+      "Relaciones internacionales",
+      "Debate político-electoral"
+    ],
+    "mentions": [
+      {
+        "entity": "Contraloría Nacional",
+        "type": "organismo de control"
+      },
+      {
+        "entity": "Procuraduría General de la Nación",
+        "type": "organismo de control"
+      },
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Imprenta Nacional",
+        "type": "institución"
+      },
+      {
+        "entity": "Cancillería",
+        "type": "ministerio"
+      },
+      {
+        "entity": "Congreso de la República",
+        "type": "cuerpo legislativo"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Guerra López María Angélica",
+    "session": "Abril-08-2026",
+    "quote": "Muchas gracias Presidenta Honorable senadores este gobierno les arrebató a los colombianos el sueño de tener casa propia la inversión más importante de millones de familias en nuestro país Enero de este año fue el peor enero para la vivienda en Colombia hace 15 años Escuchen bien estas cifras el producto interno bruto del sector vivienda lleva dos años consecutivos en caída y acumula una reducción del 14 desde que este gobierno llegó al poder Mientras en enero del año 2022 se vendieron 23 mil viviendas en enero de este año apenas se vendieron 11 mil una caída muy triste del 52 por ciento Y no solo es eso las iniciaciones y los lanzamientos están en mínimos de más de una década Con caídas acumuladas superiores al 60 en los últimos cuatro años Este gobierno dice ser el gobierno del pueblo pero fue el responsable de cerrarle la puerta de la vivienda propia a ese mismo pueblo Acabó con mi casa allá un programa que sí funcionaba destruyó la confianza en el sector generó inseguridad jurídica y rompió las reglas de juego Colegas este gobierno prometió entre el 2022 y el 2026 cuatrocientos mil subsidios para mejoramiento de vivienda Y saben cuantos ha entregado al día de hoy solamente cuarenta y cuatro mil apenas una décima parte de lo prometido Para colmo el presidente Gustavo Petro culpa al Banco de la República por el aumento de las tasas hipotecarias absolutamente falso El incremento de las tasas hipotecarias responde a la crisis fiscal y al derroche del gasto Si revisan las cifras verán que mientras las tasas del banco de la República se mantuvo estable en el 2025 las tasas hipotecarias subieron junto con el costo del endeudamiento del gobierno Hoy para un banco es más rentable prestarle al gobierno que prestarle a una familia Por Dios estamos en el mundo al revés Es decir las tasas hipotecarias altas son el resultado de la irresponsabilidad fiscal de los altísimos déficits y del derroche en burocracia de este gobierno No se dejen engañar Menos mal queridos compañeros ya quedan pocos meses para que este infierno se acabe Muchas gracias presidenta",
+    "summary": "María Angélica Guerra ataca al gobierno por la crisis en el sector vivienda, señalando que las ventas han caído un 52% desde su llegada al poder, y acusa al ejecutivo de arrebatar el sueño de la casa propia a los colombianos debido a su irresponsabilidad fiscal y derroche, en lugar de culpar al Banco de la República.",
+    "start": 3736.6,
+    "end": 3913.3,
+    "tags": [
+      "Economía",
+      "Debate político-electoral"
+    ],
+    "mentions": [
+      {
+        "entity": "Gobierno Nacional",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Presidente Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Banco de la República",
+        "type": "banco central"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Daza Cotes Imelda",
+    "session": "Abril-08-2026",
+    "quote": "Quiero dejar constancia ante esta plenaria del Senado sobre mi profunda preocupación y rechazo frente al proyecto de ley 056 de 2025 y 139 que amplía los cupos en la educación superior Este proyecto que propone la creación de un bono escolar en Colombia se presenta formalmente como una medida para ampliar el acceso a la educación sin embargo en su estructura y en su lógica responde en realidad a un modelo de subsidio a la demanda que desplaza progresivamente la responsabilidad del estado desde la garantía directa del derecho a la educación hacia su financiamiento Indirecto en el mercado educativo este giro no es neutro implica una reconfiguración del sistema educativo en favor de actores privados en detrimento del fortalecimiento de la educación pública como un derecho universal El bono escolar en esencia permite transferir recursos públicos a familias para que estas accedan a instituciones privadas aunque esto puede ser presentado como una ampliación de la libertad de elección en la práctica introduce dinámicas de segmentación social donde quienes logran complementar el bono acceden a mejores servicios mientras que los sectores más vulnerables quedan confinados a opciones de inferior calidad o a una oferta Termina senadora lejos de corregir desigualdades este modelo tiende a profundizarlas Este proyecto no crea nueva oferta educativa donde más se necesita por el contrario promueve el traslado de recursos públicos hacia instituciones privadas concentradas mayoritariamente en zonas urbanas profundizando así las brechas territoriales más que una política de ampliación de derechos el bono escolar constituye una estrategia de privatización de la educación encubierta del sistema educativo su aprobación significaría un retroceso en la construcción de un modelo educativo público y fortalecido por lo tanto",
+    "summary": "La senadora Daza Cotes manifiesta su rechazo al proyecto de bono escolar, argumentando que representa una privatización encubierta del sistema educativo al desviar recursos públicos hacia instituciones privadas, lo que agravaría las desigualdades y debilitaría la educación pública como derecho universal.",
+    "start": 3943.0,
+    "end": 4131.7,
+    "tags": [
+      "Educación pública",
+      "Privatización",
+      "Financiamiento educativo",
+      "Desigualdad social",
+      "Debate legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "proyecto de ley 056 de 2025 y 139",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "bono escolar",
+        "type": "medida política"
+      },
+      {
+        "entity": "estado",
+        "type": "institución"
+      },
+      {
+        "entity": "sistema educativo",
+        "type": "sistema"
+      },
+      {
+        "entity": "educación pública",
+        "type": "derecho"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Valencia Laserna Paloma Susana",
+    "session": "Abril-08-2026",
+    "quote": "Gracias señora presidenta Yo le quería pedir a esta plenaria que no modificemos el orden del día en lo que se refiere al proyecto del orden del día número dos que es el mono escolar que es la oportunidad de que los niños pobres y vulnerables de este país tengan el derecho que tienen los niños ricos de este país que las familias puedan escoger senadora norma entre los colegios públicos privados pagados por el estado y los de concesión Cómo nos van a decir que un sistema de educación tan regresivo donde los niños más pobres de este país están teniendo la peor educación disponible como lo muestran los estudios aquí no hay derecho a abrirle una oportunidad a los niños pobres y vulnerables de este país para que senadora Lorena puedan escoger colegios con calidad en un gran programa que le permita a este país rescatar de la ignorancia y de la falta de oportunidades a las comunidades más pobres de este país este es un derecho que tenemos que hacer realidad cuando se dice en la constitución que los niños son prioritarios son estas las cosas que se esperan esto no amenaza la educación pública pero sí le da derechos a los niños más pobres senadores a que puedan escoger su colegio ya que tengan derecho a ir a colegios de calidad yo le pido que votemos negativamente en la proposición y presidenta si quiere ponga la aparte para que la podamos excluir de la discusión del orden del día gracias",
+    "summary": "La senadora Valencia Laserna defiende el bono escolar como una herramienta para dar a los niños pobres y vulnerables el derecho a elegir colegios de calidad, argumentando que corrige la regresividad del sistema actual y no amenaza la educación pública.",
+    "start": 4274.3,
+    "end": 4374.0,
+    "tags": [
+      "Bono escolar",
+      "Igualdad educativa",
+      "Derechos de los niños",
+      "Educación pública",
+      "Debate legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "proyecto del orden del día número dos",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "bono escolar",
+        "type": "medida política"
+      },
+      {
+        "entity": "constitución",
+        "type": "ley"
+      },
+      {
+        "entity": "niños",
+        "type": "grupo social"
+      },
+      {
+        "entity": "colegios públicos",
+        "type": "institución"
+      },
+      {
+        "entity": "colegios privados",
+        "type": "institución"
+      },
+      {
+        "entity": "estado",
+        "type": "institución"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Muñoz León Fredy",
+    "session": "Abril-08-2026",
+    "quote": "Muchas gracias señora Presidenta Señora Presidenta yo le pido el favor Para que escuchemos la sustentación que es importante Presidenta Si le ponemos un poco de orden al recinto claro que sí senador vamos a pedirle a los senadores por favor hacer silencio si alguien tiene reunión en la parte de afuera el área social y demás asesores que se encuentran en el recinto continúe senador Leonfried con su sustentación muchas gracias señora presidenta Yo quiero que pongan atención los argumentos por los cuales solicito que se archive ese proyecto de ley tiene dos razones fundamentales una es que este proyecto no tiene aval fiscal no tiene aval fiscal del gobierno en este momento y lo segundo este proyecto de ley también tiene un problema de jerarquía Hierarquía normativa esto pretende modificar una ley orgánica con una ley ordinaria yo creo que empecemos por ahí pero además compañeros colegas yo quiero que escuchen atentamente Aquí nos hemos dado una pelea histórica histórica desde que estábamos en el período anterior por intentar aumentar los recursos del sistema general de participación Para que llegaran más recursos a la salud a la educación de aseanamiento básico en concreto en este proyecto de ley para la educación porque vimos cómo fue bajando y bajando hasta llegar a unos niveles donde no llegaban los recursos suficientes para la educación pública en este gobierno se tomó una decisión de hacer una reforma al sistema general de participaciones para que llegaran más recursos para un déficit profundo que viene sufriendo el sistema de educación en este caso el preescolar la básica y la media que estamos hablando nada más y nada menos que de casi tres billones y pico que es el déficit del sistema general de participaciones del público qué pretende entonces este proyecto de ley de los famosos bonos escolares que se sacan los recursos públicos del sistema general de participaciones escuchen bien compañeros que esto no es de poca monta es de financiar lo público en este caso concreto los que viven por allá que tienen muchos amigos en muchas veredas en muchos corregimientos que allí saben en qué condiciones se encuentran nuestros niños y nuestras niñas En qué condiciones de infraestructura se encuentran los colegios las escuelitas en condiciones lamentables lamentables y claro este proyecto de ley lo que busca es quitar esos recursos públicos que van a tender a esos colegios a esas escuelas y llevarlos a las escuelas y colegios privados privados que básicamente las escuelas y los colegios privados están en las zonas urbanas díganme ustedes qué colegio privado hay en una vereda Qué colegio privado hay una vereda qué colegio privado va a atender un niño o una niña en lo más profundo de la Colombia digámenь yo quiero escucharlos digámenos solo colegio una escuela un preescolar que esté allá en esa Colombia profunda que es con lo que queremos que se atiendan de manera eficaz y eficiente a los niños y las niñas con los recursos públicos Que puede pasar entonces que muchos de estos recursos se vayan a los colegios privados a los preescolares y a las escuelas Aquí estamos hablando de cosas delicadas Recuerdan ustedes qué pasó con Serpilopaga cuánta plata se fue para universidades públicas y dejamos desfinanciada las universidades privadas perdón cuánto se ve para las privadas y desfinanciamos las universidades públicas el serpillo paga con lo que se atendieron 40 mil jóvenes hubiésemos podido atender en ese momento más de 200 mil que se demostró ahora con los nuevos recursos pero qué pasaría Qué pasaría compañeros si dejamos de ingresar Continúa senador Qué pasaría si le quitamos recursos a las escuelas a los preescolares y a los colegios públicos Quién va a invertir en infraestructura Si del sistema general de participaciones se saca para infraestructura Qué va a pasar con nuestros profesores y profesoras si migran de lo público a lo privado entonces vamos a echar va tocar entonces sacar a los profesores y profesoras de los colegios públicos eso es lo que lleva este proyecto de ley de los famosos bonos escolares es fortalecer lo privado en contra de lo público compañeros yo sí quiero Pedirles que lo analicen bien este proyecto Continúe senador por favor para que culmine su sustentación Compañeros este proyecto de ley además de no tener el aval fiscal De no cumplir con la normatividad jerárquica tiene muchos muchos daños al sistema público Yo no quiero pensar qué pasaría entonces con las zonas rurales qué pasaría con la ruralidad vamos a acabar entonces con las escuelas y los colegios de los campesinos y campesinas si los recursos se van a lo privado no estamos en contra que entiende bien No estamos en contra de las escuelas privadas y colegios privados que sigan funcionando y el que tenga deseos y ganas y tenga con qué pagarlas pues que vaya hacia allá pero los recursos públicos son para atender a los niños y las niñas que quieran estar en un colegio público y que hoy son millones más de siete millones de niños y niñas que son atendidos en colegios y escuelas públicas este proyecto de ley es gravísimo gravísimo para lo público yo les pido entonces que nos acompañen archivar y votar de manera positiva esta solicitud que les hago para archivar este proyecto de ley muchas gracias presidente",
+    "summary": "El senador Muñoz León pide archivar el proyecto de bono escolar, señalando la falta de aval fiscal, problemas de jerarquía normativa y que desviaría recursos públicos del sistema general de participaciones, perjudicando la educación pública, especialmente en zonas rurales, y favoreciendo a instituciones privadas urbanas.",
+    "start": 5975.6,
+    "end": 6489.8,
+    "tags": [
+      "Educación pública",
+      "Financiamiento educativo",
+      "Aval fiscal",
+      "Jerarquía normativa",
+      "Debate legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "proyecto de ley",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "gobierno",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "sistema general de participaciones",
+        "type": "sistema"
+      },
+      {
+        "entity": "colegios privados",
+        "type": "institución"
+      },
+      {
+        "entity": "zonas rurales",
+        "type": "área geográfica"
+      },
+      {
+        "entity": "Serpilopaga",
+        "type": "programa gubernamental"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Valencia Laserna Paloma Susana",
+    "session": "Abril-08-2026",
+    "quote": "muchísimas gracias señora presidente claro que no Estos son recursos adicionales que le podemos dar a los colegios privados para que duquen bien a los niños Pero yo sí creo que es absolutamente infamio que en un país donde los estudios muestran que solamente trece por ciento de los niños que están en el sector público adquieren habilidades suficientes durante todo su tránsito por el colegio uno insista en no darle oportunidades a nadie a mí sí me parece muy extraño que cuando Colombia lleva varios años quedando de últimas y penúltimas en las pruebas pisa aquí se niegen a reconocer la realidad de que la educación no está siendo suficiente y cuando usted le dan mala educación las oportunidades se le cierran y yo quiero recordar que aquí hay un estudio que hizo el premio Nobel de economía Michael Kremer Estudiando lo que fue el sistema de bonos escolares que tuvo Bogotá en un momento dado los colegios no estaban construidos y entonces se contrataron colegios privados para llevar a los niños que iban tradicionalmente a las escuelas públicas y sorprendas el senador J P diecisiete por ciento más de los jóvenes se graduaron cayó la deserción aumentó el porcentaje de jóvenes que fueron a la universidad Al inicio de este gobierno el premio Nobel Michael Kramer vino a Colombia a reunirse con el ministro de educación de entonces y le dijo Lo que es claro que hay que hacer en Colombia es crear los bonos escolares saquen los niños más pobres para darles oportunidades en buenos colegios como aquí nos están diciendo que no que lo dejen en malos colegios para que no puedan progresar para que no puedan aprender Es que el hecho de que uno sea pobre vulnerable no puede significar que le toque peor educación La regresión es absolutamente clara entre más pobre es el colombiano peor calidad de la educación le toca Tiene mucho que ver con que no le paramos bolas a los derechos de los colombianos más pobres a educarse y a tener oportunidades reales Yo sí quiero pedirle a este Congreso que creamos esos vouchers escolares que no van a reemplazar la educación pública de ninguna manera pero que sí le van a dar algunos niños oportunidades que puedan salir adelante dejen el sectarismo ideológico porque es que a uno no le debe importar de quién es el edificio le debe importar la calidad de la educación que reciben los niños le debe importar de qué tamaño son las alas que se le dan para que pueda realizar su proyecto vital de qué tamaño es la educación para transformarle la vida Yo si pido que ese sectorismo ideológico que le importa es de quién es el edificio lo dejemos de lado para pensar en los niños que los niños sí merecen una oportunidad y si tenemos que darle la oportunidad a los colombianos más pobres de tener los derechos que los colombianos ricos tienen elegir el colegio para sus hijos elegir en calidad elegir en derechos y elegir que tu hijo pueda llegar tan lejos como su disciplina y su talento se lo determinen y no cuánta plata tienen el bolsillo el padre de familia",
+    "summary": "La senadora Valencia Laserna defiende el bono escolar citando estudios, incluido uno del premio Nobel Michael Kremer, que muestran mejoras en graduación y acceso a la universidad, argumentando que da oportunidades a los niños pobres y critica el sectarismo ideológico que prioriza la propiedad sobre la calidad educativa.",
+    "start": 6506.7,
+    "end": 6744.4,
+    "tags": [
+      "Bono escolar",
+      "Calidad educativa",
+      "Estudios académicos",
+      "Igualdad de oportunidades",
+      "Debate legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "premio Nobel de economía Michael Kremer",
+        "type": "académico"
+      },
+      {
+        "entity": "Bogotá",
+        "type": "entidad territorial"
+      },
+      {
+        "entity": "ministro de educación",
+        "type": "cargo"
+      },
+      {
+        "entity": "Congreso",
+        "type": "institución"
+      },
+      {
+        "entity": "vouchers escolares",
+        "type": "medida política"
+      },
+      {
+        "entity": "educación pública",
+        "type": "derecho"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Espitia Jerez Ana Carolina",
+    "session": "Abril-08-2026",
+    "quote": "Gracias Presidenta Yo debo estar de acuerdo con quien me antecedió en el uso de la palabra que sin lugar a dudas el modelo de formación de la educación de los niños debe ser la prioridad como sociedad pero decir también que creo que es bien importante que así como estudiamos y tenemos en cuenta lo que nos plantean a mí me gustaría mucho preguntarles durante todas estas décadas que hemos conocido de las falencias que tiene el sistema que se ha hecho para Reducir esa precha es que hay porque estamos de acuerdo es desafortunado que el lugar donde nacemos en muchas ocasiones limita el acceso que podemos tener a la calidad y a la educación pero ahí yo debo decir que es responsabilidad del Estado garantizar que no unos pocos sino que como lo dice la Constitución la educación sea un derecho para todos y para todas indistintamente del lugar donde hayamos nacido Y entonces yo debo preguntar No será mejor lograr fortalecer los recursos para que tengamos mejores docentes en esas instituciones educativas que hoy tenemos en todo el territorio nacional no será mejor fortalecer los recursos para garantizar que se puedan mejorar las herramientas que se pueda mejorar la infraestructura y que esos tan bajísimos Niveles que mencionamos en términos de medición y de exámenes se puedan mejorar y se puedan resagar a través de la inversión de recursos Yo debo decirlo con mucho honor que soy hija de la educación pública desde la primaria Sí me formé en una escuela rural y por eso soy convencida de lo que que lo que debemos hacer es garantizar que en esos espacios hayan cada día mayores habilidades y competencias de quienes acompañan a los niños y niñas en este país a formarse yo estoy de acuerdo con mi compañero Leon con mi compañero Leon acá no se trata de poder sectorizarnos y de decir que solo en los colegios públicos se ofrece educación de calidad no yo tengo que reconocerle a los cientos de maestros de este país que desde la educación pública hacen todos los días a pesar de los limitados recursos que tienen Un esfuerzo a monumental por llevar a los niños y a las niñas el desarrollo que se merecen Claro que hay brechas desde luego y por eso cada vez que tenemos la posibilidad de garantizar que hayan más recursos Senadores quiero recordarles que las intervenciones son en torno a la proposición de archivo presentada por el senador Leon Freddy Muñoz",
+    "summary": "La senadora Carolina Espitia defiende la educación pública como prioridad nacional, argumentando que el Estado debe garantizarla como un derecho constitucional para todos, independientemente del lugar de nacimiento. Propone fortalecer recursos para mejorar docentes, infraestructura y resultados educativos, respaldando la proposición de archivo del proyecto que desvía fondos a colegios privados.",
+    "start": 6765.8,
+    "end": 6920.6,
+    "tags": [
+      "Educación pública",
+      "Financiación educativa",
+      "Derechos sociales",
+      "Debate político",
+      "Archivo legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "Estado",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Constitución",
+        "type": "ley"
+      },
+      {
+        "entity": "Muñoz León Fredy",
+        "type": "legislador"
+      },
+      {
+        "entity": "proposición de archivo",
+        "type": "moción"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Asprilla Reyes Inti Raúl",
+    "session": "Abril-08-2026",
+    "quote": "Muchas gracias presidenta para que usted lo tenga claro Usted no me puede a mí negar una moción de orden Segundo para que tenga claro el reglamento que lo voy a tener usted en cuenta cuando preside Las mociónes de orden proceden de manera automática De tal manera que al usted decirme que no me da una moción de orden y que solo puedo hablar respecto a la inscripción que hice previamente está hablando del reglamento voy a ovviar por un momento la falta que usted ha hecho contra el reglamento y voy a explicar cuáles son los motivos que nos llevan a no estar de acuerdo con este proyecto de ley también presidenta Para que usted lo tenga claro cuando uno voto un archivo habla como lo estaba haciendo la senadora Carolina de los elementos que lo llevan a no estar de acuerdo con el proyecto de ley original es una cosa elemental lógica Diciendo esto señor Presidenta vamos a decir cuáles son los argumentos que nos llevan a no estar de acuerdo con el proyecto de la senadora Paloma Valencia La senadora Paloma Valencia parte de la siguiente premisa es mucho más eficiente dar dinero público a las familias para que paguen un colegio privado Cuál es la posición que nosotros tenemos Nosotros creemos que los recursos públicos pueden ser mucho mejor invertidos en una apuesta en mejorar la educación pública desde el progresismo que en cabeza el presidente Gustavo Petro nosotros creemos en una educación pública gratuita y de calidad y en ese orden de ideas no podemos aceptar la tesis que nunca la educación pública va a mejorar porque en ese orden de ideas pues básicamente estamos condenando la educación pública al fracaso no por algo no por esto presidenta usted ve los países desarrollados la educación pública es el pilar de la educación el pilar de educación porque los países desarrollados han entendido que lo más eficiente en términos económicos Continúa senador Lo más eficiente en términos económicos señora presidenta es apuntar a mejorar la educación pública para que más colombianas y colombianos tengan acceso a una educación de calidad Por último señora presidenta voy a decir que me Anima a tener este tipo de debates y no la campaña sucia la que no se ha acostumbrado últimamente Muchas gracias",
+    "summary": "El senador Inti Asprilla desafía a la presidenta por negarle una moción de orden, luego expone su oposición al proyecto de bonos escolares de la senadora Paloma Valencia, argumentando que los recursos públicos deben invertirse en fortalecer la educación pública, no en subsidiar colegios privados, y cita ejemplos de países desarrollados donde la educación pública es prioritaria.",
+    "start": 6950.1,
+    "end": 7098.1,
+    "tags": [
+      "Educación pública",
+      "Financiación educativa",
+      "Debate político",
+      "Archivo legislativo",
+      "Procedimiento parlamentario"
+    ],
+    "mentions": [
+      {
+        "entity": "senadora Paloma Valencia",
+        "type": "legislador"
+      },
+      {
+        "entity": "presidente Gustavo Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "proyecto de ley",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "reglamento",
+        "type": "reglamento"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Díaz Plata Edwing Fabián",
+    "session": "Abril-08-2026",
+    "quote": "Muchas gracias señora presidenta Aquí quieren poner otro otro debate para intentar confundir y es que vuelven nuevamente con el asunto de la ideología esto no tiene que ver con eso yo sí lamento mucho que una persona que quiere ser presidenta de este país esté con esos argumentos de fortalecer de y de de intentar que los recursos públicos se vayan a fortalecer lo privado yo no sé qué va a pasar con este país en manos de una persona así no sé qué va a pasar entonces se van a acabar nuestras escuelas nuestros colegios en muchos lugares en la ruralidad yo creo que es lamentable y no es un asunto ideología o más bien es lo que pretende ese sector político de la extrema derecha seguramente como no quieren a fecode es la manera de desfinanciarlo público porque eso tiene tiene repercusiones profundas con la estabilidad de los profesores y profesoras de nuestro país si se van los recursos a los privados van a debilitar los públicos van a acabar con los públicos y es lamentable yo sí lamento mucho que una persona que quiera ser presidenta de este país tenga esos argumentos tan flojos yo sí insisto compañeros entendamos un poco lo que está pasando aquí aquí no hay recursos adicionales de dónde los van a sacar cuáles los recursos adicionales los recursos salen del sistema general de participación que van para lo público de ahí es donde pretenden sacar los recursos para lo privado tengan eso claro aquí lo que están intentando con este proyecto de ley es acabar lo público y fortalecerlo privado que eso quede absolutamente claro",
+    "summary": "El senador Freddy Muñoz acusa a la derecha de intentar confundir el debate con ideología y afirma que el proyecto busca desfinanciar la educación pública para fortalecer la privada, lo que perjudicaría especialmente a las escuelas rurales y la estabilidad laboral de los docentes. Advierte que esto tendría repercusiones profundas en el país.",
+    "start": 7109.9,
+    "end": 7234.0,
+    "tags": [
+      "Educación pública",
+      "Financiación educativa",
+      "Debate político-electoral",
+      "Archivo legislativo",
+      "Zonas rurales"
+    ],
+    "mentions": [
+      {
+        "entity": "fecode",
+        "type": "sindicato"
+      },
+      {
+        "entity": "sistema general de participación",
+        "type": "sistema de transferencias"
+      },
+      {
+        "entity": "extrema derecha",
+        "type": "partido"
+      },
+      {
+        "entity": "proyecto de ley",
+        "type": "proyecto de ley"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Avella Esquivel Aída Yolanda",
+    "session": "Abril-08-2026",
+    "quote": "Señora Presidenta muchísimas gracias Yo también fui maestra rural Y trabajé en la Normal Nacional de Falan y estuve con muchos jóvenes nos tocaba ser de todos hasta reconstruir escuelas cuando se nos estaba cayendo precisamente la escuela anexa de la cual fui directora Cuando uno está en el campo tiene que llevar cuando no hay buses ni carros a caballo los jóvenes cuando se parten un brazo cuando tienen un accidente yo no he visto a ningún colegio privado por esos lados ni uno ni medio entonces esa fue la manera como construyeron el segundo país más desigual de América Latina que los que tienen privilegios pues los que tienen plata yo estoy completamente de acuerdo con Freddy quieren ser en plata que estudien en los colegios privados y eso sí que tienen privilegios bilingües trilingües cuatro bilingües pero la gente del campo nunca tiene por ejemplo la posibilidad de acceder a una clase de inglés no hay señora presidenta no hay si usted de pronto se educó en el campo A mí me tocó educarme en una ciudad intermedia donde no pudimos tampoco aprender idiomas pero llegué a la Universidad Nacional y soy una educadora de esa universidad y lo que más me duele es que muchos de los presupuestos que están destinados a la educación pública se vaya precisamente para quienes tienen el dinero pero esto a qué estamos jugando yo sí creo que lo único que tenemos que hacer aquí es que pensar en los 50 millones de colombianos sobre todo en la gente del campo sobre todo en los hijos de nuestros campesinos que tienen muy pocas posibilidades por ejemplo de pasar en las universidades públicas y menos en las privadas porque con Continúa senador Gracias presidenta yo le agradezco que nos deje hablar a quienes hemos tenido contactos con la educación pública no solamente porque nos educamos en una universidad sino porque fuimos a educar y también fuimos a que los maestros que en esa época eran de cuatro años de bachillerato se pudieran volver maestros de seis años y lo hicimos como Los maestros que salíamos de las universidades públicas íbamos precisamente allá a formar los educadores para que nuestros niños pudieran tener una mejor educación Y por eso yo estoy completamente de acuerdo en que archivemos este esperto que nos han presentado en el día de hoy Yo sí creo que es una forma de ir borrando las brechas de la gente cuando vamos a la educación pública cuando fortalecemos las escuelas del campus Terminen senadora Niños del campo también tienen derecho a manejar unos idiomas También tienen derecho Está domendigando treinta computadores para por ejemplo el municipio de Quitania no tienen esos muchachos es un municipio de qué escala pues de la sexta y como pretendemos nosotros que compitan con los de cualquier colegio privado de aquí que tienen que dar bonos de treinta millones y que tienen computadores que tienen tabletas y que tienen de todo señora presidenta yo creo que lo más lógico es que archivemos al Gracias senadora Treinta segundos para que termine senadora Claro señora presidenta yo le agradezco muchísimo Es que quienes nos hemos batido en la educación y en educación pública quienes hemos sido educadores en el campo quienes nos ha tocado Llevar tantas cosas a cuestas para poder sacar los hijos de los campesinos esto no es posible Que nos quiten la plata Entonces para los bonos de los que tienen todos los privilegios entre esa la candidata a la presidencia que nació entre los privilegios que tuvo todo que no ha tenido ni siquiera Gracias senadora",
+    "summary": "La senadora Aída Avella, desde su experiencia como maestra rural, denuncia la desigualdad educativa y argumenta que desviar recursos públicos a colegios privados profundizaría la exclusión de comunidades campesinas e indígenas. Pide archivar el proyecto para priorizar la educación pública y cerrar brechas en zonas apartadas.",
+    "start": 7238.7,
+    "end": 7505.0,
+    "tags": [
+      "Educación pública",
+      "Desigualdad social",
+      "Zonas rurales",
+      "Archivo legislativo",
+      "Financiación educativa"
+    ],
+    "mentions": [
+      {
+        "entity": "Normal Nacional de Falan",
+        "type": "institución educativa"
+      },
+      {
+        "entity": "Universidad Nacional",
+        "type": "universidad"
+      },
+      {
+        "entity": "municipio de Quitania",
+        "type": "municipio"
+      },
+      {
+        "entity": "candidata a la presidencia",
+        "type": "candidato"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Espitia Jerez Ana Carolina",
+    "session": "Abril-08-2026",
+    "quote": "Gracias presidenta solo para concluir lo siguiente en este congreso que es tan estudioso y la bancada que presenta la iniciativa cuando plantea que esto es una Una discusión una discusión ideológica Yo los invito respetuosamente queridos compañeros a que revisen los modelos de financiación de muchos de esos estados que decimos estados desarrollados Revisen cuál es el modelo de educación de Alemania Revisen cuál es el modelo de educación De Suecia revisen cuál es el modelo de educación de Noruega es una educación financiada totalmente pública para la educación básica e inicial así que yo de verdad insisto tengo que reconocer y respaldar la iniciativa de el archivo de esta de esta de este proyecto de ley porque va a encontrar vía de lo que durante años hemos luchado para garantizar insistimos que la educación no sea un privilegio sino que sea un derecho para todos y para todas",
+    "summary": "En su conclusión, la senadora Carolina Espitia invita a los colegas a revisar modelos de educación pública financiada en países como Alemania, Suecia y Noruega, respaldando el archivo del proyecto para asegurar que la educación sea un derecho, no un privilegio.",
+    "start": 7516.2,
+    "end": 7580.3,
+    "tags": [
+      "Educación pública",
+      "Modelos internacionales",
+      "Archivo legislativo",
+      "Financiación educativa"
+    ],
+    "mentions": [
+      {
+        "entity": "Alemania",
+        "type": "país"
+      },
+      {
+        "entity": "Suecia",
+        "type": "país"
+      },
+      {
+        "entity": "Noruega",
+        "type": "país"
+      },
+      {
+        "entity": "bancada",
+        "type": "grupo parlamentario"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Díaz Plata Edwing Fabián",
+    "session": "Abril-08-2026",
+    "quote": "Gracias Presidenta Yo soy hijo de la educación pública como gran parte de la mayoría de los colombianos Educación pública que lo que nosotros hemos visto a lo largo de los diferentes gobiernos de derecha es que quieren destruir no les interesa un pueblo con conocimiento no les interesa un pueblo educado les interesa un pueblo que ellos puedan seguir manipulando y es por esto que encontramos este tipo de iniciativas que las termina liderando nada más y nada menos que la candidata presidencial del centro democrático este proyecto no es malo este proyecto es malísimo destruye la educación pública en nuestro país Le quita recursos a la educación pública para dárselo a instituciones privadas y ahora no estamos en contra de las instituciones de la educación privada no quien tenga los recursos para que a sus hijos los pueda inscribir en esas instituciones lo pueda hacer pero lo que no podemos permitir es que recursos públicos que se necesitan en la educación pública vaya para estas instituciones privadas así de sencillo es que ya hoy tenemos grandes dificultades en la educación pública docentes que deben hacer grandes esfuerzos con diferentes dificultades para poder transmitir el conocimiento con instituciones que se caen a pedazos con aulas pequeñas para el número de estudiantes que terminan ocupando por supuesto un salón porque se requieren recursos para más docentes para mejores instalaciones y aún así hacen su mejor esfuerzo como para ahora pretenda que el estado colombiano les quita Continúa senador Gracias presidente Que ahora pretendan que esos recursos esenciales que deberían estar justamente para la educación pública terminen en instituciones privadas Pues no no podemos estar a favor de esto No se puede y es impensable Esto en otros países ya lo decía mi compañera Carolira Es que veamos nosotros a esos países Que tanto aclaman de primer mundo cuál es su orientación de política pública La educación pública de calidad ESE es justamente el camino que Colombia debe recorrer Fortalezca la educación pública y es por eso que estamos a favor del archivo Y pedimos al Congreso de la República Que por favor entienda el sentir de los recursos públicos hacia donde deben estar orientados y que en estos momentos más que nunca se requieren inversiones sustanciales en la educación pública de calidad en nuestro país Gracias presidente",
+    "summary": "El senador Fabián Díaz acusa a los gobiernos de derecha de querer destruir la educación pública para mantener un pueblo manipulable, y califica el proyecto como 'malísimo' por desviar recursos esenciales a colegios privados. Pide archivar la iniciativa y fortalecer la educación pública de calidad, siguiendo ejemplos de países desarrollados.",
+    "start": 7589.4,
+    "end": 7778.6,
+    "tags": [
+      "Educación pública",
+      "Debate político",
+      "Financiación educativa",
+      "Archivo legislativo",
+      "Manipulación política"
+    ],
+    "mentions": [
+      {
+        "entity": "gobiernos de derecha",
+        "type": "partido"
+      },
+      {
+        "entity": "candidata presidencial del centro democrático",
+        "type": "candidato"
+      },
+      {
+        "entity": "estado colombiano",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Congreso de la República",
+        "type": "cámara legislativa"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Guevara Villabon Carlos Eduardo",
+    "session": "Abril-08-2026",
+    "quote": "Mil gracias presidente Quiero desatar también que soy hijo de la educación pública del país En mi educación básica primaria en su momento tuve la oportunidad de hacer la prueba saber que era como el ifex de su momento hace en sexto de primaria y logré gracias a una política del distrito estudiar en uno de los mejores colegios privados de Bogotá Si queremos garantizar los derechos de los niños y niñas que es un derecho prevalente tenemos también que garantizarle la oportunidad que puedan estudiar en las mejores instituciones educativas del país sean públicas o privadas y eso depende también en gran medida de la formación educativa el modelo de valores el énfasis que los padres quieren ofrecerle a sus hijos en su modelo de formación no podemos estandarizar un modelo en el cual sea netamente público ni estigmatizarlo tampoco pero tampoco podemos dejar de lado que la educación privada en el país ha jugado un papel fundamental porque en muchas ocasiones fueron los colegios privados quienes ofrecieron la cobertura en educación y poco a poco las entidades territoriales fueron construyendo colegios generando infraestructuras y fueron generando un equilibrio ese nuestro llamado que existe un equilibrio entre la educación pública y la privada un modelo mixto donde efectivamente los padres y por supuesto los niños tengan la mejor educación pero los resultados son evidentes presidenta las pruebas a ver once señalan que los colegios que tienen esta oportunidad de concesión o de tener un recurso de parte del estado las secretarías de gobierno de las alcaldías están calificados como nivel alto o muy superior en todos los ránkis institucionales Tienen jornada única tienen tasas más bajas de reprobación tienen mejores condiciones Lo conversábamos ahora con el señor Manuel de infraestructura de mantenimiento de sus laboratorios tienen la oportunidad de hacer evaluación de sus profesores tienen la oportunidad también de generar un control y eficacia los recursos porque los recursos son medios en la medida en que los niños y niñas cumplen no solamente estándares de calidad educativo sino que también por ejemplo tengan por medio de estatura que tengan la posibilidad de tener comida caliente es decir es un modelo en el cual tiene que coexistir con la educación privada por eso consideramos presidenta que este proyecto tiene que seguir adelante es un es un paso hacia adelante para que los niños y niñas en Colombia tengan la oportunidad de estudiar las mejores instituciones educativas del país sean públicas o privadas eso sí la puesta tiene que ser equidad La poesía tiene que ser por mejores maestros La poesía tiene que ser para que lleguen computadores a las escuelas públicas del país que lleguen la infraestructura a los colegios públicos en las zonas rurales pero también si en las zonas rurales o en las zonas más apartadas del país o aquí como en Ciudad Bolívar o en Bozca que existen colegios de alta calidad donde los colegios privados los están administrando y brindando a los jóvenes de esas localidades educación de calidad porque negarse la esa Es una reflexión que queremos dejar aquí en la plenaria y yo creo que eso es una alternativa viable para que los padres también mirando en modelo educacional en modelo institucional de valores de ética de principios de los colegios decidan o no matricular a un colegio en la educación pública o en la educación privada del país Gracias presidente",
+    "summary": "El senador Carlos Eduardo Guevara defiende un modelo mixto de educación, argumentando que los recursos públicos deben permitir a los niños acceder a las mejores instituciones, sean públicas o privadas, basándose en su experiencia personal y en resultados como pruebas Saber 11. Considera que el proyecto de bonos escolares es un paso adelante para la equidad y oportunidades.",
+    "start": 7787.8,
+    "end": 8025.2,
+    "tags": [
+      "Educación privada",
+      "Bonos escolares",
+      "Oportunidades educativas",
+      "Modelo mixto",
+      "Debate legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "prueba saber",
+        "type": "examen"
+      },
+      {
+        "entity": "distrito",
+        "type": "entidad territorial"
+      },
+      {
+        "entity": "Bogotá",
+        "type": "ciudad"
+      },
+      {
+        "entity": "secretarías de gobierno",
+        "type": "organismo"
+      },
+      {
+        "entity": "alcaldías",
+        "type": "gobierno local"
+      },
+      {
+        "entity": "Ciudad Bolívar",
+        "type": "localidad"
+      },
+      {
+        "entity": "Bozca",
+        "type": "localidad"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Peralta Epieyu Martha Isabel",
+    "session": "Abril-08-2026",
+    "quote": "Muchas gracias señora presidenta Yo quiero que el país se entere y estén atentos al tema que hoy estamos debatiendo Hoy hay una iniciativa legislativa un proyecto de ley que busca crear un bono de un programa de bonos escolares Prácticamente es que los recursos que van dirigidos a fortalecer la educación pública vaya y se traslade a las instituciones privadas que también los recursos del Sistema General de Participación vaya a fortalecer instituciones y escuelas privadas aquí nosotros tenemos que levantar la voz porque si hoy hay una deficiencia si hoy hay una falta de cobertura para los sectores rurales para las comunidades indígenas campesinas y afro ustedes se podrán imaginar entonces qué tipo de educación va a llegar a estas comunidades apartadas donde no hay ni siquiera un colegio privado y a duras y escasas gestiones a veces hay formalmente en el papel colegios pero que realmente sus profesores tienen que editar clases debajo de un árbol Entonces para estos sectores para estas comunidades qué tipo de formación va a llegar ninguna Es decir no vamos a poder tener un desarrollo social no vamos a lograr nosotros tener la garantía de que al menos podamos tener una igualdad Este proyecto de ley lo que hace es profundizar la inequidad es profundizar la exclusión que ya existe en el país en cuanto al tema de formación No quiero decir y no voy no estoy de acuerdo con que dicen que los mejores estudiantes o se hacen mejor estudiantes si salen de una de un colegio privado ni que allá lleguen los que tengan los mejores de conocimiento las mayores capacidades no eso es falso y lo decía la senadora Espitia hoy el desarrollo social y económico en los países europeos y demás está fortalecido en la educación básica primaria gratuita Ojalá más bien aquí nos pongamos de acuerdo en fortalecerlo público Cómo hacemos que la cobertura llegue a Cómo hacemos para que la cobertura en educación primaria de los de nuestros niños niñas y adolescentes pueda llegar a una cobertura del cien por ciento garantizándole infraestructuras en buen estado garantizándole conectividad garantizándole transporte Hoy estamos en esa problemática con los alcaldes que no contratan el transporte escolar a las zonas rurales Este proyecto de ley además aquí que nos gusta mucho tener y analizar el impacto fiscal no tiene hoy un aval fiscal tampoco cumple con la jerarquía o viola el bloque de constitucionalidad que debe respetarse también tengo que contarles que Termina senadora También tengo que contarle la ciudadanía que este proyecto de ley no cuenta con el visto bueno y tiene concepto negativo por parte del Ministerio de Educación Porque es inviable financieramente y produciría un déficit presupuestal mucho más importante y profundo del que hoy tenemos Ojalá que más bien nos pongamos en acuerdo para sal Cumíne senadora para sacar adelante una iniciativa claro que lo privado se pueda fortalecer pero no quitándole la oportunidad a las poblaciones a los estudiantes que no tienen cómo sostenerse en una institución privada y que lo público se siga trabajando por ello entonces aquí no se trata de un tema de clases Aquí no se trata de un tema ideológico aquí se trata de no retroceder en derechos que hemos logrado Muchas gracias señora Presidenta",
+    "summary": "La senadora Martha Peralta alerta que el proyecto de bonos escolares desviaría recursos de la educación pública a la privada, agravando la exclusión en zonas rurales y comunidades vulnerables. Critica su inviabilidad fiscal, la falta de aval del Ministerio de Educación, y pide archivar la iniciativa para no retroceder en derechos conquistados.",
+    "start": 8033.1,
+    "end": 8310.1,
+    "tags": [
+      "Educación pública",
+      "Financiación educativa",
+      "Cobertura educativa",
+      "Impacto fiscal",
+      "Archivo legislativo"
+    ],
+    "mentions": [
+      {
+        "entity": "Sistema General de Participación",
+        "type": "sistema de transferencias"
+      },
+      {
+        "entity": "comunidades indígenas, campesinas y afro",
+        "type": "grupos étnicos"
+      },
+      {
+        "entity": "Ministerio de Educación",
+        "type": "ministerio"
+      },
+      {
+        "entity": "bloque de constitucionalidad",
+        "type": "marco legal"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Pulido Hernández Jonathan Ferney",
+    "session": "Abril-08-2026",
+    "quote": "una moción de orden para hacerle una solicitud a la mesa directiva a mí este proyecto si me parece muy importante aquí hay que dar una discusión profunda con la presencia de todos los senadores y senadoras yo no comparto ese tema de que se están quitando oportunidades a las personas más humildes se les está olvidando que el programa Ser Pilo Paga fue un ejemplo de como veintiséis mil jóvenes humildes pudieron ir a las mejores universidades y por meritocracia quien dijo que un estudiante humilde que un niño humilde no tiene derecho a través de un bono escolar de tener una educación privilegiada y privada aquí lo que se está buscando es oportunidades para los más necesitados pero la plenaria no está completa por eso le solicito presidente según el reglamento que verifique el cuadro",
+    "summary": "El Jonathan Pulido solicita verificar el quórum para una discusión plena, defendiendo que programas como Ser Pilo Paga muestran que los bonos escolares pueden brindar oportunidades educativas a jóvenes de bajos recursos, y critica la idea de que se estén quitando oportunidades a los más humildes.",
+    "start": 8327.0,
+    "end": 8374.8,
+    "tags": [
+      "Educación pública",
+      "Debate político-electoral",
+      "Acceso a la educación"
+    ],
+    "mentions": [
+      {
+        "entity": "programa Ser Pilo Paga",
+        "type": "programa gubernamental"
+      },
+      {
+        "entity": "mesa directiva",
+        "type": "órgano legislativo"
+      },
+      {
+        "entity": "presidente",
+        "type": "cargo legislativo"
+      }
+    ],
+    "importance": 0.5
+  },
+  {
+    "congressman_name": "Meisel Vergara Carlos Manuel",
+    "session": "Abril-08-2026",
+    "quote": "Presidente hay dos preguntas dónde está el Parto Histórico Pero la pregunta del millón sigue siendo dónde está Iván Cepeda Por qué se pega nunca viene y cuando viene se echa tres mentiras y se va y por qué sigue diciendo que este Congreso no es un escenario legítimo para discutir la política y el futuro de este país cómo es posible que el senador se pega le parezca una pérdida de tiempo que él vaya apuntando en las encuestas y este Congreso no pueda preguntarle por qué quiere profundizar los desastres en el sistema de salud Por qué quiere profundizar el retraso en los medicamentos Por qué señor candidato que va apuntando en las encuestas quiere profundizar el fracaso de la paz total y los sesenta mil cuatrocientos cuarenta y tres homicidios que van en este gobierno Por qué quiere profundizar la evolución paupérrima de nuestra economía Estamos de acuerdo con él en algo es probable que sus líos que se originan de las apariciones del computador de Raúl Reyes y de la FARC no sea objeto de esta plenaria pero que lo diga él que lo diga él que fue capaz de inventarse en el dos mil catorce una sesión irreal e ilegal en contra de otro senador de la oposición que lo diga él que cada vez que puede aquí acusa a Uribe de cosas que después tiene que retratarse como lo demostré en los estrados judiciales y que aquí y en los medios de comunicación y en todos lados repite mentiras y calumnias para después tener que decir no frente a los jueces eso si es un descaro de tamaños industriales presidente y ayer se decía aquí que ellos no tenían los votos manchados de sangre Quienes sí tenemos los votos manchados de sangre somos nosotros de la sangre de este señor de Miguel Uribe que debería estar al lado de nosotros hoy debatiendo este debate presidencial y no gracias a gestores de paz que ellos han nombrado en el en el en el gobierno no lo podemos tener no solamente la tenemos llenos de sangre nuestros votos también de lágrimas presidente gracias",
+    "summary": "El senador Carlos Meisel cuestiona la ausencia de Iván Cepeda y lanza un ataque frontal al gobierno de Petro, acusándolo de desastres en salud, retrasos en medicamentos, fracaso de la paz total con altos homicidios, y mala gestión económica, mientras acusa a Cepeda de mentiras y calumnias contra el expresidente Uribe.",
+    "start": 10189.7,
+    "end": 10346.6,
+    "tags": [
+      "Debate político-electoral",
+      "Salud",
+      "Seguridad regional",
+      "Víctimas y reparación",
+      "Economía"
+    ],
+    "mentions": [
+      {
+        "entity": "Cepeda Castro Iván",
+        "type": "legislador"
+      },
+      {
+        "entity": "gobierno de Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Raúl Reyes",
+        "type": "líder guerrillero"
+      },
+      {
+        "entity": "FARC",
+        "type": "grupo armado"
+      },
+      {
+        "entity": "Álvaro Uribe",
+        "type": "expresidente"
+      },
+      {
+        "entity": "Miguel Uribe",
+        "type": "víctima"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Quintero Cardona Esteban",
+    "session": "Abril-08-2026",
+    "quote": "Presidenta muchas gracias Un saludo muy especial para los compañeros que aún se encuentran en esta plenaria Yo lamento muchísimo que por falta y por la inasistencia del Pacto Histórico hoy la juventud colombiana y la educación en nuestro país que tanto dicen ellos defender pues no haya tenido las buenas noticias de dos proyectos de ley bien importantes para ellos y como a mí me han enseñado y eso sí que me lo ha enseñado nuestro líder álvaro ribebeles que aquí se viene es a trabajar trabajar y trabajar Asistir a las sesiones plenarias a las comisiones y no a inasistir como así lo dijo ahora mi compañero Michel como lo hace recurrentemente el senador Iván Cepeda Así no haya configurados el quarum para poder seguir con el debate Yo quiero mediante esta intervención responder a mis compañeros para que ellos se vayan esta semana con una información objetiva y no vengan con más excusas de ideología barata a incumplirle a la juventud colombiana y a la educación que el CGP se va a tocar para este proyecto hombre lo hemos dicho recurrentemente en las intervenciones no se va a tocar el CGP ocurre una parte pero lo que no se cubre el faltante nosotros queremos que sea vía presupuesto nacional que sea un recurso adicional y sí un recurso adicional porque no un recurso adicional para la educación colombiana para los jóvenes para los niños o es que les duele mucho que haya un recurso adicional para eso porque más bien en vez de estar gastándose la plata en más ministerios en más consulados en más embajadas por supuesto en más contratos de prestación de servicios que los están sirviendo para la campaña presidencial porque más bien no se gasta una plata adicional para poder que la educación en Colombia sea de calidad y claro que a eso le estamos apostando a que la persona o el niño de recursos bajos Continúa senador Puede acceder a una educación de calidad y que si quiere escoger que así se hagan el mejor colegio pues que pueda tener ese derecho como lo tiene quien tiene la capacidad también de pagar decidan que los modelos de educación de los países desarrollados el modelo estatal perdón el modelo de educación es un modelo más de educación pública y que esos eran los modelos exitosos y que por eso los países estaban desarrollados yo les hago la siguiente pregunta y es que acaso esos países desarrollados derrochan igual que el estado colombiano que el gobierno el presidente petro por supuesto que no si aquí no hubiera este derroche muy seguramente la plata rendiría para que la educación pública fuera mucho mejor Decían también que se le quita los recursos a la educación pública para darse a la privada a las instituciones privadas Hombre que no que no es para la plata para las instituciones el bono es para el estudiante para los niños no es para las instituciones educativas así que presidente seguiremos con este debate por favor así se lo pido en comedeeamente para el próximo martes que sea agendado por supuesto este que fue suspendido y el que sigue de la matrícula cero para qué para ayudarles incluso a que cumplan esa meta que no están cumpliendo de los quinientos mil cupos educativos porque este gobierno se ha demostrado que saben hablar mucho incumplir mucho pero actuar muy poco gracias presidente",
+    "summary": "El senador Esteban Quintero lamenta la inasistencia del Pacto Histórico y defiende proyectos de ley que buscan otorgar bonos escolares a familias vulnerables, argumentando que se requieren recursos adicionales para educación y criticando el gasto gubernamental en burocracia y campañas políticas.",
+    "start": 10357.8,
+    "end": 10676.3,
+    "tags": [
+      "Educación pública",
+      "Debate político-electoral",
+      "Presupuesto",
+      "Acceso a la educación"
+    ],
+    "mentions": [
+      {
+        "entity": "Pacto Histórico",
+        "type": "partido"
+      },
+      {
+        "entity": "gobierno de Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Cepeda Castro Iván",
+        "type": "legislador"
+      },
+      {
+        "entity": "CGP",
+        "type": "programa gubernamental"
+      },
+      {
+        "entity": "proyectos de ley educativos",
+        "type": "proyecto de ley"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Cepeda Castro Iván",
+    "session": "Abril-08-2026",
+    "quote": "Gracias señor presidente En este Congreso tenemos que lidiar frecuentemente con la hipocresía porque uno escucha ahora a los luchadores sociales de última hora A quienes se han opuesto en esta cámara y en estas cámaras a todas las reformas sociales a todas Quienes han mezquinado al pueblo colombiano el alza salarial el aumento que este gobierno ha logrado para que la gente viva de una manera más digna Quienes han intentado por todas las vías que no haya reforma pensional quienes se han opuesto a que se resuelva el problema de la salud mediante una reforma ahora en tiempo electoral milagrosamente se han convertido en luchadores sociales en partidarios y en partidarias de la reforma agraria en luchadores por el salario a ver señoras y señores del Centro Democrático y su candidata que le gusta hacer campaña en este recinto porque se oponían antes al salario al aumento de salario y ahora ya no qué pasó ahí porque fue qué les qué qué cambió yo les voy a decir qué cambió que están desesperados y desesperadas por ganar el favor popular pero eso no se obtiene con oportunismo No se obtiene intentando posar de centro político cuando se ha sido toda la vida de extrema derecha cuando se hizo y se estructuró un sistema de salud privado que se han robado literalmente entonces repito no se puede a última hora venir a maquillarse venir a disfrazarse para ganar el favor popular y encima de eso tener el descaro de pedir cuentas no eso no se puede claro si uno cree que el engaño es parte de una política pues sí si uno cree que la gente se deja meter gato por liebre que la gente no recuerda que el pueblo colombiano se olvida de quienes defendieron en un momento Los intereses privados y absolutamente mezquinos y ahora intentan posar como amigos del social pues claro que puede utilizar el engaño pero eso ya no eso dejó de funcionar en Colombia señoras y señores del Centro Democrático muchas gracias presidente",
+    "summary": "El senador Iván Cepeda acusa al Centro Democrático de hipocresía por haberse opuesto históricamente a reformas sociales como aumentos salariales y reformas pensionales, y ahora posar como defensores de los trabajadores en tiempos electorales, denunciando su oportunismo y defendiendo las políticas del gobierno de Petro.",
+    "start": 10683.2,
+    "end": 10862.7,
+    "tags": [
+      "Debate político-electoral",
+      "Reformas sociales",
+      "Salud",
+      "Pensional",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "Centro Democrático",
+        "type": "partido"
+      },
+      {
+        "entity": "gobierno de Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "reformas sociales",
+        "type": "política pública"
+      },
+      {
+        "entity": "reforma agraria",
+        "type": "política pública"
+      }
+    ],
+    "importance": 0.8
+  },
+  {
+    "congressman_name": "Meisel Vergara Carlos Manuel",
+    "session": "Abril-08-2026",
+    "quote": "Hombre qué alegría qué alegría encontrándolos por aquí en estos minuticos señor candidato presidente pero ponde va envío otra vez llega hablo y se va que que que qué gracia estuve aquí discutiendo esto pero miren cálmense defensores cálmense cálmense cálmense Calmes calmes calmes Miren miren miren Pedimos orden en el recinto Si quieren hablar los inscribimos en medio de las costancias Por favor pedimos orden en el recinto a los senadores Senador Meizel continúe Le respondo rapidito a los en ergúmenos defensores de CEDA le respondo muy rápido y muy calma pero calmate papá calmate calmate calmate Paloma estuvo aquí defendiendo su proyecto de ley hasta que se hundió porque ustedes y el patio histórico se levantaron para que se hundiera entraron después papá entraron después pero déjenme contestarle acepta ustedes nombres ustedes no aquí el gran problema es quién está liderando las encuestas y con qué propuestas No senador Cepeda yo lamento decirle que aquí nadie se está disfrazando Intentar impulsar un proyecto de ley que usted se ausentó para no aprobar y que solamente busca entregarle un bono a las familias más vulnerables de este país para que puedan ser libres y estudiar en el colegio que les dé la gana no es disfrazarse y que usted no venga y que usted no quiera apoyar ese proyecto de ley de ley eso es culpa suya no nuestra que el gobierno de Petro tenga que declarar tres emergencias económicas y que ustedes todavía digan que la economía va bien en la única economía que va bien y necesita declarar tres emergencias económicas y que ustedes todavía digan que va bien y que nosotros simplemente querramos preguntar por qué quieren profundizar ese paupérrimo crecimiento de la economía colombiana yo creo que estamos en todo nuestro derecho de hacerlo y usted además de contestarlo Que usted quiera o que nosotros no podamos preguntar qué les duele a ustedes de los cuarenta mil estudiantes de ser pilopaga que es en que otra vaina es una cosa que se le inventó Santos De lo poquito rescatable de Santos y por qué nosotros no podemos preguntarle a ustedes eso cuando nos hemos nosotros opuesto al salario mínimo señor dejen esa fábula que nosotros nunca hemos dicho o estado en contra del aumento del salario mínimo lo que sí hemos dicho es cuidado con la microempresa de este país lo que hemos dicho es que nos hemos quedado esperando que cuando Benedetti venía aquí señor Cepeda doctor Cepeda cuando Benedetti venía aquí por los votos de la reforma laboral decía que lo apoyáramos con contundencia que el gobierno se iba a venir con un paquete de incentivos tributarios para no golpear a la microempresa dónde está ese paquete de incentivos tributarios señor candidato presidencial y señor candidato presidencial yo no puedo generalizar y yo no puedo meterme a decir que todo el gobierno petro ha sido corrupto porque es mentira pero lo que sí le agradecería yo es que no empiece a hablar de la corrupción antes del gobierno petro sin señalar su gobierno señor candidato presidencial que ha sido el gobierno más corrupto de la historia de este país muchas gracias",
+    "summary": "El senador Carlos Meisel responde a Iván Cepeda defendiendo el proyecto de bonos educativos y acusándolo de ausentarse, critica la gestión económica de Petro por declarar tres emergencias económicas, y niega oposición al salario mínimo mientras pide incentivos para microempresas.",
+    "start": 10868.9,
+    "end": 11134.2,
+    "tags": [
+      "Educación pública",
+      "Economía",
+      "Debate político-electoral",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "Cepeda Castro Iván",
+        "type": "legislador"
+      },
+      {
+        "entity": "gobierno de Petro",
+        "type": "ejecutivo"
+      },
+      {
+        "entity": "Santos",
+        "type": "expresidente"
+      },
+      {
+        "entity": "Benedetti",
+        "type": "legislador"
+      },
+      {
+        "entity": "reforma laboral",
+        "type": "proyecto de ley"
+      },
+      {
+        "entity": "programa Ser Pilo Paga",
+        "type": "programa gubernamental"
+      }
+    ],
+    "importance": 0.7
+  },
+  {
+    "congressman_name": "Díaz Plata Edwing Fabián",
+    "session": "Abril-08-2026",
+    "quote": "Gracias Presidenta Aquí el Centro Democrático dice Dónde está Cepeda Pues aquí está Y cada vez que lo nombran él le responde y más que responderle lo speina Nosotros les preguntamos Dónde está Paloma Dónde está su candidata y ustedes mismos dicen salió salió volando la paloma se fue porque no es capaz de responder ante los argumentos la paloma se fue porque quedan evidencia como el centro democrático ahora sí les interesa a los trabajadores cuando ellos fueron los que hundieron en la comisión séptima la reforma laboral que apelamos y que el pueblo lo ha dicho y lo ha visto cómo se contradicen cuando este Congreso logró regir la reforma laboral y devolvere los derechos a los trabajadores que el centro democrático ya les había quitado y por supuesto ahora se posan de defensores de los trabajadores pues no el pueblo no les crie y el pueblo le ha visto cómo justamente ustedes dicen dónde está cepea y aparece y nosotros decimos dónde está paloma y se vuela gracias presidente",
+    "summary": "El senador Fabián Díaz critica al Centro Democrático por su hipocresía al hundir la reforma laboral y ahora pretender defender a los trabajadores, y responde a la pregunta sobre Cepeda señalando que su candidata Paloma se ausenta del debate.",
+    "start": 11146.9,
+    "end": 11235.0,
+    "tags": [
+      "Debate político-electoral",
+      "Reforma laboral",
+      "Hipocresía política"
+    ],
+    "mentions": [
+      {
+        "entity": "Centro Democrático",
+        "type": "partido"
+      },
+      {
+        "entity": "Paloma",
+        "type": "candidata"
+      },
+      {
+        "entity": "Cepeda Castro Iván",
+        "type": "legislador"
+      },
+      {
+        "entity": "reforma laboral",
+        "type": "proyecto de ley"
+      }
+    ],
+    "importance": 0.6
+  },
+  {
+    "congressman_name": "Guerra Hoyos Andrés Felipe",
+    "session": "Abril-08-2026",
+    "quote": "Presidente muy buena noche a mis compañeros y compañeras que todavía esta hora se hacen presente en la plenaria del Senado Municipio de Caucasio gana el Pacto Histórico el corazón hoy de la minería ilegal del oro del país Segovia nordeste antioqueño gana el pacto histórico el corazón de la minería ilegal del oro del país el vagre Corazón de la minería del oro gana el pacto histórico el corredor y el corazón de la producción de la coca en Antioquia entre Puerto Valladolid y Cáceres Segundo y primero el Pacto histórico Yo simplemente presidente le vuelvo a solicitar y será insistente respetuoso Aquí piden que no gritemos que tengamos altura creo que durante cuatro años he sido un hombre prudente con altura y con respeto con todas las bancadas y con todos los partidos con todos los funcionarios con todas las uteses presidente le pido el favor a usted a la mesa directiva al presidente Dilio Lilio que nos permita hacer el debate sobre los poderes mafiosos locales parece que nos hubiéramos quedado congelados en el tiempo parece que ese relato que en el dos mil cuatro un representante a la cámara llamado Gustavo Francisco Petro Urrego Gustavo Francisco Pedro Urrego le contó a Colombia y al mundo que aquí había un problema entre lo que era el Estado y tres ítems que eran poderes políticos mafiosos que eran ejércitos privados ilegales y que eran economías ilegales tenían una relación muy fuerte con la cámara y el senado ayer lo dije y lo volví a repetir en la noche de hoy parece que un sector de la clase política de este país no quiere este debate porque veintidós años después mutó oigan la palabra mutó la economía hacia quien hoy es presidente y tengo las cifras concretas y claras porque por donde usted traza el mapa de las economías ilegales del transporte de la entrada y la salida del continente está el voto de quien hoy Continué para que termine senado De quien hoy gobierna la presidencia de Colombia En el 2004 en la cámara se llamaba Gustavo Francisco Petro Y hoy el presidente de Colombia es con toda prudencia y respeto sin gritos no hay que hacerlos tranquilos Aquí también hay equilibrio emocional Gustavo Francisco Petro Buenas noches",
+    "summary": "El senador Andrés Guerra señala que el Pacto Histórico gana en regiones con economías ilegales como minería y coca, y solicita un debate sobre poderes mafiosos locales, vinculándolos con el presidente Petro y su discurso de 2004 sobre crimen y política.",
+    "start": 11244.3,
+    "end": 11500.2,
+    "tags": [
+      "Seguridad regional",
+      "Minería ilegal",
+      "Economías ilegales",
+      "Debate político",
+      "Corrupción"
+    ],
+    "mentions": [
+      {
+        "entity": "Pacto Histórico",
+        "type": "partido"
+      },
+      {
+        "entity": "Gustavo Petro",
+        "type": "presidente"
+      },
+      {
+        "entity": "Estado",
+        "type": "institución"
+      },
+      {
+        "entity": "poderes mafiosos",
+        "type": "crimen organizado"
+      },
+      {
+        "entity": "ejércitos privados ilegales",
+        "type": "grupo armado"
+      }
+    ],
+    "importance": 0.8
+  },
   {
     "congressman_name": "Ávila Martínez Ariel Fernando",
     "session": "Abril-14-2026",
@@ -1577,7 +4702,7 @@ export const IDEAS_DATA =
     "importance": 0.6
   },
   {
-    "congressman_name": "Cruz Bonilla Saúl",
+    "congressman_name": "Cruz Bonilla Saúl ",
     "session": "Abril-14-2026",
     "quote": "Con fundamento en las razones expuestas me permito rendir ponencia positiva y en consecuencia Solicito a la plenaria del Senado de la República dar segundo debate y aprobar el proyecto de ley número cero ochenta y nueve dos mil veinticuatro senado por medio de la cual se fomenta la inclusión activa de la mujer en el mercado financiero de Colombia",
     "summary": "El senador Gnecco Zuleta presenta ponencia favorable para el segundo debate del proyecto de ley que busca fomentar la inclusión activa de las mujeres en el mercado financiero colombiano, argumentando su importancia para la equidad económica.",

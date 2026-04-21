@@ -476,6 +476,72 @@ body { background: var(--bg); }
   margin-top: 4px;
 }
 
+/* ── Senator enriched profile ───────────────────────────── */
+.senator-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 10px;
+}
+
+.senator-summary {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.senator-summary p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.senator-themes {
+  margin-bottom: 16px;
+}
+
+.senator-positions {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.senator-positions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.senator-positions-list li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.senator-positions-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.senator-ideas-header {
+  border-top: 1px solid var(--border);
+  margin-bottom: 14px;
+  padding-top: 14px;
+}
+
 /* ── Session group label ─────────────────────────────────── */
 .session-group-label {
   font-size: 12px;

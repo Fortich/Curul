@@ -1,9 +1,10 @@
 import { avatarCol, initials, displayName, fmtDate } from "../utils";
 import { IdeaCard } from "../components/IdeaCard";
 import { Back } from "../components/Back";
+import POSITIONS from "../positions.json";
 
 /**
- * SenatorView — profile page for a single senator.
+ * SenatorView — perfil de un senador con posiciones consolidadas.
  *
  * Props:
  *   senatorName  string
@@ -13,14 +14,16 @@ import { Back } from "../components/Back";
  *   goBack       fn
  */
 export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack }) {
-  const ideas = getIdeas({ senator: senatorName }).sort((a, b) => a.start - b.start);
+  const ideas   = getIdeas({ senator: senatorName }).sort((a, b) => a.start - b.start);
   const sessionIds = [...new Set(ideas.map((i) => i.session))];
   const avatarColor = avatarCol(senatorName);
+  const position = POSITIONS[senatorName];
 
   return (
     <>
       <Back label="Volver" onClick={goBack} />
 
+      {/* ── Cabecera ──────────────────────────────────────── */}
       <header className="senator-profile-header">
         <div
           className="avatar"
@@ -38,18 +41,71 @@ export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack
         </div>
       </header>
 
+      {/* ── Resumen consolidado ───────────────────────────── */}
+      {position?.consolidated_summary && (
+        <div className="senator-summary">
+          <p>{position.consolidated_summary}</p>
+        </div>
+      )}
+
+      {/* ── Temas principales ─────────────────────────────── */}
+      {position?.main_themes?.length > 0 && (
+        <div className="senator-themes">
+          <p className="senator-section-label">Temas principales</p>
+          <div className="tags-row">
+            {position.main_themes.map((t) => {
+              // Derivar color igual que tagColors en utils.js
+              let h = 0;
+              for (let i = 0; i < t.length; i++) h = t.charCodeAt(i) + ((h << 5) - h);
+              const hue = Math.abs(h) % 360;
+              const bg   = `hsl(${hue},18%,19%)`;
+              const text = `hsl(${hue},45%,72%)`;
+              return (
+                <span
+                  key={t}
+                  style={{
+                    display: "inline-flex", alignItems: "center",
+                    borderRadius: "100px", fontFamily: "var(--font-ui)",
+                    fontWeight: 500, whiteSpace: "nowrap",
+                    background: bg, color: text,
+                    padding: "5px 14px", fontSize: 12,
+                  }}
+                >
+                  {t}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* ── Posiciones clave ──────────────────────────────── */}
+      {position?.key_positions?.length > 0 && (
+        <div className="senator-positions">
+          <p className="senator-section-label">Posiciones clave</p>
+          <ul className="senator-positions-list">
+            {position.key_positions.map((pos, i) => (
+              <li key={i}>{pos}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* ── Intervenciones ────────────────────────────────── */}
+      <div className="senator-ideas-header">
+        <p className="senator-section-label">
+          Intervenciones{sessionIds.length > 1 ? ` (${sessionIds.length} sesiones)` : ""}
+        </p>
+      </div>
+
       {sessionIds.length > 1
         ? sessionIds.map((sid) => {
             const sessionIdeas = ideas.filter((i) => i.session === sid);
-            const sessionData = sessions.find((x) => x.session === sid);
-            const date = sessionData?.date ?? "";
-
+            const sessionData  = sessions.find((x) => x.session === sid);
+            const date         = sessionData?.date ?? "";
             return (
               <div key={sid} style={{ marginBottom: "24px" }}>
-                <button
-                  className="session-group-label"
-                  onClick={() => goSession(sid)}
-                >
+                <button className="session-group-label" onClick={() => goSession(sid)}>
                   {date ? fmtDate(date) : sid}
                 </button>
                 {sessionIdeas.map((idea, i) => (
