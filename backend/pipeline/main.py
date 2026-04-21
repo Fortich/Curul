@@ -12,6 +12,7 @@ from pipeline import (
     review_ideas,
     review_session_info,
     senate_scraper,
+    senator_consolidator,
     session_info_extractor,
     transcriber,
 )
@@ -410,6 +411,156 @@ def export_frontend_cli() -> None:
     export_frontend.write_data_js(sessions, ideas, data_js_path)
 
 
+def consolidate_senator_cli() -> None:
+    """Consolidates a senator's position from ideas across one or more sessions.
+
+    Reads ideas from <ideas_dir> (a directory with ideas.json files in subdirectories
+    or a single ideas.json), filters by <congressman_name>, and outputs a JSON summary.
+
+    Usage: uv run python main.py consolidate-senator <ideas_dir> <congressman_name>
+        <api_key> [--output position.json]
+    """
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    )
+
+    args = sys.argv[2:]
+
+    if len(args) < 3 or args[0] in ("-h", "--help"):
+        print(
+            "Usage: uv run python main.py consolidate-senator"
+            " <ideas_dir> <congressman_name> <api_key>"
+            " [--output position.json]"
+        )
+        sys.exit(0)
+
+    output_path: pathlib.Path | None = None
+    if "--output" in args:
+        idx = args.index("--output")
+        if idx + 1 >= len(args):
+            logger.error("--output requires a file path")
+            sys.exit(1)
+        output_path = pathlib.Path(args.pop(idx + 1))
+        args.pop(idx)
+
+    ideas_dir = pathlib.Path(args[0])
+    congressman_name = args[1]
+    api_key = args[2]
+
+    ideas: list[idea_extractor.Idea] = []
+
+    if ideas_dir.is_file():
+        ideas = idea_extractor.load_ideas(ideas_dir)
+    elif ideas_dir.is_dir():
+        for ideas_path in sorted(ideas_dir.rglob("ideas.json")):
+            ideas.extend(idea_extractor.load_ideas(ideas_path))
+    else:
+        logger.error("Path not found: %s", ideas_dir)
+        sys.exit(1)
+
+    filtered = [i for i in ideas if i["congressman_name"] == congressman_name]
+    logger.info(
+        "Found %d idea(s) for '%s' (out of %d total)",
+        len(filtered), congressman_name, len(ideas),
+    )
+
+    if not filtered:
+        logger.error("No ideas found for '%s'", congressman_name)
+        sys.exit(1)
+
+    result = senator_consolidator.consolidate_senator_position(
+        filtered, congressman_name, api_key
+    )
+
+    if output_path:
+        senator_consolidator.save_senator_position(result, output_path)
+    else:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+def consolidate_all_senators_cli() -> None:
+    """Consolidates positions for all senators that have at least one idea.
+
+    Scans <output_dir> for sessions, loads ideas, and generates a SenatorPosition
+    for each senator in the cache that has at least one idea.
+
+    Usage: uv run python main.py consolidate-all-senators <output_dir> <api_key>
+        [--senators <senators_cache.json>] [--output <positions.json>]
+        [--max-ideas N]
+    """
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    )
+
+    args = sys.argv[2:]
+
+    if len(args) < 2 or args[0] in ("-h", "--help"):
+        print(
+            "Usage: uv run python main.py consolidate-all-senators"
+            " <output_dir> <api_key>"
+            " [--senators <senators_cache.json>] [--output <positions.json>]"
+            " [--max-ideas N]"
+        )
+        sys.exit(0)
+
+    output_path: pathlib.Path | None = None
+    if "--output" in args:
+        idx = args.index("--output")
+        if idx + 1 >= len(args):
+            logger.error("--output requires a file path")
+            sys.exit(1)
+        output_path = pathlib.Path(args.pop(idx + 1))
+        args.pop(idx)
+
+    senators_cache_path: pathlib.Path | None = None
+    if "--senators" in args:
+        idx = args.index("--senators")
+        if idx + 1 >= len(args):
+            logger.error("--senators requires a file path")
+            sys.exit(1)
+        senators_cache_path = pathlib.Path(args.pop(idx + 1))
+        args.pop(idx)
+
+    max_ideas = 50
+    if "--max-ideas" in args:
+        idx = args.index("--max-ideas")
+        if idx + 1 >= len(args):
+            logger.error("--max-ideas requires an integer value")
+            sys.exit(1)
+        max_ideas = int(args.pop(idx + 1))
+        args.pop(idx)
+
+    output_dir = pathlib.Path(args[0])
+    api_key = args[1]
+
+    if not output_dir.is_dir():
+        logger.error("Directory not found: %s", output_dir)
+        sys.exit(1)
+
+    if senators_cache_path is None:
+        senators_cache_path = output_dir / "senators_cache.json"
+
+    senators = senate_scraper.fetch_senators(cache_path=senators_cache_path)
+    logger.info("Loaded %d senators from cache", len(senators))
+
+    results = senator_consolidator.consolidate_all_senators(
+        output_dir, senators, api_key, max_ideas=max_ideas
+    )
+
+    serializable = {name: dict(pos) for name, pos in results.items()}
+
+    if output_path:
+        output_path.write_text(
+            json.dumps(serializable, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        logger.info("Positions written to: %s", output_path)
+    else:
+        print(json.dumps(serializable, ensure_ascii=False, indent=2))
+
+
 COMMANDS = {
     "download": download_cli,
     "transcribe": transcribe_file,
@@ -419,6 +570,8 @@ COMMANDS = {
     "review-session-info": review_session_info_cli,
     "review-ideas": review_ideas_cli,
     "export-frontend": export_frontend_cli,
+    "consolidate-senator": consolidate_senator_cli,
+    "consolidate-all-senators": consolidate_all_senators_cli,
 }
 
 

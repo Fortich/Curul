@@ -5,7 +5,7 @@ from unittest import mock
 
 import pytest
 
-from pipeline import idea_extractor, transcriber
+from pipeline import idea_extractor, session_info_extractor, transcriber
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -16,6 +16,20 @@ def _make_segment(
     id: int, start: float, end: float, text: str
 ) -> transcriber.Segment:
     return transcriber.Segment(start=start, end=end, text=text)
+
+
+def _make_session_result(
+    participants: list[str] | None = None,
+    themes: list[str] | None = None,
+) -> session_info_extractor.SessionResult:
+    return session_info_extractor.SessionResult(
+        session="S1",
+        summary="Resumen de prueba.",
+        participants=participants or ["García López"],
+        themes=themes or ["Economía"],
+        youtube_url="",
+        date="2026-01-01",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -33,6 +47,11 @@ def sample_transcription() -> transcriber.TranscriptionResult:
         ],
         language="es",
     )
+
+
+@pytest.fixture
+def session_result() -> session_info_extractor.SessionResult:
+    return _make_session_result()
 
 
 @pytest.fixture
@@ -89,13 +108,13 @@ def test_format_segments_empty_transcription() -> None:
 
 
 # ---------------------------------------------------------------------------
-# _chunk_segments
+# _chunk_segments (character-based splitting)
 # ---------------------------------------------------------------------------
 
 
 @pytest.mark.unit
 def test_chunk_segments_empty_returns_empty() -> None:
-    assert idea_extractor._chunk_segments([], 600.0) == []
+    assert idea_extractor._chunk_segments([], max_chars=100) == []
 
 
 @pytest.mark.unit
@@ -103,31 +122,30 @@ def test_chunk_segments_fits_in_one_chunk() -> None:
     segments = [
         _make_segment(i, i * 10.0, i * 10.0 + 9.0, "text") for i in range(3)
     ]
-    chunks = idea_extractor._chunk_segments(segments, 600.0)
+    chunks = idea_extractor._chunk_segments(segments, max_chars=10_000)
     assert len(chunks) == 1
     assert chunks[0] == segments
 
 
 @pytest.mark.unit
-def test_chunk_segments_splits_on_duration() -> None:
-    # 3 segments: 0-10s, 10-20s, 700-710s — the third exceeds a 600s window
+def test_chunk_segments_splits_on_chars() -> None:
+    # Two segments whose combined formatted text exceeds max_chars
     segments = [
-        _make_segment(0, 0.0, 10.0, "a"),
-        _make_segment(1, 10.0, 20.0, "b"),
-        _make_segment(2, 700.0, 710.0, "c"),
+        _make_segment(0, 0.0, 1.0, "a" * 60),
+        _make_segment(1, 1.0, 2.0, "b" * 60),
     ]
-    chunks = idea_extractor._chunk_segments(segments, 600.0)
+    chunks = idea_extractor._chunk_segments(segments, max_chars=70)
     assert len(chunks) == 2
-    assert chunks[0] == segments[:2]
-    assert chunks[1] == segments[2:]
+    assert chunks[0] == [segments[0]]
+    assert chunks[1] == [segments[1]]
 
 
 @pytest.mark.unit
 def test_chunk_segments_never_splits_a_segment() -> None:
     segments = [
-        _make_segment(i, i * 100.0, i * 100.0 + 90.0, "text") for i in range(10)
+        _make_segment(i, float(i), float(i) + 0.9, "x" * 10) for i in range(10)
     ]
-    chunks = idea_extractor._chunk_segments(segments, 150.0)
+    chunks = idea_extractor._chunk_segments(segments, max_chars=30)
     reassembled = [seg for chunk in chunks for seg in chunk]
     assert reassembled == segments
 
@@ -140,14 +158,15 @@ def test_chunk_segments_never_splits_a_segment() -> None:
 @pytest.mark.unit
 def test_extract_ideas_returns_list(
     sample_transcription: transcriber.TranscriptionResult,
+    session_result: session_info_extractor.SessionResult,
     llm_payload: str,
 ) -> None:
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=llm_payload,
     ):
         ideas = idea_extractor.extract_ideas(
-            sample_transcription, "Pleno 2024-01-15", "fake-key"
+            sample_transcription, "Pleno 2024-01-15", "fake-key", session_result
         )
     assert isinstance(ideas, list)
 
@@ -155,15 +174,16 @@ def test_extract_ideas_returns_list(
 @pytest.mark.unit
 def test_extract_ideas_injects_session(
     sample_transcription: transcriber.TranscriptionResult,
+    session_result: session_info_extractor.SessionResult,
     llm_payload: str,
 ) -> None:
     session = "Pleno 2024-01-15"
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=llm_payload,
     ):
         ideas = idea_extractor.extract_ideas(
-            sample_transcription, session, "fake-key"
+            sample_transcription, session, "fake-key", session_result
         )
     assert all(idea["session"] == session for idea in ideas)
 
@@ -171,14 +191,15 @@ def test_extract_ideas_injects_session(
 @pytest.mark.unit
 def test_extract_ideas_parses_fields(
     sample_transcription: transcriber.TranscriptionResult,
+    session_result: session_info_extractor.SessionResult,
     llm_payload: str,
 ) -> None:
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=llm_payload,
     ):
         ideas = idea_extractor.extract_ideas(
-            sample_transcription, "Pleno 2024-01-15", "fake-key"
+            sample_transcription, "Pleno 2024-01-15", "fake-key", session_result
         )
 
     idea = ideas[0]
@@ -192,14 +213,15 @@ def test_extract_ideas_parses_fields(
 @pytest.mark.unit
 def test_extract_ideas_handles_empty_ideas_array(
     sample_transcription: transcriber.TranscriptionResult,
+    session_result: session_info_extractor.SessionResult,
 ) -> None:
     payload = json.dumps({"ideas": []})
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=payload,
     ):
         ideas = idea_extractor.extract_ideas(
-            sample_transcription, "Pleno 2024-01-15", "fake-key"
+            sample_transcription, "Pleno 2024-01-15", "fake-key", session_result
         )
     assert ideas == []
 
@@ -207,16 +229,18 @@ def test_extract_ideas_handles_empty_ideas_array(
 @pytest.mark.unit
 def test_extract_ideas_passes_credentials_to_chat_completion(
     sample_transcription: transcriber.TranscriptionResult,
+    session_result: session_info_extractor.SessionResult,
     llm_payload: str,
 ) -> None:
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=llm_payload,
     ) as mock_fn:
         idea_extractor.extract_ideas(
             sample_transcription,
             "Pleno 2024-01-15",
             api_key="my-key",
+            session_result=session_result,
             base_url="https://custom.api.com",
             model="deepseek-reasoner",
         )
@@ -230,6 +254,7 @@ def test_extract_ideas_passes_credentials_to_chat_completion(
 @pytest.mark.unit
 def test_extract_ideas_tags_default_to_empty_list(
     sample_transcription: transcriber.TranscriptionResult,
+    session_result: session_info_extractor.SessionResult,
 ) -> None:
     payload = json.dumps(
         {
@@ -244,73 +269,82 @@ def test_extract_ideas_tags_default_to_empty_list(
         }
     )
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=payload,
     ):
         ideas = idea_extractor.extract_ideas(
-            sample_transcription, "S1", "fake-key"
+            sample_transcription, "S1", "fake-key", session_result
         )
     assert ideas[0]["tags"] == []
 
 
 @pytest.mark.unit
 def test_extract_ideas_merges_results_across_chunks(
-    llm_payload: str,
+    session_result: session_info_extractor.SessionResult,
 ) -> None:
-    # Two chunks separated by > 20 min: _chat_completion called twice,
-    # results merged into one list.
+    # Two segments with large text force char-based splitting into separate chunks.
+    # First chunk returns empty (no drop/rewind), second returns one idea.
+    big_text = "x" * 60_000
     segments = [
-        _make_segment(0, 0.0, 10.0, "primer chunk"),
-        _make_segment(1, 2000.0, 2010.0, "segundo chunk"),
+        _make_segment(0, 0.0, 10.0, big_text),
+        _make_segment(1, 10.0, 20.0, big_text),
     ]
     transcription = transcriber.TranscriptionResult(
         text="", segments=segments, language="es"
     )
+    empty = json.dumps({"ideas": []})
+    one_idea = json.dumps(
+        {"ideas": [{"congressman_name": "García López", "quote": "q", "start": 10.0, "end": 20.0, "tags": []}]}
+    )
 
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
-        return_value=llm_payload,
+        "pipeline.deepseek.chat_completion",
+        side_effect=[empty, one_idea],
     ) as mock_fn:
-        ideas = idea_extractor.extract_ideas(transcription, "S1", "fake-key")
+        ideas = idea_extractor.extract_ideas(
+            transcription, "S1", "fake-key", session_result
+        )
 
     assert mock_fn.call_count == 2
-    assert len(ideas) == 2  # one idea per chunk call
+    assert len(ideas) == 1
 
 
 # ---------------------------------------------------------------------------
-# _process_chunk — error-handling paths
+# _process_segments — error-handling paths
 # ---------------------------------------------------------------------------
 
 
 @pytest.mark.unit
-def test_process_chunk_all_invalid_json_returns_empty() -> None:
+def test_process_segments_all_invalid_json_returns_empty() -> None:
     segments = [_make_segment(0, 0.0, 10.0, "texto")]
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value="not-json",
     ):
-        result = idea_extractor._process_chunk(
-            segments, "S1", 1, 1, "k", "url", "m"
+        result = idea_extractor._process_segments(
+            segments, "S1", "k", "url", "m",
+            known_participants=[], known_themes=[],
         )
     assert result == []
 
 
 @pytest.mark.unit
-def test_process_chunk_ideas_not_a_list_returns_empty() -> None:
+def test_process_segments_ideas_not_a_list_returns_empty() -> None:
     payload = json.dumps({"ideas": "not-a-list"})
     segments = [_make_segment(0, 0.0, 10.0, "texto")]
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=payload,
     ):
-        result = idea_extractor._process_chunk(
-            segments, "S1", 1, 1, "k", "url", "m"
+        result = idea_extractor._process_segments(
+            segments, "S1", "k", "url", "m",
+            known_participants=[], known_themes=[],
         )
     assert result == []
 
 
 @pytest.mark.unit
-def test_process_chunk_partial_items_returns_best() -> None:
+def test_process_segments_partial_items_returns_best() -> None:
     payload = json.dumps(
         {
             "ideas": [
@@ -327,18 +361,19 @@ def test_process_chunk_partial_items_returns_best() -> None:
     )
     segments = [_make_segment(0, 0.0, 10.0, "texto")]
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         return_value=payload,
     ):
-        result = idea_extractor._process_chunk(
-            segments, "S1", 1, 1, "k", "url", "m"
+        result = idea_extractor._process_segments(
+            segments, "S1", "k", "url", "m",
+            known_participants=[], known_themes=[],
         )
     assert len(result) == 1
     assert result[0]["congressman_name"] == "García"
 
 
 @pytest.mark.unit
-def test_process_chunk_recovers_on_later_attempt() -> None:
+def test_process_segments_recovers_on_later_attempt() -> None:
     good = json.dumps(
         {
             "ideas": [
@@ -354,11 +389,12 @@ def test_process_chunk_recovers_on_later_attempt() -> None:
     )
     segments = [_make_segment(0, 0.0, 10.0, "texto")]
     with mock.patch(
-        "pipeline.idea_extractor._chat_completion",
+        "pipeline.deepseek.chat_completion",
         side_effect=["not-json", good],
     ):
-        result = idea_extractor._process_chunk(
-            segments, "S1", 1, 1, "k", "url", "m"
+        result = idea_extractor._process_segments(
+            segments, "S1", "k", "url", "m",
+            known_participants=[], known_themes=[],
         )
     assert len(result) == 1
     assert result[0]["congressman_name"] == "García"
