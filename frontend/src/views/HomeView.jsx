@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SessionCard } from "../components/SessionCard";
 import { SenatorRow } from "../components/SenatorRow";
 import { Tag } from "../components/Tag";
@@ -15,9 +16,17 @@ import { Tag } from "../components/Tag";
  *   goTheme      fn(tag)
  */
 export function HomeView({ sessions, allSenators, globalTags, getIdeas, goSession, goSenator, goTheme }) {
+  const [query, setQuery] = useState("");
+
+  const normalize = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  const filteredSenators = query.trim()
+    ? allSenators.filter((s) => normalize(s.name).includes(normalize(query.trim())))
+    : allSenators;
+
   return (
     <>
-      {/* Sessions */}
+      {/* Sesiones */}
       <section className="section-block" aria-labelledby="heading-sessions">
         <h2 id="heading-sessions" className="section-heading">
           <span className="marker" aria-hidden="true">■</span>
@@ -51,18 +60,56 @@ export function HomeView({ sessions, allSenators, globalTags, getIdeas, goSessio
           Senadores
         </h2>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-          {allSenators.map((s, i) => (
-            <SenatorRow
-              key={s.name}
-              name={s.name}
-              count={s.count}
-              sessions={s.sessions}
-              onClick={() => goSenator(s.name)}
-              delay={0.04 * i}
-            />
-          ))}
+        {/* Search input */}
+        <div className="senator-search-wrap">
+          <span className="senator-search-icon" aria-hidden="true">⌕</span>
+          <input
+            className="senator-search-input"
+            type="search"
+            placeholder="Buscar senador…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            aria-label="Buscar senador por nombre"
+            autoComplete="off"
+            spellCheck="false"
+          />
+          {query && (
+            <button
+              className="senator-search-clear"
+              onClick={() => setQuery("")}
+              aria-label="Limpiar búsqueda"
+            >
+              ×
+            </button>
+          )}
         </div>
+
+        {/* Results */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          {filteredSenators.length > 0
+            ? filteredSenators.map((s, i) => (
+                <SenatorRow
+                  key={s.name}
+                  name={s.name}
+                  count={s.count}
+                  sessions={s.sessions}
+                  onClick={() => goSenator(s.name)}
+                  delay={query ? 0 : 0.04 * i}
+                />
+              ))
+            : (
+              <p className="senator-search-empty">
+                No hay senadores que coincidan con "<strong>{query}</strong>"
+              </p>
+            )}
+        </div>
+
+        {/* Count indicator when filtering */}
+        {query && filteredSenators.length > 0 && (
+          <p className="senator-search-count">
+            {filteredSenators.length} de {allSenators.length} senadores
+          </p>
+        )}
       </section>
 
       {/* Themes */}
