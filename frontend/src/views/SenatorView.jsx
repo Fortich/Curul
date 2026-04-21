@@ -4,7 +4,7 @@ import { Back } from "../components/Back";
 import POSITIONS from "../positions.json";
 
 /**
- * SenatorView — perfil de un senador con posiciones consolidadas.
+ * SenatorView — senator profile with consolidated positions.
  *
  * Props:
  *   senatorName  string
@@ -23,7 +23,7 @@ export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack
     <>
       <Back label="Volver" onClick={goBack} />
 
-      {/* ── Cabecera ──────────────────────────────────────── */}
+      {/* ── Header ───────────────────────────────────────── */}
       <header className="senator-profile-header">
         <div
           className="avatar"
@@ -41,20 +41,20 @@ export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack
         </div>
       </header>
 
-      {/* ── Resumen consolidado ───────────────────────────── */}
+      {/* ── Consolidated summary ─────────────────────────── */}
       {position?.consolidated_summary && (
         <div className="senator-summary">
           <p>{position.consolidated_summary}</p>
         </div>
       )}
 
-      {/* ── Temas principales ─────────────────────────────── */}
+      {/* ── Main themes ──────────────────────────────────── */}
       {position?.main_themes?.length > 0 && (
         <div className="senator-themes">
           <p className="senator-section-label">Temas principales</p>
           <div className="tags-row">
             {position.main_themes.map((t) => {
-              // Derivar color igual que tagColors en utils.js
+              // Derive color the same way tagColors does in utils.js
               let h = 0;
               for (let i = 0; i < t.length; i++) h = t.charCodeAt(i) + ((h << 5) - h);
               const hue = Math.abs(h) % 360;
@@ -79,7 +79,7 @@ export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack
         </div>
       )}
 
-      {/* ── Posiciones clave ──────────────────────────────── */}
+      {/* ── Key positions ────────────────────────────────── */}
       {position?.key_positions?.length > 0 && (
         <div className="senator-positions">
           <p className="senator-section-label">Posiciones clave</p>
@@ -91,7 +91,7 @@ export function SenatorView({ senatorName, sessions, getIdeas, goSession, goBack
         </div>
       )}
 
-      {/* ── Intervenciones ────────────────────────────────── */}
+      {/* ── Speeches ─────────────────────────────────────── */}
       <div className="senator-ideas-header">
         <p className="senator-section-label">
           Intervenciones{sessionIds.length > 1 ? ` (${sessionIds.length} sesiones)` : ""}
