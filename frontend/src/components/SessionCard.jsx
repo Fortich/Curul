@@ -10,11 +10,13 @@ import { Tag } from "./Tag";
  *   senators   number   — unique senators in this session
  *   onClick    fn
  *   delay      number   — animation delay in seconds
- *   isLatest   bool
+ *   isLatest   bool     — first session in the list
+ *   isNew      bool     — the user has not visited this session yet
  */
-export function SessionCard({ session, count, senators, onClick, delay = 0, isLatest = false }) {
+export function SessionCard({ session, count, senators, onClick, delay = 0, isLatest = false, isNew = false }) {
   const date = session.date ?? "";
   const isRecent = isLatest || (date && (new Date() - new Date(date + "T12:00:00")) < 7 * 864e5);
+  const showNewBadge = isNew && isRecent;
 
   return (
     <button
@@ -27,7 +29,7 @@ export function SessionCard({ session, count, senators, onClick, delay = 0, isLa
 
       <div className="session-card-meta">
         <div className="session-card-meta-left">
-          {isRecent && <span className="badge-new">Nueva</span>}
+          {showNewBadge && <span className="badge-new">Nueva</span>}
           {date && <span className="session-card-date">{ago(date)}</span>}
         </div>
         <span className="session-card-arrow">›</span>

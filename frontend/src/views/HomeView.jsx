@@ -11,11 +11,12 @@ import { Tag } from "../components/Tag";
  *   allSenators  { name, count, sessions }[]
  *   globalTags   [string, number][]
  *   getIdeas     fn(opts) → Idea[]
+ *   hasVisited   fn(id) → bool
  *   goSession    fn(id)
  *   goSenator    fn(name)
  *   goTheme      fn(tag)
  */
-export function HomeView({ sessions, allSenators, globalTags, getIdeas, goSession, goSenator, goTheme }) {
+export function HomeView({ sessions, allSenators, globalTags, getIdeas, hasVisited, goSession, goSenator, goTheme }) {
   const [query, setQuery] = useState("");
 
   const normalize = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -26,7 +27,7 @@ export function HomeView({ sessions, allSenators, globalTags, getIdeas, goSessio
 
   return (
     <>
-      {/* Sesiones */}
+      {/* Sessions */}
       <section className="section-block" aria-labelledby="heading-sessions">
         <h2 id="heading-sessions" className="section-heading">
           <span className="marker" aria-hidden="true">■</span>
@@ -44,6 +45,7 @@ export function HomeView({ sessions, allSenators, globalTags, getIdeas, goSessio
               onClick={() => goSession(s.session)}
               delay={0.06 * i}
               isLatest={i === 0}
+              isNew={!hasVisited(s.session)}
             />
           );
         })}

@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { BrowserRouter, Routes, Route, useNavigate, useParams, Navigate } from "react-router-dom";
 import { useData } from "./useData";
+import { useVisitedSessions } from "./hooks/useVisitedSessions";
 import { HomeView } from "./views/HomeView";
 import { SessionView } from "./views/SessionView";
 import { SenatorView } from "./views/SenatorView";
@@ -22,11 +23,12 @@ export default function App() {
 
 function AppShell() {
   const { sessions, ideas: ideasData, loading } = useData();
+  const { hasVisited, markVisited } = useVisitedSessions();
   const navigate = useNavigate();
 
   // ── Navigation ────────────────────────────────────────────
   const goHome    = ()       => navigate("/");
-  const goSession = (id)     => navigate(`/sesion/${encodeURIComponent(id)}`);
+  const goSession = (id)     => { markVisited(id); navigate(`/sesion/${encodeURIComponent(id)}`); };
   const goSenator = (name)   => navigate(`/senador/${encodeURIComponent(name)}`);
   const goTheme   = (tag, session) =>
     navigate(`/tema/${encodeURIComponent(tag)}${session ? `?sesion=${encodeURIComponent(session)}` : ""}`);
@@ -65,6 +67,7 @@ function AppShell() {
   // ── Shared props ──────────────────────────────────────────
   const nav = { goHome, goSession, goSenator, goTheme, goBack };
   const data = { sessions, getIdeas };
+  const visited = { hasVisited };
 
   // ── Render ────────────────────────────────────────────────
   return (
@@ -81,7 +84,7 @@ function AppShell() {
         <Routes>
           <Route
             path="/"
-            element={<HomeView allSenators={allSenators} globalTags={globalTags} {...data} {...nav} />}
+            element={<HomeView allSenators={allSenators} globalTags={globalTags} {...data} {...nav} {...visited} />}
           />
           <Route
             path="/sesion/:id"
